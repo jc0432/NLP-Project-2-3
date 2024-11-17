@@ -2,7 +2,7 @@ import requests
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import re 
-
+from gadgets import get_gadgets
 
 def get_recipe_page(url: str) -> BeautifulSoup:
     """ Fetch and parse recipe page"""
@@ -88,6 +88,7 @@ def main():
     ingredients = ingredient_parser(site_html)
     steps = direction_parser(site_html)
     recipe_details = other_information(site_html)
+    gadgets = get_gadgets([step.direction for step in steps])
 
 
 main()
