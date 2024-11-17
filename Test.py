@@ -2,9 +2,16 @@ import requests
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import re 
+from gadgets import get_gadgets
 import json
 
-class Ingredient: 
+def get_recipe_page(url: str) -> BeautifulSoup:
+    """ Fetch and parse recipe page"""
+    request = requests.get(url)
+    return BeautifulSoup(request.text, 'html.parser')
+
+
+class Ingredients: 
     def __init__(self, ingredient, amount, preparation):
         self.ingredient = ingredient
         self.amount = amount
@@ -121,7 +128,7 @@ def main():
     ingredients = ingredient_parser(site_html)
     steps = direction_parser(site_html)
     recipe_details = other_information(site_html)
- 
+    gadgets = get_gadgets([step.direction for step in steps])
 
     # Prepare data for JSON serialization
     recipe_data = {
