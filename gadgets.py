@@ -20,6 +20,10 @@ class Gadget:
     
     def __hash__(self):
         return hash((self.size, self.name))
+    
+    def to_dict(self):
+        """Convert the object to a dictionary."""
+        return {"size": self.size, "name": self.name}
 
 NAMES = [
     "bowl",
@@ -73,8 +77,7 @@ TOOLS = [
 ]
     
 def clean_directions(directions: list) -> list:
-    directions = [direction.lower() for direction in directions]
-    directions = [direction.strip() for direction in directions]
+    directions = [direction.lower().strip() for direction in directions]
     return directions
 
 def get_gadgets(directions):
@@ -99,4 +102,28 @@ def get_gadgets(directions):
                 size_or_dimension = match.group(1) or match.group(2)
                 gadgets.add(Gadget(size=size_or_dimension, name=gadget))
 
+    return gadgets
+
+def get_gadgets_single(direction):
+    gadgets = set()
+    direction = direction.lower().strip()
+    
+    # sort by length to prioritize longer matches
+    combined_gadgets = sorted(NAMES + TOOLS, key=len, reverse=True)
+    
+    # regex for sizes and dimensions
+    size_pattern = r"(small|medium|large)"
+    dimension_pattern = r"(\d+x\d+-inch)"
+    
+    for gadget in combined_gadgets:
+        regex = rf"\b(?:{size_pattern}|{dimension_pattern})?\s*{re.escape(gadget)}\b"
+        match = re.search(regex, direction)
+        if match:
+            size_or_dimension = match.group(1) or match.group(2)
+            gadgets.add(Gadget(size=size_or_dimension, name=gadget))
+            
+            # remove the matched text from the direction for cases like "baking dish" and "dish"
+            direction = direction[:match.start()] + direction[match.end():]
+            direction = direction.strip()
+    
     return gadgets
