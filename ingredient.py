@@ -57,7 +57,7 @@ def get_ingredients(url: str) -> str:
                 descriptor=descriptor,
                 preparation=ing.preparation.strip() if ing.preparation else ''
             )
-            result.append(f"- {ingredient}")
+            result.append(f"- {ingredient.name}, {ingredient.quantity}, {ingredient.unit}, {ingredient.descriptor}, {ingredient.preparation}")
         
         return "\n".join(result)
         
@@ -65,18 +65,18 @@ def get_ingredients(url: str) -> str:
         return f"Error parsing ingredients: {e}"
 
 
-# test code
-# if __name__ == "__main__":
-#     test_urls = [
-#         'https://www.allrecipes.com/recipe/256288/chef-johns-creamy-corn-pudding/',
-#         'https://www.allrecipes.com/recipe/18379/best-green-bean-casserole/',
-#         'https://www.allrecipes.com/recipe/217149/americano-cocktail/'
-#     ]
+if __name__ == "__main__":
+    test_urls = [
+        # 'https://www.allrecipes.com/recipe/21261/yummy-sweet-potato-casserole/'
+        # 'https://www.allrecipes.com/recipe/256288/chef-johns-creamy-corn-pudding/',
+        # 'https://www.allrecipes.com/recipe/18379/best-green-bean-casserole/',
+        # 'https://www.allrecipes.com/recipe/217149/americano-cocktail/'
+    ]
  
-#     for url in test_urls:
-#         try:
-#             print(f"\nrecipe: {url.split('/')[-2].replace('-', ' ').title()}")
-#             print(get_ingredients(url))
-#             print("\n" + "-"*50)
-#         except Exception as e:
-#             print(f"Error parsing ingredients: {e}")
+    for url in test_urls:
+        try:
+            print(f"\nrecipe: {url.split('/')[-2].replace('-', ' ').title()}")
+            print(get_ingredients(url))
+            print("\n" + "-"*50)
+        except Exception as e:
+            print(f"Error parsing ingredients: {e}")

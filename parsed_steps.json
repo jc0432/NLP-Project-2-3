@@ -26,9 +26,7 @@
     {
         "step_number": 2,
         "direction": "To prepare the sweet potatoes: Put sweet potatoes in a medium saucepan and cover with water. Cook over medium-high heat until tender, 10 to 15 minutes. Drain and transfer to a large bowl.",
-        "ingredients": {
-            "sweet potatoes": null
-        },
+        "ingredients": {},
         "tools": [
             "bowl",
             "saucepan"
@@ -55,7 +53,6 @@
         "step_number": 3,
         "direction": "Mash drained sweet potatoes with a fork. Add eggs; mix until well combined. Add sugar, milk, butter, vanilla, and salt; mix until smooth. Transfer to a 9x13-inch baking dish.",
         "ingredients": {
-            "sweet potatoes": null,
             "eggs": null,
             "milk": null,
             "butter": null,
@@ -99,9 +96,7 @@
         "step_number": 4,
         "direction": "To make the topping: Mix brown sugar and flour together in a medium bowl. Cut in butter with a pastry cutter until mixture is coarse and looks like peas; don't overmix. Stir in pecans. Sprinkle topping over sweet potato mixture.",
         "ingredients": {
-            "butter": null,
-            "brown sugar": null,
-            "pecans": null
+            "butter": null
         },
         "tools": [
             "bowl"
