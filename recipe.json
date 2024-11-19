@@ -2,9 +2,9 @@
     "title": "Yummy Sweet Potato Casserole",
     "ingredients": [
         {
-            "ingredient": "sweet potatoes",
+            "ingredient": "peeled",
             "amount": "4 cups",
-            "preparation": "cubed, peeled"
+            "preparation": "cubed sweet potatoes"
         },
         {
             "ingredient": "eggs",
@@ -37,9 +37,9 @@
             "preparation": ""
         },
         {
-            "ingredient": "brown sugar",
+            "ingredient": "packed brown sugar",
             "amount": "\u00bd cup",
-            "preparation": "packed"
+            "preparation": ""
         },
         {
             "ingredient": "all-purpose flour",
@@ -52,9 +52,9 @@
             "preparation": "softened"
         },
         {
-            "ingredient": "pecans",
+            "ingredient": "chopped pecans",
             "amount": "\u00bd cup",
-            "preparation": "chopped"
+            "preparation": ""
         }
     ],
     "steps": [

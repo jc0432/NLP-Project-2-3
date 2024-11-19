@@ -112,14 +112,12 @@ def ingredient_parser(soup: BeautifulSoup):
             prep_method = match[1].strip()
             ingredient_name = match[0].strip()
         
-        ingredients.append(Ingredient(ingredient=ingredient_name, amount=amount, preparation=prep_method))
+        ingredients.append(Ingredients(ingredient=ingredient_name, amount=amount, preparation=prep_method))
     
     return ingredients
 
 
-def main():
-    url = 'https://www.allrecipes.com/recipe/21261/yummy-sweet-potato-casserole/'
-
+def scrape_and_save(url):
     site_html = get_recipe_page(url)
     if not site_html:
         return
@@ -142,6 +140,4 @@ def main():
     with open('recipe.json', 'w') as f:
         json.dump(recipe_data, f, indent=4)
     print("\nScraped data has been saved to 'recipe.json'.")
-
-if __name__ == "__main__":
-    main()
+    

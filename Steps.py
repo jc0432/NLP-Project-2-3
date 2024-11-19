@@ -28,7 +28,7 @@ def parse_step(step, ingredient_list):
     # Extract methods and their details
     for token in doc:
         if token.tag_ == "VB" and (token.lemma_.lower() in DURATION_METHODS or token.lemma_.lower() in NO_DURATION_METHODS):
-            print("@@@@@@ ", token)
+            # print("@@@@@@ ", token)
             method = token.lemma_.lower()
             subjects = []
             duration = None
@@ -75,7 +75,8 @@ def parse_step(step, ingredient_list):
         "methods": methods
     }
 
-def main():
+
+def parse_and_save():
     try:
         with open('recipe.json', 'r') as f:
             recipe_data = json.load(f)
@@ -87,18 +88,17 @@ def main():
 
     # Parse each step
     parsed_steps = []
-    print("\n### Parsed Steps ###")
+    # print("\n### Parsed Steps ###")
     for step in recipe_data.get('steps', []):
         parsed = parse_step(step, ingredients)
         parsed_steps.append(parsed)
-        print(f"\nStep {parsed['step_number']}: {parsed['direction']}")
-        print(f"  Ingredients: {parsed['ingredients']}")
-        print(f"  Tools: {parsed['tools']}")
-        print(f"  Methods: {parsed['methods']}")
+        # print(f"\nStep {parsed['step_number']}: {parsed['direction']}")
+        # print(f"  Ingredients: {parsed['ingredients']}")
+        # print(f"  Tools: {parsed['tools']}")
+        # print(f"  Methods: {parsed['methods']}")
 
     with open('parsed_steps.json', 'w') as f:
         json.dump(parsed_steps, f, indent=4)
     print("\nParsed steps have been saved to 'parsed_steps.json'.")
 
-if __name__ == "__main__":
-    main()
+    

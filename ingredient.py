@@ -153,8 +153,7 @@ class IngredientParser:
                 ingredient_text,
                 unit_match,
                 descriptors
-            )
-            
+            )     
             return ingredient_dict
             
         except Exception as e:
