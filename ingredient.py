@@ -16,9 +16,9 @@ Test.Ingredient = Ingredient
 class IngredientParser:
     def __init__(self):
         # expand unit pattern to include more possible units
-        self.unit_pattern = r'\b(cup|cups|tablespoon|tablespoons|tbsp|teaspoon|teaspoons|tsp|pound|pounds|ounce|ounces|oz|gram|grams|g|pinch|pinches|dash|dashes|piece|pieces|slice|slices|whole|package|pkg|can|cans)\b'
+        self.unit_pattern = r'\b(cup|cups|tablespoon|tablespoons|tbsp|teaspoon|teaspoons|to taste|tsp|pound|pounds|ounce|ounces|oz|gram|grams|g|pinch|pinches|dash|dashes|piece|pieces|slice|slices|whole|package|pkg|can|cans)\b'
         # expand descriptor pattern to include more possible preparation methods
-        self.descriptor_pattern = r'\b(fresh|dried|chopped|minced|sliced|diced|grated|crushed|ground|whole|frozen|large|medium|small|ripe|raw|cooked|cold|hot|warm|softened|melted|beaten|peeled|cubed)\b'
+        self.descriptor_pattern = r'\b(fresh|dried|chopped|minced|sliced|diced|grated|shredded|crushed|ground|whole|frozen|large|medium|small|ripe|raw|cooked|cold|hot|warm|softened|melted|beaten|peeled|cubed)\b'
         self.number_pattern = r'(\d+(?:/\d+)?|\d*\.\d+|\d+)'
 
     def clean_text(self, text):
@@ -77,9 +77,11 @@ class IngredientParser:
         
         # extract preparation methods from descriptors
         prep_descriptors = [d for d in descriptors if d in [
-            'chopped', 'minced', 'sliced', 'diced', 'grated', 
-            'crushed', 'beaten', 'peeled', 'cubed', 'drained'
-        ]]
+            "fresh", "dried", "chopped", "minced", "sliced", "diced", "grated", "shredded",
+            "crushed", "ground", "whole", "frozen", "large", "medium", "small", "ripe",
+            "raw", "cooked", "cold", "hot", "warm", "softened", "melted", "beaten", 
+            "peeled", "cubed"
+            ]]
         if prep_descriptors:
             prep_parts.extend(prep_descriptors)
         
@@ -119,6 +121,7 @@ class IngredientParser:
 
     def parse_single_ingredient(self, ing):
         # parse single ingredient, ensure output format is correct
+
         try:
             ingredient_dict = {
                 "ingredient": "",
@@ -142,6 +145,7 @@ class IngredientParser:
                 ingredient_text + (f", {prep_method}" if prep_method else ""),
                 descriptors
             )
+            
             
             # handle ingredient name
             unit_match = re.search(self.unit_pattern, ingredient_text)
@@ -181,19 +185,21 @@ def get_ingredients(url: str) -> str:
     return parser.parse_ingredients(url)
 
 # test code
-# if __name__ == "__main__":
-#     test_urls = [
-#        'https://www.allrecipes.com/recipe/230966/country-sunday-breakfast-casserole/',  # casserole 1
-#         'https://www.allrecipes.com/recipe/18045/yellow-squash-casserole/',   # casserole 2
-#         'https://www.allrecipes.com/recipe/231154/creamy-chicken-cordon-bleu-casserole/' # casserole 3
-#     ]
+if __name__ == "__main__":
+    test_urls = ['https://www.allrecipes.com/recipe/18045/yellow-squash-casserole/']
     
-#     parser = IngredientParser()
-#     for url in test_urls:
-#         try:
-#             print(f"\nRecipe: {url.split('/')[-2].replace('-', ' ').title()}")
-#             result = parser.parse_ingredients(url)
-#             print(result)
-#             print("\n" + "-"*50)
-#         except Exception as e:
-#             print(f"Error parsing recipe: {e}")
+    # [
+    #    'https://www.allrecipes.com/recipe/230966/country-sunday-breakfast-casserole/',  # casserole 1
+    #     'https://www.allrecipes.com/recipe/18045/yellow-squash-casserole/',   # casserole 2
+    #     'https://www.allrecipes.com/recipe/231154/creamy-chicken-cordon-bleu-casserole/' # casserole 3
+    # ]
+    
+    parser = IngredientParser()
+    for url in test_urls:
+        try:
+            print(f"\nRecipe: {url.split('/')[-2].replace('-', ' ').title()}")
+            result = parser.parse_ingredients(url)
+            print(result)
+            print("\n" + "-"*50)
+        except Exception as e:
+            print(f"Error parsing recipe: {e}")
