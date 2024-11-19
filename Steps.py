@@ -2,6 +2,7 @@ import json
 import re
 import spacy
 from constants import TOOLS, DURATION_METHODS, NO_DURATION_METHODS
+from gadgets import get_gadgets_single
 nlp = spacy.load("en_core_web_trf")
 
 
@@ -10,7 +11,6 @@ def parse_step(step, ingredient_list):
     direction = step['direction']
     step_number = step['step']
     doc = nlp(direction)
-    tools = []
     methods = {}
     ingredients = {}
 
@@ -23,10 +23,8 @@ def parse_step(step, ingredient_list):
             until_phrases.append((until_start, until_phrase.group(1).strip()))
 
     # Extract tools
-    for token in doc:
-        if token.text.lower() in TOOLS:
-            tools.append(token.text.lower())
-
+    gadgets = get_gadgets_single(direction)
+    gadgets = [gadget.to_dict() for gadget in gadgets]
     # Extract methods and their details
     for token in doc:
         if token.tag_ == "VB" and (token.lemma_.lower() in DURATION_METHODS or token.lemma_.lower() in NO_DURATION_METHODS):
@@ -73,7 +71,7 @@ def parse_step(step, ingredient_list):
         "step_number": step_number,
         "direction": direction,
         "ingredients": ingredients,
-        "tools": list(set(tools)),
+        "tools": gadgets,
         "methods": methods
     }
 

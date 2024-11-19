@@ -4,7 +4,10 @@
         "direction": "Gather the ingredients. Preheat oven to 325 degrees F (165 degrees C).",
         "ingredients": {},
         "tools": [
-            "oven"
+            {
+                "size": null,
+                "name": "oven"
+            }
         ],
         "methods": {
             "gather": {
@@ -28,13 +31,19 @@
         "direction": "To prepare the sweet potatoes: Put sweet potatoes in a medium saucepan and cover with water. Cook over medium-high heat until tender, 10 to 15 minutes. Drain and transfer to a large bowl.",
         "ingredients": {},
         "tools": [
-            "bowl",
-            "saucepan"
+            {
+                "size": "large",
+                "name": "bowl"
+            },
+            {
+                "size": "medium",
+                "name": "saucepan"
+            }
         ],
         "methods": {
             "cook": {
                 "subject": [],
-                "duration": "10 to 15 minutes",
+                "duration": null,
                 "until": "tender"
             },
             "drain": {
@@ -59,7 +68,14 @@
             "salt": null
         },
         "tools": [
-            "fork"
+            {
+                "size": null,
+                "name": "fork"
+            },
+            {
+                "size": "9x13-inch",
+                "name": "baking dish"
+            }
         ],
         "methods": {
             "mash": {
@@ -99,7 +115,14 @@
             "butter": null
         },
         "tools": [
-            "bowl"
+            {
+                "size": "medium",
+                "name": "bowl"
+            },
+            {
+                "size": null,
+                "name": "pastry cutter"
+            }
         ],
         "methods": {
             "mix": {
@@ -111,7 +134,9 @@
                 "until": "mixture is coarse and looks like peas"
             },
             "cut": {
-                "subject": [],
+                "subject": [
+                    "butter"
+                ],
                 "duration": null,
                 "until": null
             },
@@ -136,7 +161,10 @@
         "direction": "Bake in the preheated oven until topping is lightly browned, about 30 minutes.",
         "ingredients": {},
         "tools": [
-            "oven"
+            {
+                "size": null,
+                "name": "oven"
+            }
         ],
         "methods": {
             "bake": {
