@@ -1,4 +1,5 @@
 import re
+from constants import TOOLS, NAMES
 # Gets all the gadgets needed from a list of directions
 # Each gadget has a:
 # size (medium, 9x16-inch, etc)
@@ -25,57 +26,6 @@ class Gadget:
         """Convert the object to a dictionary."""
         return {"size": self.size, "name": self.name}
 
-NAMES = [
-    "bowl",
-    "pan",
-    "dish",
-    "pot",
-    "skillet",
-    "tray",
-    "baking sheet",
-    "baking dish",
-    "saucepan",
-    "oven",
-    "baking pan"
-]
-
-TOOLS = [
-    "knife",
-    "spoon",
-    "fork",
-    "whisk",
-    "tongs",
-    "spatula",
-    "grater",
-    "peeler",
-    "ladle",
-    "rolling pin",
-    "measuring cup",
-    "measuring spoon",
-    "mixing bowl",
-    "cutting board",
-    "colander",
-    "strainer",
-    "sifter",
-    "timer",
-    "thermometer",
-    "scale",
-    "oven mitt",
-    "pot holder",
-    "baking rack",
-    "baking paper",
-    "parchment paper",
-    "aluminum foil",
-    "plastic wrap",
-    "wax paper",
-    "tinfoil",
-    "towel",
-    "paper towel",
-    "dish towel",
-    "dish cloth",
-    "pastry cutter"
-]
-    
 def clean_directions(directions: list) -> list:
     directions = [direction.lower().strip() for direction in directions]
     return directions

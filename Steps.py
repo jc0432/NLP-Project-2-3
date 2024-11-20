@@ -1,7 +1,7 @@
 import json
 import re
 import spacy
-from constants import TOOLS, DURATION_METHODS, NO_DURATION_METHODS
+from constants import DURATION_METHODS, NO_DURATION_METHODS
 from gadgets import get_gadgets_single
 nlp = spacy.load("en_core_web_trf")
 
