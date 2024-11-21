@@ -1,11 +1,9 @@
 import json
 import re
 import spacy
-from constants import DURATION_METHODS, NO_DURATION_METHODS
+from constants import DURATION_METHODS, NO_DURATION_METHODS, STEP_STOP_WORDS, REFERENCE_WORDS, NAMES, TOOLS
 from gadgets import get_gadgets_single
 nlp = spacy.load("en_core_web_trf")
-
-
 
 def parse_step(step, ingredient_list):
     direction = step['direction']
@@ -26,20 +24,41 @@ def parse_step(step, ingredient_list):
     gadgets = get_gadgets_single(direction)
     gadgets = [gadget.to_dict() for gadget in gadgets]
     # Extract methods and their details
-    for token in doc:
+    prev_subjects = []
+    
+    doc_ptr = 0
+    while doc_ptr < len(doc):
+        token = doc[doc_ptr]
+        if token.text.lower() in STEP_STOP_WORDS:
+            doc_ptr += 1
+            continue
         if token.tag_ == "VB" and (token.lemma_.lower() in DURATION_METHODS or token.lemma_.lower() in NO_DURATION_METHODS):
             # print("@@@@@@ ", token)
+            print("found token", token)
             method = token.lemma_.lower()
             subjects = []
             duration = None
             until_condition = None
 
-            # Find the subject
-            for child in token.children:
-                if child.dep_ in ("dobj", "pobj", "nsubj"):
-                    subjects.append(child.text)
-                    for conj in child.conjuncts:
-                        subjects.append(conj.text)
+            # go through tokens until another verb or a period is found
+            next_ptr = doc_ptr + 1
+            stops = STEP_STOP_WORDS + REFERENCE_WORDS
+            while(next_ptr < len(doc) and 
+                  doc[next_ptr].tag_ != "VB" and 
+                  doc[next_ptr].text != "." and 
+                  doc[next_ptr].text.lower() not in stops):
+                next_doc = doc[next_ptr]
+                if next_doc.dep_ in ("dobj", "pobj", "nsubj", "appos"):
+                    subjects.append(doc[next_ptr].text)
+                    print("added subject", doc[next_ptr].text, doc[next_ptr].dep_)
+                    # for conj in doc[next_ptr].conjuncts:
+                    #     subjects.append(conj.text)
+                next_ptr += 1
+            doc_ptr = next_ptr
+            if subjects: 
+                prev_subjects = subjects
+            subjects = prev_subjects
+            print("subjects", subjects)
 
             # Find duration
             if method in DURATION_METHODS:
@@ -47,19 +66,62 @@ def parse_step(step, ingredient_list):
                     if ent.label_ in ["TIME", "QUANTITY"] and ent.start > token.i:
                         duration = ent.text
                         break
-
+            
             # Assign "until..." condition
             for until_start, until_text in until_phrases:
                 if until_start > direction.lower().find(token.text.lower()):
                     until_condition = until_text
                     until_phrases.remove((until_start, until_text))  # Avoid reuse
                     break
-
             methods[method] = {
                 "subject": subjects,
                 "duration": duration,
                 "until": until_condition
             }
+        doc_ptr += 1
+    
+    # for token in doc:
+    #     if token.tag_ == "VB" and (token.lemma_.lower() in DURATION_METHODS or token.lemma_.lower() in NO_DURATION_METHODS):
+    #         # print("@@@@@@ ", token)
+    #         print("found token", token)
+    #         method = token.lemma_.lower()
+    #         subjects = []
+    #         duration = None
+    #         until_condition = None
+
+    #         # go through tokens until another verb or a period is found
+    #         for i in range(token.i+1, len(doc)):
+    #             if doc[i].tag_ == "VB" or doc[i].text == ".":
+    #                 break
+    #             print("doc", doc[i], doc[i].dep_)
+    #             if doc[i].dep_ in ("dobj", "pobj", "nsubj", "appos"):
+    #                 subjects.append(doc[i].text)
+    #                 for conj in doc[i].conjuncts:
+    #                     subjects.append(conj.text)
+
+    #         if subjects: 
+    #             prev_subjects = subjects
+    #         subjects = prev_subjects
+    #         print("subjects", subjects)
+
+    #         # Find duration
+    #         if method in DURATION_METHODS:
+    #             for ent in doc.ents:
+    #                 if ent.label_ in ["TIME", "QUANTITY"] and ent.start > token.i:
+    #                     duration = ent.text
+    #                     break
+
+    #         # Assign "until..." condition
+    #         for until_start, until_text in until_phrases:
+    #             if until_start > direction.lower().find(token.text.lower()):
+    #                 until_condition = until_text
+    #                 until_phrases.remove((until_start, until_text))  # Avoid reuse
+    #                 break
+    #         methods[method] = {
+    #             "subject": subjects,
+    #             "duration": duration,
+    #             "until": until_condition
+    #         }
 
     for ing in ingredient_list:
         pattern = rf'(\d+\/?\d*\s?(?:cups?|teaspoons?|tablespoons?|grams?|ounces?|pounds?|cloves?|slices?|pinches?))?\s+{re.escape(ing["ingredient"].lower())}'

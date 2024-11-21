@@ -2,16 +2,23 @@ DURATION_METHODS = [
     "preheat", "cook", "bake", "boil", "broil", "poach", 
     "sauté", "simmer", "roast", "toast", "chill", "freeze", 
     "marinate", "grill", "steam", "blanch", "fry", "knead",
-    "boil", "reduce"
+    "boil", "reduce", "heat"
 ]
 NO_DURATION_METHODS = [
     "drain", "transfer", "mix", "chop", "grate", "cut", 
     "stir", "gather", "mash", "add", "sprinkle", "serve",
     "whisk", "dice", "slice", "fold", "pour", "peel", 
     "crack", "press", "spread", "combine", "coat", 
-    "layer", "shape"
+    "layer", "shape", "melt", "place"
 ]
 
+STEP_STOP_WORDS = [
+    "in", "on", "at", "to", "with", "by", "for", "of", "from", "over", "into", "between", "through", "until", "about", "after", "before", "during", "under", "against", "up", "down", "off", "out", "around", "throughout", "upon", "along", "across", "toward", "away", "behind", "beneath", "beside", "inside", "onto", "underneath", "within", "without", "above", "below", "among", "around", "before", "behind", "beneath", "beside", "between", "inside", "outside", "throughout", "underneath", "where", "when", "how", "why", "what", "who", "which", "whom", "whose", "whether", "whenever"
+]
+
+REFERENCE_WORDS = [
+    "them", "it"
+]
 NAMES = [
     "bowl",
     "pan",

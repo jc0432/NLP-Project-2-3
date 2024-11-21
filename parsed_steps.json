@@ -1,7 +1,7 @@
 [
     {
         "step_number": 1,
-        "direction": "Gather the ingredients. Preheat oven to 325 degrees F (165 degrees C).",
+        "direction": "Gather ingredients. Preheat the oven to 350 degrees F (175 degrees C).",
         "ingredients": {},
         "tools": [
             {
@@ -21,38 +21,44 @@
                 "subject": [
                     "oven"
                 ],
-                "duration": "325 degrees F",
+                "duration": "350 degrees F",
                 "until": null
             }
         }
     },
     {
         "step_number": 2,
-        "direction": "To prepare the sweet potatoes: Put sweet potatoes in a medium saucepan and cover with water. Cook over medium-high heat until tender, 10 to 15 minutes. Drain and transfer to a large bowl.",
-        "ingredients": {},
-        "tools": [
-            {
-                "size": "large",
-                "name": "bowl"
-            },
-            {
-                "size": "medium",
-                "name": "saucepan"
-            }
-        ],
+        "direction": "Place chicken breasts on a flat work surface. Slice horizontally through the middle, being careful not to cut all the way through to the other side. Open the 2 sides and spread them out like an open book to butterfly.",
+        "ingredients": {
+            "butter": null
+        },
+        "tools": [],
         "methods": {
-            "cook": {
-                "subject": [],
-                "duration": null,
-                "until": "tender"
-            },
-            "drain": {
-                "subject": [],
+            "place": {
+                "subject": [
+                    "breasts"
+                ],
                 "duration": null,
                 "until": null
             },
-            "transfer": {
-                "subject": [],
+            "slice": {
+                "subject": [
+                    "breasts"
+                ],
+                "duration": null,
+                "until": null
+            },
+            "cut": {
+                "subject": [
+                    "breasts"
+                ],
+                "duration": null,
+                "until": null
+            },
+            "spread": {
+                "subject": [
+                    "breasts"
+                ],
                 "duration": null,
                 "until": null
             }
@@ -60,123 +66,260 @@
     },
     {
         "step_number": 3,
-        "direction": "Mash drained sweet potatoes with a fork. Add eggs; mix until well combined. Add sugar, milk, butter, vanilla, and salt; mix until smooth. Transfer to a 9x13-inch baking dish.",
+        "direction": "Melt butter in a large, oven-safe skillet over medium-high heat. Add garlic, oregano, thyme. Saut\u00e9 until fragrant, about 30 seconds.",
         "ingredients": {
-            "eggs": null,
-            "milk": null,
             "butter": null,
-            "salt": null
+            "garlic": null
         },
         "tools": [
             {
                 "size": null,
-                "name": "fork"
+                "name": "skillet"
             },
-            {
-                "size": "9x13-inch",
-                "name": "baking dish"
-            }
-        ],
-        "methods": {
-            "mash": {
-                "subject": [
-                    "potatoes"
-                ],
-                "duration": null,
-                "until": "well combined"
-            },
-            "add": {
-                "subject": [
-                    "sugar",
-                    "milk",
-                    "butter",
-                    "vanilla",
-                    "salt"
-                ],
-                "duration": null,
-                "until": null
-            },
-            "mix": {
-                "subject": [],
-                "duration": null,
-                "until": null
-            },
-            "transfer": {
-                "subject": [],
-                "duration": null,
-                "until": null
-            }
-        }
-    },
-    {
-        "step_number": 4,
-        "direction": "To make the topping: Mix brown sugar and flour together in a medium bowl. Cut in butter with a pastry cutter until mixture is coarse and looks like peas; don't overmix. Stir in pecans. Sprinkle topping over sweet potato mixture.",
-        "ingredients": {
-            "butter": null
-        },
-        "tools": [
-            {
-                "size": "medium",
-                "name": "bowl"
-            },
-            {
-                "size": null,
-                "name": "pastry cutter"
-            }
-        ],
-        "methods": {
-            "mix": {
-                "subject": [
-                    "sugar",
-                    "flour"
-                ],
-                "duration": null,
-                "until": "mixture is coarse and looks like peas"
-            },
-            "cut": {
-                "subject": [
-                    "butter"
-                ],
-                "duration": null,
-                "until": null
-            },
-            "stir": {
-                "subject": [
-                    "pecans"
-                ],
-                "duration": null,
-                "until": null
-            },
-            "sprinkle": {
-                "subject": [
-                    "topping"
-                ],
-                "duration": null,
-                "until": null
-            }
-        }
-    },
-    {
-        "step_number": 5,
-        "direction": "Bake in the preheated oven until topping is lightly browned, about 30 minutes.",
-        "ingredients": {},
-        "tools": [
             {
                 "size": null,
                 "name": "oven"
             }
         ],
         "methods": {
+            "melt": {
+                "subject": [
+                    "butter"
+                ],
+                "duration": null,
+                "until": "fragrant"
+            },
+            "add": {
+                "subject": [
+                    "garlic",
+                    "oregano",
+                    "thyme"
+                ],
+                "duration": null,
+                "until": null
+            },
+            "saut\u00e9": {
+                "subject": [
+                    "garlic",
+                    "oregano",
+                    "thyme"
+                ],
+                "duration": "about 30 seconds",
+                "until": null
+            }
+        }
+    },
+    {
+        "step_number": 4,
+        "direction": "Add chicken and cook until golden brown but not fully cooked, 3 to 4 minutes per side.",
+        "ingredients": {},
+        "tools": [],
+        "methods": {
+            "add": {
+                "subject": [
+                    "chicken"
+                ],
+                "duration": null,
+                "until": "golden brown but not fully cooked"
+            }
+        }
+    },
+    {
+        "step_number": 5,
+        "direction": "Pour 1/4 cup chicken broth into the skillet and bake in the preheated oven until chicken is no longer pink in the centers and juices run clear, about 15 minutes.",
+        "ingredients": {
+            "chicken broth": "1/4 cup"
+        },
+        "tools": [
+            {
+                "size": null,
+                "name": "skillet"
+            },
+            {
+                "size": null,
+                "name": "oven"
+            }
+        ],
+        "methods": {
+            "pour": {
+                "subject": [
+                    "broth"
+                ],
+                "duration": null,
+                "until": "chicken is no longer pink in the centers and juices run clear"
+            },
             "bake": {
-                "subject": [],
-                "duration": "about 30 minutes",
-                "until": "topping is lightly browned"
+                "subject": [
+                    "broth"
+                ],
+                "duration": "about 15 minutes",
+                "until": null
             }
         }
     },
     {
         "step_number": 6,
-        "direction": "Serve and enjoy!",
+        "direction": "Meanwhile, place bacon in a large skillet and cook over medium-high heat, turning occasionally, until evenly browned, about 10 minutes. Drain bacon slices on paper towels and let cool enough to handle, about 5 minutes; chop.",
+        "ingredients": {
+            "bacon": null
+        },
+        "tools": [
+            {
+                "size": "large",
+                "name": "skillet"
+            }
+        ],
+        "methods": {
+            "place": {
+                "subject": [
+                    "bacon"
+                ],
+                "duration": null,
+                "until": "evenly browned"
+            },
+            "cook": {
+                "subject": [
+                    "bacon"
+                ],
+                "duration": "about 10 minutes",
+                "until": null
+            },
+            "drain": {
+                "subject": [
+                    "slices"
+                ],
+                "duration": null,
+                "until": null
+            },
+            "chop": {
+                "subject": [
+                    "slices"
+                ],
+                "duration": null,
+                "until": null
+            }
+        }
+    },
+    {
+        "step_number": 7,
+        "direction": "At the same time, bring a large pot of lightly salted water to a boil. Cook angel hair pasta in the boiling water, stirring occasionally, until tender yet firm to the bite, 4 to 5 minutes. Drain and keep warm.",
+        "ingredients": {
+            "angel hair pasta": null
+        },
+        "tools": [
+            {
+                "size": "large",
+                "name": "pot"
+            }
+        ],
+        "methods": {
+            "cook": {
+                "subject": [
+                    "pasta"
+                ],
+                "duration": "4 to 5 minutes",
+                "until": "tender yet firm to the bite"
+            },
+            "drain": {
+                "subject": [
+                    "pasta"
+                ],
+                "duration": null,
+                "until": null
+            }
+        }
+    },
+    {
+        "step_number": 8,
+        "direction": "Remove skillet from the oven and transfer chicken to a plate, reserving juices in the skillet. Keep chicken warm and place skillet on the stovetop.",
+        "ingredients": {},
+        "tools": [
+            {
+                "size": null,
+                "name": "skillet"
+            },
+            {
+                "size": null,
+                "name": "oven"
+            }
+        ],
+        "methods": {
+            "transfer": {
+                "subject": [
+                    "chicken"
+                ],
+                "duration": null,
+                "until": null
+            },
+            "place": {
+                "subject": [
+                    "skillet"
+                ],
+                "duration": null,
+                "until": null
+            }
+        }
+    },
+    {
+        "step_number": 9,
+        "direction": "Whisk flour into the skillet over medium heat. Add remaining chicken broth, Parmesan cheese, and whipping cream. Whisk until combined.",
+        "ingredients": {
+            "chicken broth": null,
+            "whipping cream": null
+        },
+        "tools": [
+            {
+                "size": null,
+                "name": "skillet"
+            },
+            {
+                "size": null,
+                "name": "whisk"
+            }
+        ],
+        "methods": {
+            "whisk": {
+                "subject": [
+                    "broth"
+                ],
+                "duration": null,
+                "until": null
+            },
+            "add": {
+                "subject": [
+                    "broth"
+                ],
+                "duration": null,
+                "until": null
+            }
+        }
+    },
+    {
+        "step_number": 10,
+        "direction": "Add sun-dried tomatoes, red pepper flakes, and salt. Add bacon and chicken back into the skillet.",
+        "ingredients": {
+            "bacon": null,
+            "red pepper flakes": null
+        },
+        "tools": [
+            {
+                "size": null,
+                "name": "skillet"
+            }
+        ],
+        "methods": {
+            "add": {
+                "subject": [
+                    "bacon"
+                ],
+                "duration": null,
+                "until": null
+            }
+        }
+    },
+    {
+        "step_number": 11,
+        "direction": "Serve on top of hot cooked pasta.",
         "ingredients": {},
         "tools": [],
         "methods": {
