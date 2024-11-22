@@ -1,109 +1,123 @@
 {
-    "title": "Turkey Tom Kha Gai",
+    "title": "The Best Million Dollar Spaghetti",
     "ingredients": [
         {
-            "ingredient": "turkey broth",
-            "amount": "6 cups",
+            "ingredient": "olive oil",
+            "amount": "1 tablespoon",
             "preparation": ""
         },
         {
-            "ingredient": "lemongrass",
-            "amount": "2 stalks",
-            "preparation": "bruised and sliced"
-        },
-        {
-            "ingredient": "fresh ginger",
-            "amount": "1 (3 inch) piece",
-            "preparation": "sliced"
-        },
-        {
-            "ingredient": "chopped fresh cilantro stems",
-            "amount": "2 tablespoons",
+            "ingredient": "onion",
+            "amount": "1 small",
             "preparation": ""
         },
         {
-            "ingredient": "makrut lime leaves",
-            "amount": "2 ",
-            "preparation": "thinly sliced"
+            "ingredient": "kosher salt",
+            "amount": "1 1/4 teaspoons",
+            "preparation": ""
         },
         {
-            "ingredient": "red pepper flakes",
-            "amount": "\u00bd teaspoon",
-            "preparation": "or more to taste"
+            "ingredient": "cloves garlic",
+            "amount": "2",
+            "preparation": ""
         },
         {
-            "ingredient": "cooked turkey",
+            "ingredient": "ground sirloin",
             "amount": "1 pound",
-            "preparation": "cut into small cubes"
+            "preparation": ""
         },
         {
-            "ingredient": "clamshell mushrooms",
+            "ingredient": "Italian sausage",
+            "amount": "1 pound",
+            "preparation": ""
+        },
+        {
+            "ingredient": "marinara sauce",
+            "amount": "32 ounces",
+            "preparation": ""
+        },
+        {
+            "ingredient": "spaghetti",
+            "amount": "16 ounces",
+            "preparation": ""
+        },
+        {
+            "ingredient": "butter",
+            "amount": "5 tablespoons",
+            "preparation": ""
+        },
+        {
+            "ingredient": "cottage cheese",
             "amount": "1 cup",
-            "preparation": "separated"
-        },
-        {
-            "ingredient": "fish sauce",
-            "amount": "2 tablespoons",
             "preparation": ""
         },
         {
-            "ingredient": "palm sugar",
-            "amount": "2 teaspoons",
+            "ingredient": "cream cheese",
+            "amount": "8 ounces",
             "preparation": ""
         },
         {
-            "ingredient": "coconut milk",
-            "amount": "1 (13 ounce) can",
+            "ingredient": "sour cream",
+            "amount": "1/4 cup",
             "preparation": ""
         },
         {
-            "ingredient": "lime juice",
-            "amount": "\u00bc cup",
+            "ingredient": "salt",
+            "amount": "1/4 teaspoon",
             "preparation": ""
         },
         {
-            "ingredient": "green onions",
-            "amount": "\u00bc cup",
-            "preparation": "chopped"
-        },
-        {
-            "ingredient": "chopped fresh cilantro leaves",
-            "amount": "2 tablespoons",
+            "ingredient": "pepper",
+            "amount": "1/4 teaspoon",
             "preparation": ""
         },
         {
-            "ingredient": "chili oil",
-            "amount": "\u00bc teaspoon",
-            "preparation": "or more to taste"
+            "ingredient": "shredded mozzarella cheese",
+            "amount": "3 cups",
+            "preparation": ""
+        },
+        {
+            "ingredient": "grated Parmesan cheese",
+            "amount": "1/3 cup",
+            "preparation": ""
+        },
+        {
+            "ingredient": "chopped parsley",
+            "amount": "",
+            "preparation": "for garnish"
         }
     ],
     "steps": [
         {
             "step": 1,
-            "direction": "Combine turkey broth, lemongrass, ginger, cilantro stems, lime leaves, and red pepper flakes in a pot over medium-high heat. Bring to a simmer, reduce heat to medium-low, and simmer until flavors blend, 20 to 30 minutes."
+            "direction": "Heat oil in a large saucepan over medium-high heat. Add onion, 1 teaspoon salt, and garlic;\u00a0cook until softened, about 3 minutes. Add ground beef and sausage and cook, crumbling with a spoon, until browned, about 5 minutes. Stir in 3 cups marinara sauce; bring to a simmer.\u00a0 Reduce heat to low and simmer while pasta cooks."
         },
         {
             "step": 2,
-            "direction": "Stain broth mixture through a fine-mesh sieve, discard vegetables, and return broth to the pot."
+            "direction": "Preheat the oven to 350 degrees F (175 degrees C). Lightly grease a large casserole dish."
         },
         {
             "step": 3,
-            "direction": "Stir turkey, mushrooms, fish sauce, and palm sugar into broth; simmer until mushrooms are tender and turkey absorbs broth flavor, about 15 minutes."
+            "direction": "Bring a large pot of salted water to a boil. Add pasta and cook until just tender with a bite, about 7 minutes. Drain; return spaghetti to the pot. Stir in 3 1/2 tablespoons butter and remaining marinara sauce."
         },
         {
             "step": 4,
-            "direction": "Pour coconut milk, lime juice, green onions, and cilantro leaves into broth. Bring soup to a simmer and drizzle in chili oil."
+            "direction": "Combine cottage cheese, cream cheese, sour cream, remaining salt, pepper, and 1 cup mozzarella in a medium bowl and stir until well incorporated."
         },
         {
             "step": 5,
-            "direction": "You can use white sugar in place of palm sugar, if desired. You can use young lemon leaves in place of the lime leaves, if desired."
+            "direction": "Add half of pasta to the casserole dish. Spread cheese mixture evenly over pasta. Add remaining pasta; cut remaining 1 1/2 tablespoons butter into thin slices, and arrange over pasta. Top with meat sauce mixture, remaining 2 cups mozzarella, and grated Parmesan cheese. Place casserole dish on a rimmed baking sheet."
+        },
+        {
+            "step": 6,
+            "direction": "Bake in the preheated oven until cheese is melted and browned and pasta is bubbling around the edges, 40 to 50 minutes. Let stand 5 to 10 minutes before serving. Sprinkle with parsley if desired."
         }
     ],
     "details": {
         "Prep Time:": "20 mins",
-        "Cook Time:": "35 mins",
-        "Total Time:": "55 mins",
-        "Servings:": "4",
-        "Yield:": "4 servings"
+        "Cook Time:": "1 hr",
+        "Stand Time:": "5 mins",
+        "Total Time:": "1 hr 25 mins",
+        "Servings:": "10"
     }
 }

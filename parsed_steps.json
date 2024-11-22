@@ -1,93 +1,150 @@
 [
     {
         "step_number": 1,
-        "direction": "Combine turkey broth, lemongrass, ginger, cilantro stems, lime leaves, and red pepper flakes in a pot over medium-high heat. Bring to a simmer, reduce heat to medium-low, and simmer until flavors blend, 20 to 30 minutes.",
+        "direction": "Heat oil in a large saucepan over medium-high heat. Add onion, 1 teaspoon salt, and garlic;\u00a0cook until softened, about 3 minutes. Add ground beef and sausage and cook, crumbling with a spoon, until browned, about 5 minutes. Stir in 3 cups marinara sauce; bring to a simmer.\u00a0 Reduce heat to low and simmer while pasta cooks.",
         "ingredients": {
-            "turkey broth": null,
-            "lemongrass": null,
-            "red pepper flakes": null
+            "onion": null,
+            "marinara sauce": "3 cups",
+            "salt": "1 teaspoon"
         },
         "tools": [
             {
                 "size": null,
-                "name": "pot"
+                "name": "spoon"
+            },
+            {
+                "size": "large",
+                "name": "saucepan"
             }
         ],
         "methods": {
-            "combine": {
+            "heat": {
                 "subject": [
-                    "broth"
+                    "oil"
+                ],
+                "duration": "1 teaspoon",
+                "until": "softened"
+            },
+            "add": {
+                "subject": [
+                    "beef"
                 ],
                 "duration": null,
-                "until": "flavors blend"
+                "until": null
+            },
+            "stir": {
+                "subject": [
+                    "beef"
+                ],
+                "duration": null,
+                "until": null
             },
             "reduce": {
                 "subject": [
                     "heat"
                 ],
-                "duration": "20 to 30 minutes",
+                "duration": null,
                 "until": null
             },
             "simmer": {
                 "subject": [
-                    "heat"
+                    "pasta"
                 ],
-                "duration": "20 to 30 minutes",
+                "duration": null,
                 "until": null
             }
         }
     },
     {
         "step_number": 2,
-        "direction": "Stain broth mixture through a fine-mesh sieve, discard vegetables, and return broth to the pot.",
+        "direction": "Preheat the oven to 350 degrees F (175 degrees C). Lightly grease a large casserole dish.",
         "ingredients": {},
         "tools": [
             {
                 "size": null,
-                "name": "pot"
+                "name": "oven"
+            },
+            {
+                "size": "large",
+                "name": "casserole dish"
             }
         ],
-        "methods": {}
+        "methods": {
+            "preheat": {
+                "subject": [
+                    "oven"
+                ],
+                "duration": "350 degrees F",
+                "until": null
+            }
+        }
     },
     {
         "step_number": 3,
-        "direction": "Stir turkey, mushrooms, fish sauce, and palm sugar into broth; simmer until mushrooms are tender and turkey absorbs broth flavor, about 15 minutes.",
+        "direction": "Bring a large pot of salted water to a boil. Add pasta and cook until just tender with a bite, about 7 minutes. Drain; return spaghetti to the pot. Stir in 3 1/2 tablespoons butter and remaining marinara sauce.",
         "ingredients": {
-            "fish sauce": null,
-            "palm sugar": null
+            "marinara sauce": null,
+            "spaghetti": null,
+            "butter": "1/2 tablespoons",
+            "salt": null
         },
-        "tools": [],
+        "tools": [
+            {
+                "size": "large",
+                "name": "pot"
+            }
+        ],
         "methods": {
-            "stir": {
+            "add": {
                 "subject": [
-                    "turkey"
+                    "pasta"
                 ],
                 "duration": null,
-                "until": "mushrooms are tender and turkey absorbs broth flavor"
+                "until": "just tender with a bite"
             },
-            "simmer": {
+            "drain": {
                 "subject": [
-                    "turkey"
+                    "pasta"
                 ],
-                "duration": "about 15 minutes",
+                "duration": null,
+                "until": null
+            },
+            "stir": {
+                "subject": [
+                    "pasta"
+                ],
+                "duration": null,
                 "until": null
             }
         }
     },
     {
         "step_number": 4,
-        "direction": "Pour coconut milk, lime juice, green onions, and cilantro leaves into broth. Bring soup to a simmer and drizzle in chili oil.",
+        "direction": "Combine cottage cheese, cream cheese, sour cream, remaining salt, pepper, and 1 cup mozzarella in a medium bowl and stir until well incorporated.",
         "ingredients": {
-            "coconut milk": null,
-            "lime juice": null,
-            "green onions": null,
-            "chili oil": null
+            "cottage cheese": null,
+            "cream cheese": null,
+            "sour cream": null,
+            "salt": null,
+            "pepper": null
         },
-        "tools": [],
+        "tools": [
+            {
+                "size": "medium",
+                "name": "bowl"
+            }
+        ],
         "methods": {
-            "pour": {
+            "combine": {
                 "subject": [
-                    "milk"
+                    "cheese"
+                ],
+                "duration": null,
+                "until": "well incorporated"
+            },
+            "stir": {
+                "subject": [
+                    "cheese"
                 ],
                 "duration": null,
                 "until": null
@@ -96,11 +153,70 @@
     },
     {
         "step_number": 5,
-        "direction": "You can use white sugar in place of palm sugar, if desired. You can use young lemon leaves in place of the lime leaves, if desired.",
+        "direction": "Add half of pasta to the casserole dish. Spread cheese mixture evenly over pasta. Add remaining pasta; cut remaining 1 1/2 tablespoons butter into thin slices, and arrange over pasta. Top with meat sauce mixture, remaining 2 cups mozzarella, and grated Parmesan cheese. Place casserole dish on a rimmed baking sheet.",
         "ingredients": {
-            "palm sugar": null
+            "butter": "1/2 tablespoons",
+            "grated Parmesan cheese": null
         },
-        "tools": [],
-        "methods": {}
+        "tools": [
+            {
+                "size": null,
+                "name": "baking sheet"
+            },
+            {
+                "size": null,
+                "name": "casserole dish"
+            },
+            {
+                "size": null,
+                "name": "dish"
+            }
+        ],
+        "methods": {
+            "add": {
+                "subject": [
+                    "pasta"
+                ],
+                "duration": null,
+                "until": null
+            },
+            "spread": {
+                "subject": [
+                    "mixture"
+                ],
+                "duration": null,
+                "until": null
+            },
+            "place": {
+                "subject": [
+                    "dish"
+                ],
+                "duration": null,
+                "until": null
+            }
+        }
+    },
+    {
+        "step_number": 6,
+        "direction": "Bake in the preheated oven until cheese is melted and browned and pasta is bubbling around the edges, 40 to 50 minutes. Let stand 5 to 10 minutes before serving. Sprinkle with parsley if desired.",
+        "ingredients": {},
+        "tools": [
+            {
+                "size": null,
+                "name": "oven"
+            }
+        ],
+        "methods": {
+            "bake": {
+                "subject": [],
+                "duration": "40 to 50 minutes",
+                "until": "cheese is melted and browned and pasta is bubbling around the edges"
+            },
+            "sprinkle": {
+                "subject": [],
+                "duration": null,
+                "until": null
+            }
+        }
     }
 ]
