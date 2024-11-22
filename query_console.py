@@ -131,8 +131,7 @@ def answer_question(step, question, conversation_context, ingredients_list):
                 if method in token.text:
                     specific_technique = method
                     break
-        if specific_technique:
-            return f"I've found a reference for you {external_search(question)}"
+        return f"I've found a reference for you {external_search(question)}"
 
     # Goal (6): Vague "how to" questions
     if "how" in tokens and "do" in tokens and "that" in tokens:

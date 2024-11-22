@@ -12,7 +12,6 @@ def answer_question(step, question, conversation_context, ingredients_list):
     response = None
 
     tokens = {token.text for token in doc}
-    specific_tool = None
     specific_technique = None
 
     # Navigation intents
