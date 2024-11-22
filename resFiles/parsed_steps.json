@@ -1,0 +1,106 @@
+[
+    {
+        "step_number": 1,
+        "direction": "Combine turkey broth, lemongrass, ginger, cilantro stems, lime leaves, and red pepper flakes in a pot over medium-high heat. Bring to a simmer, reduce heat to medium-low, and simmer until flavors blend, 20 to 30 minutes.",
+        "ingredients": {
+            "turkey broth": null,
+            "lemongrass": null,
+            "red pepper flakes": null
+        },
+        "tools": [
+            {
+                "size": null,
+                "name": "pot"
+            }
+        ],
+        "methods": {
+            "combine": {
+                "subject": [
+                    "broth"
+                ],
+                "duration": null,
+                "until": "flavors blend"
+            },
+            "reduce": {
+                "subject": [
+                    "heat"
+                ],
+                "duration": "20 to 30 minutes",
+                "until": null
+            },
+            "simmer": {
+                "subject": [
+                    "heat"
+                ],
+                "duration": "20 to 30 minutes",
+                "until": null
+            }
+        }
+    },
+    {
+        "step_number": 2,
+        "direction": "Stain broth mixture through a fine-mesh sieve, discard vegetables, and return broth to the pot.",
+        "ingredients": {},
+        "tools": [
+            {
+                "size": null,
+                "name": "pot"
+            }
+        ],
+        "methods": {}
+    },
+    {
+        "step_number": 3,
+        "direction": "Stir turkey, mushrooms, fish sauce, and palm sugar into broth; simmer until mushrooms are tender and turkey absorbs broth flavor, about 15 minutes.",
+        "ingredients": {
+            "fish sauce": null,
+            "palm sugar": null
+        },
+        "tools": [],
+        "methods": {
+            "stir": {
+                "subject": [
+                    "turkey"
+                ],
+                "duration": null,
+                "until": "mushrooms are tender and turkey absorbs broth flavor"
+            },
+            "simmer": {
+                "subject": [
+                    "turkey"
+                ],
+                "duration": "about 15 minutes",
+                "until": null
+            }
+        }
+    },
+    {
+        "step_number": 4,
+        "direction": "Pour coconut milk, lime juice, green onions, and cilantro leaves into broth. Bring soup to a simmer and drizzle in chili oil.",
+        "ingredients": {
+            "coconut milk": null,
+            "lime juice": null,
+            "green onions": null,
+            "chili oil": null
+        },
+        "tools": [],
+        "methods": {
+            "pour": {
+                "subject": [
+                    "milk"
+                ],
+                "duration": null,
+                "until": null
+            }
+        }
+    },
+    {
+        "step_number": 5,
+        "direction": "You can use white sugar in place of palm sugar, if desired. You can use young lemon leaves in place of the lime leaves, if desired.",
+        "ingredients": {
+            "palm sugar": null
+        },
+        "tools": [],
+        "methods": {}
+    }
+]
