@@ -1,6 +1,5 @@
-from Test import ingredient_parser, get_recipe_page, Ingredients
+from Test import ingredient_parser, get_recipe_page
 import re
-import json
 
 # create Ingredient class
 class Ingredient:

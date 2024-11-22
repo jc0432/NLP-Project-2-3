@@ -2,7 +2,6 @@
 
 import os
 import json
-import re
 from slack_bolt import App
 from slack_bolt.adapter.flask import SlackRequestHandler
 from flask import Flask, request

@@ -1,5 +1,4 @@
 import requests 
-from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import re 
 from gadgets import get_gadgets

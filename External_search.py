@@ -1,5 +1,4 @@
 # conda activate nlp_project_env
-import spacy 
 import re
 from Test import get_title, get_recipe_page
 # spacy_model = spacy.load("en_core_web_sm")
