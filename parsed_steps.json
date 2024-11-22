@@ -1,185 +1,106 @@
 [
     {
         "step_number": 1,
-        "direction": "Boil cabbage in a stockpot until tender, 10 to 15 minutes. Drain well.",
-        "ingredients": {},
+        "direction": "Combine turkey broth, lemongrass, ginger, cilantro stems, lime leaves, and red pepper flakes in a pot over medium-high heat. Bring to a simmer, reduce heat to medium-low, and simmer until flavors blend, 20 to 30 minutes.",
+        "ingredients": {
+            "turkey broth": null,
+            "lemongrass": null,
+            "red pepper flakes": null
+        },
         "tools": [
             {
                 "size": null,
-                "name": "stockpot"
+                "name": "pot"
             }
         ],
         "methods": {
-            "boil": {
+            "combine": {
                 "subject": [
-                    "cabbage"
-                ],
-                "duration": "10 to 15 minutes",
-                "until": "tender"
-            },
-            "drain": {
-                "subject": [
-                    "cabbage"
+                    "broth"
                 ],
                 "duration": null,
+                "until": "flavors blend"
+            },
+            "reduce": {
+                "subject": [
+                    "heat"
+                ],
+                "duration": "20 to 30 minutes",
+                "until": null
+            },
+            "simmer": {
+                "subject": [
+                    "heat"
+                ],
+                "duration": "20 to 30 minutes",
                 "until": null
             }
         }
     },
     {
         "step_number": 2,
-        "direction": "Heat a large skillet over medium-high heat. Cook and stir beef in the hot skillet until browned and crumbly, 5 to 7 minutes; drain and discard grease. Mix salt, parsley, onion powder, and black pepper into ground beef.",
-        "ingredients": {
-            "ground beef": null,
-            "salt": null,
-            "onion powder": null
-        },
+        "direction": "Stain broth mixture through a fine-mesh sieve, discard vegetables, and return broth to the pot.",
+        "ingredients": {},
         "tools": [
             {
-                "size": "large",
-                "name": "skillet"
+                "size": null,
+                "name": "pot"
             }
         ],
-        "methods": {
-            "heat": {
-                "subject": [
-                    "skillet"
-                ],
-                "duration": "5 to 7 minutes",
-                "until": "browned and crumbly"
-            },
-            "cook": {
-                "subject": [
-                    "skillet"
-                ],
-                "duration": "5 to 7 minutes",
-                "until": null
-            },
-            "drain": {
-                "subject": [
-                    "skillet"
-                ],
-                "duration": null,
-                "until": null
-            },
-            "mix": {
-                "subject": [
-                    "salt"
-                ],
-                "duration": null,
-                "until": null
-            }
-        }
+        "methods": {}
     },
     {
         "step_number": 3,
-        "direction": "Bring water and rice to a boil in a saucepan. Reduce heat to medium-low, cover, and simmer until rice is tender and liquid has been absorbed, 20 to 25 minutes. Stir tomato soup and crushed tomatoes together in a bowl.",
+        "direction": "Stir turkey, mushrooms, fish sauce, and palm sugar into broth; simmer until mushrooms are tender and turkey absorbs broth flavor, about 15 minutes.",
         "ingredients": {
-            "water": null
+            "fish sauce": null,
+            "palm sugar": null
         },
-        "tools": [
-            {
-                "size": null,
-                "name": "bowl"
-            },
-            {
-                "size": null,
-                "name": "saucepan"
-            }
-        ],
+        "tools": [],
         "methods": {
-            "reduce": {
+            "stir": {
                 "subject": [
-                    "heat"
+                    "turkey"
                 ],
-                "duration": "20 to 25 minutes",
-                "until": "rice is tender and liquid has been absorbed"
+                "duration": null,
+                "until": "mushrooms are tender and turkey absorbs broth flavor"
             },
             "simmer": {
                 "subject": [
-                    "heat"
+                    "turkey"
                 ],
-                "duration": "20 to 25 minutes",
-                "until": null
-            },
-            "stir": {
-                "subject": [
-                    "soup"
-                ],
-                "duration": null,
+                "duration": "about 15 minutes",
                 "until": null
             }
         }
     },
     {
         "step_number": 4,
-        "direction": "Preheat oven to 350 degrees F (175 degrees C).",
-        "ingredients": {},
-        "tools": [
-            {
-                "size": null,
-                "name": "oven"
-            }
-        ],
+        "direction": "Pour coconut milk, lime juice, green onions, and cilantro leaves into broth. Bring soup to a simmer and drizzle in chili oil.",
+        "ingredients": {
+            "coconut milk": null,
+            "lime juice": null,
+            "green onions": null,
+            "chili oil": null
+        },
+        "tools": [],
         "methods": {
-            "preheat": {
+            "pour": {
                 "subject": [
-                    "oven"
+                    "milk"
                 ],
-                "duration": "350 degrees F",
+                "duration": null,
                 "until": null
             }
         }
     },
     {
         "step_number": 5,
-        "direction": "Combine cabbage, seasoned ground beef, rice, and tomato mixture together in a bowl; transfer to a 9x13-inch baking dish.",
+        "direction": "You can use white sugar in place of palm sugar, if desired. You can use young lemon leaves in place of the lime leaves, if desired.",
         "ingredients": {
-            "ground beef": null
+            "palm sugar": null
         },
-        "tools": [
-            {
-                "size": null,
-                "name": "bowl"
-            },
-            {
-                "size": "9x13-inch",
-                "name": "baking dish"
-            }
-        ],
-        "methods": {
-            "combine": {
-                "subject": [
-                    "cabbage"
-                ],
-                "duration": null,
-                "until": null
-            },
-            "transfer": {
-                "subject": [
-                    "cabbage"
-                ],
-                "duration": null,
-                "until": null
-            }
-        }
-    },
-    {
-        "step_number": 6,
-        "direction": "Bake in the preheated oven until bubbling, about 45 minutes.",
-        "ingredients": {},
-        "tools": [
-            {
-                "size": null,
-                "name": "oven"
-            }
-        ],
-        "methods": {
-            "bake": {
-                "subject": [],
-                "duration": "about 45 minutes",
-                "until": "bubbling"
-            }
-        }
+        "tools": [],
+        "methods": {}
     }
 ]

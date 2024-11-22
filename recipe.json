@@ -1,87 +1,109 @@
 {
-    "title": "Beef and Cabbage (Lazy Golumpki)",
+    "title": "Turkey Tom Kha Gai",
     "ingredients": [
         {
-            "ingredient": "green cabbage",
-            "amount": "1 head",
-            "preparation": "cut into bite-size pieces"
+            "ingredient": "turkey broth",
+            "amount": "6 cups",
+            "preparation": ""
         },
         {
-            "ingredient": "ground beef",
+            "ingredient": "lemongrass",
+            "amount": "2 stalks",
+            "preparation": "bruised and sliced"
+        },
+        {
+            "ingredient": "fresh ginger",
+            "amount": "1 (3 inch) piece",
+            "preparation": "sliced"
+        },
+        {
+            "ingredient": "chopped fresh cilantro stems",
+            "amount": "2 tablespoons",
+            "preparation": ""
+        },
+        {
+            "ingredient": "makrut lime leaves",
+            "amount": "2 ",
+            "preparation": "thinly sliced"
+        },
+        {
+            "ingredient": "red pepper flakes",
+            "amount": "\u00bd teaspoon",
+            "preparation": "or more to taste"
+        },
+        {
+            "ingredient": "cooked turkey",
             "amount": "1 pound",
-            "preparation": ""
+            "preparation": "cut into small cubes"
         },
         {
-            "ingredient": "salt",
-            "amount": "1 teaspoon",
-            "preparation": ""
-        },
-        {
-            "ingredient": "dried parsley",
-            "amount": "1 teaspoon",
-            "preparation": ""
-        },
-        {
-            "ingredient": "onion powder",
-            "amount": "\u00bc teaspoon",
-            "preparation": ""
-        },
-        {
-            "ingredient": "ground black pepper",
-            "amount": "\u215b teaspoon",
-            "preparation": ""
-        },
-        {
-            "ingredient": "water",
-            "amount": "2 cups",
-            "preparation": ""
-        },
-        {
-            "ingredient": "white rice",
+            "ingredient": "clamshell mushrooms",
             "amount": "1 cup",
+            "preparation": "separated"
+        },
+        {
+            "ingredient": "fish sauce",
+            "amount": "2 tablespoons",
             "preparation": ""
         },
         {
-            "ingredient": "condensed tomato soup (such as Campbell's)",
-            "amount": "1 (10.5 ounce) can",
+            "ingredient": "palm sugar",
+            "amount": "2 teaspoons",
             "preparation": ""
         },
         {
-            "ingredient": "crushed tomatoes (such as Hunt's)",
-            "amount": "1 (32 ounce) container",
+            "ingredient": "coconut milk",
+            "amount": "1 (13 ounce) can",
             "preparation": ""
+        },
+        {
+            "ingredient": "lime juice",
+            "amount": "\u00bc cup",
+            "preparation": ""
+        },
+        {
+            "ingredient": "green onions",
+            "amount": "\u00bc cup",
+            "preparation": "chopped"
+        },
+        {
+            "ingredient": "chopped fresh cilantro leaves",
+            "amount": "2 tablespoons",
+            "preparation": ""
+        },
+        {
+            "ingredient": "chili oil",
+            "amount": "\u00bc teaspoon",
+            "preparation": "or more to taste"
         }
     ],
     "steps": [
         {
             "step": 1,
-            "direction": "Boil cabbage in a stockpot until tender, 10 to 15 minutes. Drain well."
+            "direction": "Combine turkey broth, lemongrass, ginger, cilantro stems, lime leaves, and red pepper flakes in a pot over medium-high heat. Bring to a simmer, reduce heat to medium-low, and simmer until flavors blend, 20 to 30 minutes."
         },
         {
             "step": 2,
-            "direction": "Heat a large skillet over medium-high heat. Cook and stir beef in the hot skillet until browned and crumbly, 5 to 7 minutes; drain and discard grease. Mix salt, parsley, onion powder, and black pepper into ground beef."
+            "direction": "Stain broth mixture through a fine-mesh sieve, discard vegetables, and return broth to the pot."
         },
         {
             "step": 3,
-            "direction": "Bring water and rice to a boil in a saucepan. Reduce heat to medium-low, cover, and simmer until rice is tender and liquid has been absorbed, 20 to 25 minutes. Stir tomato soup and crushed tomatoes together in a bowl."
+            "direction": "Stir turkey, mushrooms, fish sauce, and palm sugar into broth; simmer until mushrooms are tender and turkey absorbs broth flavor, about 15 minutes."
         },
         {
             "step": 4,
-            "direction": "Preheat oven to 350 degrees F (175 degrees C)."
+            "direction": "Pour coconut milk, lime juice, green onions, and cilantro leaves into broth. Bring soup to a simmer and drizzle in chili oil."
         },
         {
             "step": 5,
-            "direction": "Combine cabbage, seasoned ground beef, rice, and tomato mixture together in a bowl; transfer to a 9x13-inch baking dish."
-        },
-        {
-            "step": 6,
-            "direction": "Bake in the preheated oven until bubbling, about 45 minutes."
+            "direction": "You can use white sugar in place of palm sugar, if desired. You can use young lemon leaves in place of the lime leaves, if desired."
         }
     ],
     "details": {
-        "Prep Time:": "15 mins",
-        "Cook Time:": "1 hr 20 mins",
-        "Total Time:": "1 hr 35 mins",
-        "Servings:": "8"
+        "Prep Time:": "20 mins",
+        "Cook Time:": "35 mins",
+        "Total Time:": "55 mins",
+        "Servings:": "4",
+        "Yield:": "4 servings"
     }
 }
