@@ -1,127 +1,87 @@
 {
-    "title": "Marry Me Chicken",
+    "title": "Beef and Cabbage (Lazy Golumpki)",
     "ingredients": [
         {
-            "ingredient": "skinless",
-            "amount": "1 \u00bd pounds",
-            "preparation": "boneless chicken breast halves"
+            "ingredient": "green cabbage",
+            "amount": "1 head",
+            "preparation": "cut into bite-size pieces"
         },
         {
-            "ingredient": "butter",
-            "amount": "2 tablespoons",
+            "ingredient": "ground beef",
+            "amount": "1 pound",
             "preparation": ""
         },
         {
-            "ingredient": "garlic",
-            "amount": "3 cloves",
-            "preparation": "minced"
-        },
-        {
-            "ingredient": "dried oregano",
-            "amount": "\u00bd teaspoon",
+            "ingredient": "salt",
+            "amount": "1 teaspoon",
             "preparation": ""
         },
         {
-            "ingredient": "ground thyme",
+            "ingredient": "dried parsley",
+            "amount": "1 teaspoon",
+            "preparation": ""
+        },
+        {
+            "ingredient": "onion powder",
             "amount": "\u00bc teaspoon",
             "preparation": ""
         },
         {
-            "ingredient": "chicken broth",
-            "amount": "\u00bd cup",
-            "preparation": "divided"
-        },
-        {
-            "ingredient": "bacon",
-            "amount": "\u00bd pound",
+            "ingredient": "ground black pepper",
+            "amount": "\u215b teaspoon",
             "preparation": ""
         },
         {
-            "ingredient": "angel hair pasta",
-            "amount": "1 (16 ounce) package",
+            "ingredient": "water",
+            "amount": "2 cups",
             "preparation": ""
         },
         {
-            "ingredient": "all-purpose flour",
-            "amount": "1 tablespoon",
+            "ingredient": "white rice",
+            "amount": "1 cup",
             "preparation": ""
         },
         {
-            "ingredient": "freshly shaved Parmesan cheese",
-            "amount": "\u00bd cup",
+            "ingredient": "condensed tomato soup (such as Campbell's)",
+            "amount": "1 (10.5 ounce) can",
             "preparation": ""
         },
         {
-            "ingredient": "whipping cream",
-            "amount": "\u00bc cup",
-            "preparation": ""
-        },
-        {
-            "ingredient": "chopped sun-dried tomatoes",
-            "amount": "\u00bc cup",
-            "preparation": ""
-        },
-        {
-            "ingredient": "red pepper flakes",
-            "amount": "1 pinch",
-            "preparation": ""
-        },
-        {
-            "ingredient": "salt to taste",
-            "amount": " ",
+            "ingredient": "crushed tomatoes (such as Hunt's)",
+            "amount": "1 (32 ounce) container",
             "preparation": ""
         }
     ],
     "steps": [
         {
             "step": 1,
-            "direction": "Gather ingredients. Preheat the oven to 350 degrees F (175 degrees C)."
+            "direction": "Boil cabbage in a stockpot until tender, 10 to 15 minutes. Drain well."
         },
         {
             "step": 2,
-            "direction": "Place chicken breasts on a flat work surface. Slice horizontally through the middle, being careful not to cut all the way through to the other side. Open the 2 sides and spread them out like an open book to butterfly."
+            "direction": "Heat a large skillet over medium-high heat. Cook and stir beef in the hot skillet until browned and crumbly, 5 to 7 minutes; drain and discard grease. Mix salt, parsley, onion powder, and black pepper into ground beef."
         },
         {
             "step": 3,
-            "direction": "Melt butter in a large, oven-safe skillet over medium-high heat. Add garlic, oregano, thyme. Saut\u00e9 until fragrant, about 30 seconds."
+            "direction": "Bring water and rice to a boil in a saucepan. Reduce heat to medium-low, cover, and simmer until rice is tender and liquid has been absorbed, 20 to 25 minutes. Stir tomato soup and crushed tomatoes together in a bowl."
         },
         {
             "step": 4,
-            "direction": "Add chicken and cook until golden brown but not fully cooked, 3 to 4 minutes per side."
+            "direction": "Preheat oven to 350 degrees F (175 degrees C)."
         },
         {
             "step": 5,
-            "direction": "Pour 1/4 cup chicken broth into the skillet and bake in the preheated oven until chicken is no longer pink in the centers and juices run clear, about 15 minutes."
+            "direction": "Combine cabbage, seasoned ground beef, rice, and tomato mixture together in a bowl; transfer to a 9x13-inch baking dish."
         },
         {
             "step": 6,
-            "direction": "Meanwhile, place bacon in a large skillet and cook over medium-high heat, turning occasionally, until evenly browned, about 10 minutes. Drain bacon slices on paper towels and let cool enough to handle, about 5 minutes; chop."
-        },
-        {
-            "step": 7,
-            "direction": "At the same time, bring a large pot of lightly salted water to a boil. Cook angel hair pasta in the boiling water, stirring occasionally, until tender yet firm to the bite, 4 to 5 minutes. Drain and keep warm."
-        },
-        {
-            "step": 8,
-            "direction": "Remove skillet from the oven and transfer chicken to a plate, reserving juices in the skillet. Keep chicken warm and place skillet on the stovetop."
-        },
-        {
-            "step": 9,
-            "direction": "Whisk flour into the skillet over medium heat. Add remaining chicken broth, Parmesan cheese, and whipping cream. Whisk until combined."
-        },
-        {
-            "step": 10,
-            "direction": "Add sun-dried tomatoes, red pepper flakes, and salt. Add bacon and chicken back into the skillet."
-        },
-        {
-            "step": 11,
-            "direction": "Serve on top of hot cooked pasta."
+            "direction": "Bake in the preheated oven until bubbling, about 45 minutes."
         }
     ],
     "details": {
         "Prep Time:": "15 mins",
-        "Cook Time:": "20 mins",
-        "Total Time:": "35 mins",
-        "Servings:": "6"
+        "Cook Time:": "1 hr 20 mins",
+        "Total Time:": "1 hr 35 mins",
+        "Servings:": "8"
     }
 }

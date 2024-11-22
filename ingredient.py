@@ -172,7 +172,7 @@ class IngredientParser:
                 if parsed and parsed["ingredient"]:  # only add valid ingredients
                     parsed_ingredients.append(parsed)
             
-            return json.dumps({"ingredients": parsed_ingredients}, indent=4)
+            return parsed_ingredients
             
         except Exception as e:
             print(f"Debug - Exception details: {str(e)}")
