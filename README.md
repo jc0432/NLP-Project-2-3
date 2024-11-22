@@ -4,8 +4,8 @@ Parsing recipes to support conversational interaction
 # Set up
 1. Be sure to be in a python environment where the python version is < 3.13. Spacy doesn't work for python 3.13 for now. Best bet is to either be in a virtual env with a downgraded version of python or use a conda environment.
 2. Run ```pip install -r requirements.txt```
-3. Download the spacy model with ```python -m spacy download en_core_web_trf```
-4. To start the program, run ```python3 main_console.py```
+3. Download the spacy model with ```python -m spacy download en_core_web_trf``` and ```python -m spacy download en_core_web_sm```
+4. To start the program in the terminal, run ```python3 main_console.py```. To start the slack bot, run ```python3 app.py```
 
 # Question Answering Goals
 
