@@ -17,10 +17,12 @@ Ex: https://www.allrecipes.com/the-best-million-dollar-spaghetti-recipe-8747691
 ### Next step:
 Say "next" to go to the next step
 
-### Go to step:
+### Navigation:
 Ask "go back" to go back to the previous step
 
 Ask "go to step n" to go to the nth step
+
+Ask "repeat this step" to repeat the step
 
 ### Parameters:
 Ask "how do I know when it's done" to get the definition of done in the current step
@@ -41,4 +43,4 @@ Ask a "what is ___" question to prompt an external google search
 ### How to:
 Ask a "how do I ___" question to prompt an external search to a youtube video
 
-Ask "how do I do that" to prompt an external search of the first part of the step
+Ask "how do I do that" to prompt an external search for the most recent cooking action from the conversation context
