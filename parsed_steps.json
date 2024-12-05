@@ -1,75 +1,22 @@
 [
     {
         "step_number": 1,
-        "direction": "Heat oil in a large saucepan over medium-high heat. Add onion, 1 teaspoon salt, and garlic;\u00a0cook until softened, about 3 minutes. Add ground beef and sausage and cook, crumbling with a spoon, until browned, about 5 minutes. Stir in 3 cups marinara sauce; bring to a simmer.\u00a0 Reduce heat to low and simmer while pasta cooks.",
-        "ingredients": {
-            "onion": null,
-            "marinara sauce": "3 cups",
-            "salt": "1 teaspoon"
-        },
-        "tools": [
-            {
-                "size": null,
-                "name": "spoon"
-            },
-            {
-                "size": "large",
-                "name": "saucepan"
-            }
-        ],
-        "methods": {
-            "heat": {
-                "subject": [
-                    "oil"
-                ],
-                "duration": "1 teaspoon",
-                "until": "softened"
-            },
-            "add": {
-                "subject": [
-                    "beef"
-                ],
-                "duration": null,
-                "until": null
-            },
-            "stir": {
-                "subject": [
-                    "beef"
-                ],
-                "duration": null,
-                "until": null
-            },
-            "reduce": {
-                "subject": [
-                    "heat"
-                ],
-                "duration": null,
-                "until": null
-            },
-            "simmer": {
-                "subject": [
-                    "pasta"
-                ],
-                "duration": null,
-                "until": null
-            }
-        }
-    },
-    {
-        "step_number": 2,
-        "direction": "Preheat the oven to 350 degrees F (175 degrees C). Lightly grease a large casserole dish.",
+        "direction": "Gather the ingredients. Preheat the oven to 350 degrees F (175 degrees C).",
         "ingredients": {},
         "tools": [
             {
                 "size": null,
                 "name": "oven"
-            },
-            {
-                "size": "large",
-                "name": "casserole dish"
             }
         ],
         "methods": {
+            "gather": {
+                "subject": [
+                    "ingredients"
+                ],
+                "duration": null,
+                "until": null
+            },
             "preheat": {
                 "subject": [
                     "oven"
@@ -77,146 +24,90 @@
                 "duration": "350 degrees F",
                 "until": null
             }
-        }
-    },
-    {
-        "step_number": 3,
-        "direction": "Bring a large pot of salted water to a boil. Add pasta and cook until just tender with a bite, about 7 minutes. Drain; return spaghetti to the pot. Stir in 3 1/2 tablespoons butter and remaining marinara sauce.",
-        "ingredients": {
-            "marinara sauce": null,
-            "spaghetti": null,
-            "butter": "1/2 tablespoons",
-            "salt": null
         },
-        "tools": [
-            {
-                "size": "large",
-                "name": "pot"
-            }
-        ],
-        "methods": {
-            "add": {
-                "subject": [
-                    "pasta"
-                ],
-                "duration": null,
-                "until": "just tender with a bite"
-            },
-            "drain": {
-                "subject": [
-                    "pasta"
-                ],
-                "duration": null,
-                "until": null
-            },
-            "stir": {
-                "subject": [
-                    "pasta"
-                ],
-                "duration": null,
-                "until": null
-            }
-        }
+        "substeps": [
+            "Gather the ingredients",
+            "Preheat the oven to 350 degrees F (175 degrees C)"
+        ]
     },
     {
-        "step_number": 4,
-        "direction": "Combine cottage cheese, cream cheese, sour cream, remaining salt, pepper, and 1 cup mozzarella in a medium bowl and stir until well incorporated.",
+        "step_number": 2,
+        "direction": "Mix ground beef, bread crumbs, onion, water, and egg together in a large bowl. Form into small meatballs and arrange on a nonstick baking sheet. Bake in the preheated oven for 20 to 25 minutes, turning once.",
         "ingredients": {
-            "cottage cheese": null,
-            "cream cheese": null,
-            "sour cream": null,
-            "salt": null,
-            "pepper": null
+            "bread crumbs": null,
+            "water": null,
+            "egg": null
         },
-        "tools": [
-            {
-                "size": "medium",
-                "name": "bowl"
-            }
-        ],
-        "methods": {
-            "combine": {
-                "subject": [
-                    "cheese"
-                ],
-                "duration": null,
-                "until": "well incorporated"
-            },
-            "stir": {
-                "subject": [
-                    "cheese"
-                ],
-                "duration": null,
-                "until": null
-            }
-        }
-    },
-    {
-        "step_number": 5,
-        "direction": "Add half of pasta to the casserole dish. Spread cheese mixture evenly over pasta. Add remaining pasta; cut remaining 1 1/2 tablespoons butter into thin slices, and arrange over pasta. Top with meat sauce mixture, remaining 2 cups mozzarella, and grated Parmesan cheese. Place casserole dish on a rimmed baking sheet.",
-        "ingredients": {
-            "butter": "1/2 tablespoons",
-            "grated Parmesan cheese": null
-        },
-        "tools": [
-            {
-                "size": null,
-                "name": "baking sheet"
-            },
-            {
-                "size": null,
-                "name": "casserole dish"
-            },
-            {
-                "size": null,
-                "name": "dish"
-            }
-        ],
-        "methods": {
-            "add": {
-                "subject": [
-                    "pasta"
-                ],
-                "duration": null,
-                "until": null
-            },
-            "spread": {
-                "subject": [
-                    "mixture"
-                ],
-                "duration": null,
-                "until": null
-            },
-            "place": {
-                "subject": [
-                    "dish"
-                ],
-                "duration": null,
-                "until": null
-            }
-        }
-    },
-    {
-        "step_number": 6,
-        "direction": "Bake in the preheated oven until cheese is melted and browned and pasta is bubbling around the edges, 40 to 50 minutes. Let stand 5 to 10 minutes before serving. Sprinkle with parsley if desired.",
-        "ingredients": {},
         "tools": [
             {
                 "size": null,
                 "name": "oven"
+            },
+            {
+                "size": "large",
+                "name": "bowl"
+            },
+            {
+                "size": null,
+                "name": "baking sheet"
             }
         ],
         "methods": {
-            "bake": {
-                "subject": [],
-                "duration": "40 to 50 minutes",
-                "until": "cheese is melted and browned and pasta is bubbling around the edges"
+            "mix": {
+                "subject": [
+                    "beef"
+                ],
+                "duration": null,
+                "until": null
             },
-            "sprinkle": {
-                "subject": [],
+            "bake": {
+                "subject": [
+                    "beef"
+                ],
+                "duration": "20 to 25 minutes",
+                "until": null
+            }
+        },
+        "substeps": [
+            "Mix ground beef, bread crumbs, onion, water, and egg together in a large bowl",
+            "Form into small meatballs and arrange on a nonstick baking sheet",
+            "Bake in the preheated oven for 20 to 25 minutes, turning once"
+        ]
+    },
+    {
+        "step_number": 3,
+        "direction": "Stir cranberry sauce, chili sauce, brown sugar, and lemon juice together in a large saucepan over low heat until smooth. Add meatballs; simmer for 1 hour before serving.",
+        "ingredients": {
+            "chili sauce": null,
+            "brown sugar": null,
+            "lemon juice": null
+        },
+        "tools": [
+            {
+                "size": "large",
+                "name": "saucepan"
+            }
+        ],
+        "methods": {
+            "stir": {
+                "subject": [
+                    "sauce"
+                ],
+                "duration": null,
+                "until": "smooth"
+            },
+            "add": {
+                "subject": [
+                    "meatballs"
+                ],
                 "duration": null,
                 "until": null
             }
-        }
+        },
+        "substeps": [
+            "Stir cranberry sauce, chili sauce, brown sugar, and lemon juice together in a large saucepan over low heat until smooth",
+            "Add meatballs",
+            "simmer for 1 hour before serving"
+        ]
     }
 ]

@@ -85,12 +85,13 @@ def parse_step(step, ingredient_list):
         match = re.search(pattern, direction.lower())
         if match:
             ingredients[ing["ingredient"]] = match.group(1) 
-            
+    print("got here")
+    print(step)
     # get the substeps of this step
     substeps = []
-    substeps = re.split(r'[.;]', step)
+    substeps = re.split(r'[.;]', step['direction'])
     substeps = [substep.strip() for substep in substeps if substep.strip()]
-
+    print("substeps", substeps)
     return {
         "step_number": step_number,
         "direction": direction,
@@ -102,6 +103,7 @@ def parse_step(step, ingredient_list):
 
 
 def parse_and_save():
+    print("called")
     try:
         with open('recipe.json', 'r') as f:
             recipe_data = json.load(f)
