@@ -79,62 +79,25 @@ def parse_step(step, ingredient_list):
                 "until": until_condition
             }
         doc_ptr += 1
-    
-    # for token in doc:
-    #     if token.tag_ == "VB" and (token.lemma_.lower() in DURATION_METHODS or token.lemma_.lower() in NO_DURATION_METHODS):
-    #         # print("@@@@@@ ", token)
-    #         print("found token", token)
-    #         method = token.lemma_.lower()
-    #         subjects = []
-    #         duration = None
-    #         until_condition = None
-
-    #         # go through tokens until another verb or a period is found
-    #         for i in range(token.i+1, len(doc)):
-    #             if doc[i].tag_ == "VB" or doc[i].text == ".":
-    #                 break
-    #             print("doc", doc[i], doc[i].dep_)
-    #             if doc[i].dep_ in ("dobj", "pobj", "nsubj", "appos"):
-    #                 subjects.append(doc[i].text)
-    #                 for conj in doc[i].conjuncts:
-    #                     subjects.append(conj.text)
-
-    #         if subjects: 
-    #             prev_subjects = subjects
-    #         subjects = prev_subjects
-    #         print("subjects", subjects)
-
-    #         # Find duration
-    #         if method in DURATION_METHODS:
-    #             for ent in doc.ents:
-    #                 if ent.label_ in ["TIME", "QUANTITY"] and ent.start > token.i:
-    #                     duration = ent.text
-    #                     break
-
-    #         # Assign "until..." condition
-    #         for until_start, until_text in until_phrases:
-    #             if until_start > direction.lower().find(token.text.lower()):
-    #                 until_condition = until_text
-    #                 until_phrases.remove((until_start, until_text))  # Avoid reuse
-    #                 break
-    #         methods[method] = {
-    #             "subject": subjects,
-    #             "duration": duration,
-    #             "until": until_condition
-    #         }
 
     for ing in ingredient_list:
         pattern = rf'(\d+\/?\d*\s?(?:cups?|teaspoons?|tablespoons?|grams?|ounces?|pounds?|cloves?|slices?|pinches?))?\s+{re.escape(ing["ingredient"].lower())}'
         match = re.search(pattern, direction.lower())
         if match:
             ingredients[ing["ingredient"]] = match.group(1) 
+            
+    # get the substeps of this step
+    substeps = []
+    substeps = re.split(r'[.;]', step)
+    substeps = [substep.strip() for substep in substeps if substep.strip()]
 
     return {
         "step_number": step_number,
         "direction": direction,
         "ingredients": ingredients,
         "tools": gadgets,
-        "methods": methods
+        "methods": methods,
+        "substeps": substeps
     }
 
 
@@ -162,5 +125,3 @@ def parse_and_save():
     with open('parsed_steps.json', 'w') as f:
         json.dump(parsed_steps, f, indent=4)
     print("\nParsed steps have been saved to 'parsed_steps.json'.")
-
-    
