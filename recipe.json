@@ -1,70 +1,92 @@
 {
-    "title": "Cocktail Meatballs",
+    "title": "Creamy Bacon Pasta Bake",
     "ingredients": [
         {
-            "ingredient": "lean ground beef",
-            "amount": "1 pound",
+            "ingredient": "thick-cut bacon",
+            "amount": "8 ounces",
+            "preparation": "chopped"
+        },
+        {
+            "ingredient": "yellow onion",
+            "amount": "1",
             "preparation": ""
         },
         {
-            "ingredient": "bread crumbs",
-            "amount": "\u00bd cup",
+            "ingredient": "tomato paste",
+            "amount": "1/4 cup",
             "preparation": ""
         },
         {
-            "ingredient": "minced onion",
-            "amount": "3 tablespoons",
+            "ingredient": "crushed red pepper",
+            "amount": "1/2 teaspoon",
             "preparation": ""
         },
         {
-            "ingredient": "water",
-            "amount": "2 tablespoons",
+            "ingredient": "chicken broth",
+            "amount": "3 cups",
             "preparation": ""
         },
         {
-            "ingredient": "egg",
-            "amount": "1 large",
+            "ingredient": "heavy whipping cream",
+            "amount": "2 cups",
             "preparation": ""
         },
         {
-            "ingredient": "jellied cranberry sauce",
-            "amount": "1 (8 ounce) can",
+            "ingredient": "white wine",
+            "amount": "1/2 cup",
             "preparation": ""
         },
         {
-            "ingredient": "chili sauce",
-            "amount": "\u00be cup",
-            "preparation": ""
-        },
-        {
-            "ingredient": "brown sugar",
+            "ingredient": "kosher salt",
             "amount": "1 tablespoon",
             "preparation": ""
         },
         {
-            "ingredient": "lemon juice",
-            "amount": "1 \u00bd teaspoons",
+            "ingredient": "freshly grated Parmigiano-Reggiano cheese",
+            "amount": "1 cup",
+            "preparation": ""
+        },
+        {
+            "ingredient": "spaghetti",
+            "amount": "1 pound",
+            "preparation": ""
+        },
+        {
+            "ingredient": "fresh flat-leaf parsley",
+            "amount": "1 tablespoon",
             "preparation": ""
         }
     ],
     "steps": [
         {
             "step": 1,
-            "direction": "Gather the ingredients. Preheat the oven to 350 degrees F (175 degrees C)."
+            "direction": "Gather all ingredients."
         },
         {
             "step": 2,
-            "direction": "Mix ground beef, bread crumbs, onion, water, and egg together in a large bowl. Form into small meatballs and arrange on a nonstick baking sheet. Bake in the preheated oven for 20 to 25 minutes, turning once."
+            "direction": "Preheat oven to 475 degrees F (245 degrees C). Scatter bacon evenly over the bottom of a 13-x-9-inch baking dish. Bake in the preheated oven, stirring twice during cooking, until bacon is crispy and fat has rendered, 20 to 25 minutes. Remove from the oven and transfer bacon to a small paper-towel-lined plate and set aside. Reduce oven temperature to 425 degrees F (220 degrees C)."
         },
         {
             "step": 3,
-            "direction": "Stir cranberry sauce, chili sauce, brown sugar, and lemon juice together in a large saucepan over low heat until smooth. Add meatballs; simmer for 1 hour before serving."
+            "direction": "Remove all but 2 tablespoons of the bacon fat from the baking dish. Add onion, tomato paste, and crushed red pepper to reserved hot bacon fat in the baking dish and stir until onion is well coated in tomato paste."
+        },
+        {
+            "step": 4,
+            "direction": "Add chicken broth, cream, wine, salt, 3/4 cup of the Parmigiano-Reggiano, and stir to combine. Spread spaghetti into broth mixture and bake at 425 degrees F (220 degrees C), uncovered, stirring every 8 to 10 minutes, until spaghetti is tender, has absorbed most of the sauce, and the sauce has thickened, 40 to 45 minutes."
+        },
+        {
+            "step": 5,
+            "direction": "Remove and top with 1/4 cup of the reserved bacon, remaining 1/4 cup Parmigiano-Reggiano and parsley."
+        },
+        {
+            "step": 6,
+            "direction": "Serve immediately, garnishing each serving with more reserved bacon, as desired."
         }
     ],
     "details": {
-        "Prep Time:": "20 mins",
-        "Cook Time:": "1 hr 20 mins",
-        "Total Time:": "1 hr 40 mins",
-        "Servings:": "10"
+        "Prep Time:": "10 mins",
+        "Cook Time:": "1 hr",
+        "Total Time:": "1 hr 10 mins",
+        "Servings:": "6 (serving size: about 1 1/2 cups)"
     }
 }

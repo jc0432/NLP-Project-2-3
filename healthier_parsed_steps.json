@@ -19,7 +19,7 @@
     },
     {
         "step_number": 2,
-        "direction": "Preheat oven to 475 degrees F (245 degrees C). Scatter bacon evenly over the bottom of a 13-x-9-inch baking dish. Bake in the preheated oven, stirring twice during cooking, until bacon is crispy and fat has rendered, 20 to 25 minutes. Remove from the oven and transfer bacon to a small paper-towel-lined plate and set aside. Reduce oven temperature to 425 degrees F (220 degrees C).",
+        "direction": "Preheat oven to 475 degrees F (245 degrees C). Scatter turkey bacon evenly over the bottom of a 13-x-9-inch baking dish. Bake in the preheated oven, stirring twice during cooking, until turkey bacon is crispy and fat has rendered, 20 to 25 minutes. Remove from the oven and transfer turkey bacon to a small paper-towel-lined plate and set aside. Reduce oven temperature to 425 degrees F (220 degrees C).",
         "ingredients": {},
         "tools": [
             {
@@ -67,15 +67,15 @@
         },
         "substeps": [
             "Preheat oven to 475 degrees F (245 degrees C)",
-            "Scatter bacon evenly over the bottom of a 13-x-9-inch baking dish",
-            "Bake in the preheated oven, stirring twice during cooking, until bacon is crispy and fat has rendered, 20 to 25 minutes",
-            "Remove from the oven and transfer bacon to a small paper-towel-lined plate and set aside",
+            "Scatter turkey bacon evenly over the bottom of a 13-x-9-inch baking dish",
+            "Bake in the preheated oven, stirring twice during cooking, until turkey bacon is crispy and fat has rendered, 20 to 25 minutes",
+            "Remove from the oven and transfer turkey bacon to a small paper-towel-lined plate and set aside",
             "Reduce oven temperature to 425 degrees F (220 degrees C)"
         ]
     },
     {
         "step_number": 3,
-        "direction": "Remove all but 2 tablespoons of the bacon fat from the baking dish. Add onion, tomato paste, and crushed red pepper to reserved hot bacon fat in the baking dish and stir until onion is well coated in tomato paste.",
+        "direction": "Remove all but 2 tablespoons of the turkey bacon fat from the baking dish. Add onion, tomato paste, and crushed red pepper to reserved hot turkey bacon fat in the baking dish and stir until onion is well coated in tomato paste.",
         "ingredients": {
             "tomato paste": null,
             "crushed red pepper": null
@@ -107,16 +107,16 @@
             }
         },
         "substeps": [
-            "Remove all but 2 tablespoons of the bacon fat from the baking dish",
-            "Add onion, tomato paste, and crushed red pepper to reserved hot bacon fat in the baking dish and stir until onion is well coated in tomato paste"
+            "Remove all but 2 tablespoons of the turkey bacon fat from the baking dish",
+            "Add onion, tomato paste, and crushed red pepper to reserved hot turkey bacon fat in the baking dish and stir until onion is well coated in tomato paste"
         ]
     },
     {
         "step_number": 4,
-        "direction": "Add chicken broth, cream, wine, salt, 3/4 cup of the Parmigiano-Reggiano, and stir to combine. Spread spaghetti into broth mixture and bake at 425 degrees F (220 degrees C), uncovered, stirring every 8 to 10 minutes, until spaghetti is tender, has absorbed most of the sauce, and the sauce has thickened, 40 to 45 minutes.",
+        "direction": "Add chicken broth, low-fat skim milk, wine, himalayan seasalt, 3/4 cup of the Parmigiano-Reggiano, and stir to combine. Spread whole wheat spaghetti into broth mixture and bake at 425 degrees F (220 degrees C), uncovered, stirring every 8 to 10 minutes, until whole wheat spaghetti is tender, has absorbed most of the sauce, and the sauce has thickened, 40 to 45 minutes.",
         "ingredients": {
             "chicken broth": null,
-            "spaghetti": null
+            "whole wheat spaghetti": null
         },
         "tools": [],
         "methods": {
@@ -169,23 +169,23 @@
             }
         },
         "substeps": [
-            "Add chicken broth, cream, wine, salt, 3/4 cup of the Parmigiano-Reggiano, and stir to combine",
-            "Spread spaghetti into broth mixture and bake at 425 degrees F (220 degrees C), uncovered, stirring every 8 to 10 minutes, until spaghetti is tender, has absorbed most of the sauce, and the sauce has thickened, 40 to 45 minutes"
+            "Add chicken broth, low-fat skim milk, wine, himalayan seasalt, 3/4 cup of the Parmigiano-Reggiano, and stir to combine",
+            "Spread whole wheat spaghetti into broth mixture and bake at 425 degrees F (220 degrees C), uncovered, stirring every 8 to 10 minutes, until whole wheat spaghetti is tender, has absorbed most of the sauce, and the sauce has thickened, 40 to 45 minutes"
         ]
     },
     {
         "step_number": 5,
-        "direction": "Remove and top with 1/4 cup of the reserved bacon, remaining 1/4 cup Parmigiano-Reggiano and parsley.",
+        "direction": "Remove and top with 1/4 cup of the reserved turkey bacon, remaining 1/4 cup Parmigiano-Reggiano and parsley.",
         "ingredients": {},
         "tools": [],
         "methods": {},
         "substeps": [
-            "Remove and top with 1/4 cup of the reserved bacon, remaining 1/4 cup Parmigiano-Reggiano and parsley"
+            "Remove and top with 1/4 cup of the reserved turkey bacon, remaining 1/4 cup Parmigiano-Reggiano and parsley"
         ]
     },
     {
         "step_number": 6,
-        "direction": "Serve immediately, garnishing each serving with more reserved bacon, as desired.",
+        "direction": "Serve immediately, garnishing each serving with more reserved turkey bacon, as desired.",
         "ingredients": {},
         "tools": [],
         "methods": {
@@ -198,7 +198,7 @@
             }
         },
         "substeps": [
-            "Serve immediately, garnishing each serving with more reserved bacon, as desired"
+            "Serve immediately, garnishing each serving with more reserved turkey bacon, as desired"
         ]
     }
 ]
