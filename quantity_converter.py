@@ -21,15 +21,29 @@ import re  # add import statement
 class IngredientParser:
     def __init__(self):
         self.converter = QuantityConverter()
+        # expand the unit set
         self.units = set(self.converter.volume_conversions.keys() | 
-                        self.converter.weight_conversions.keys())
+                        self.converter.weight_conversions.keys() |
+                        {'piece', 'pieces', 'slice', 'slices', 'package', 'pkg'})
+        
+        # add more descriptors
+        self.adjectives = {
+            'large', 'medium', 'small', 'fresh', 'dried', 'ground',
+            'chopped', 'diced', 'minced', 'sliced', 'grated', 'crushed',
+            'frozen', 'ripe', 'raw', 'cooked', 'cold', 'hot', 'warm',
+            'softened', 'melted', 'beaten', 'peeled', 'cubed'
+        }
+        
+        # add common words
         self.common_words = {'of', 'a', 'an', 'the'}
         
-        # add special phrase handling
+        # keep special phrase handling
         self.special_phrases = {
             'dash of': {'amount': '1', 'unit': 'dash'},
             'pinch of': {'amount': '1', 'unit': 'pinch'},
             'to taste': {'amount': '', 'unit': ''},
+            'fluid ounce': {'unit': 'oz'},  # add
+            'fluid ounces': {'unit': 'oz'}  # add
         }
 
     # Enhanced ingredient parsing
@@ -37,6 +51,10 @@ class IngredientParser:
         parts = ingredient_str.split(',', 1)
         main_info = parts[0].strip().lower()
         prep_info = parts[1].strip() if len(parts) > 1 else ''
+        
+        # add special case handling
+        if '(' in main_info:
+            main_info = re.sub(r'\([^)]*\)', '', main_info)
         
         # check special phrases
         for phrase, values in self.special_phrases.items():
@@ -72,6 +90,12 @@ class IngredientParser:
                 unit = word
             else:
                 name_parts.append(word)
+        
+        # handle fluid ounces
+        for phrase, values in self.special_phrases.items():
+            if phrase in main_info and 'unit' in values:
+                unit = values['unit']
+                break
         
         return {
             'amount': amount,
@@ -148,7 +172,7 @@ class QuantityConverter:
             'sliced', 'grated', 'crushed'
         }
         
-        # 添加分数字符映射
+        # add fraction character mapping
         self.fraction_map = {
             '½': '1/2',
             '¼': '1/4', 
@@ -162,9 +186,9 @@ class QuantityConverter:
         }
 
     def convert_fraction(self, fraction_str):
-        """处理分数转换，包括特殊分数字符"""
+        # Handle fraction conversion, including special fraction characters
         try:
-            # 首先检查是否是特殊分数字符
+            # first check if it's a special fraction character
             if fraction_str in self.fraction_map:
                 fraction_str = self.fraction_map[fraction_str]
             
@@ -205,7 +229,7 @@ class QuantityConverter:
                 amount = ing.get('amount', '')
                 unit = ing.get('unit', '').lower()
                 
-                # 处理特殊分数字符
+                # handle special fraction characters
                 if amount in self.fraction_map:
                     parsed_amount = self.convert_fraction(amount)
                     if parsed_amount:
