@@ -1,35 +1,55 @@
 {
-    "title": "Creamy Bacon Pasta Bake",
+    "title": "Tuscan Salmon",
     "ingredients": [
         {
-            "ingredient": "thick-cut bacon",
-            "amount": "8 ounces",
-            "preparation": "chopped"
+            "ingredient": "salmon filets",
+            "amount": "4 (5 ounce)",
+            "preparation": ""
         },
         {
-            "ingredient": "yellow onion",
+            "ingredient": "salt and freshly ground black pepper to taste",
+            "amount": "",
+            "preparation": ""
+        },
+        {
+            "ingredient": "olive oil",
+            "amount": "1 tablespoon",
+            "preparation": ""
+        },
+        {
+            "ingredient": "unsalted butter",
+            "amount": "1 tablespoon",
+            "preparation": ""
+        },
+        {
+            "ingredient": "rosemary sprigs",
+            "amount": "2 or 3 short",
+            "preparation": "plus more for garnish"
+        },
+        {
+            "ingredient": "prosciutto",
+            "amount": "1/3 cup",
+            "preparation": ""
+        },
+        {
+            "ingredient": "green onion",
             "amount": "1",
-            "preparation": ""
+            "preparation": "finely chopped"
         },
         {
-            "ingredient": "tomato paste",
-            "amount": "1/4 cup",
-            "preparation": ""
+            "ingredient": "garlic cloves",
+            "amount": "1 to 2",
+            "preparation": "minced"
         },
         {
-            "ingredient": "crushed red pepper",
-            "amount": "1/2 teaspoon",
-            "preparation": ""
+            "ingredient": "red pepper flakes",
+            "amount": "1 pinch",
+            "preparation": "or to taste"
         },
         {
-            "ingredient": "chicken broth",
-            "amount": "3 cups",
-            "preparation": ""
-        },
-        {
-            "ingredient": "heavy whipping cream",
-            "amount": "2 cups",
-            "preparation": ""
+            "ingredient": "lemon",
+            "amount": "1/2",
+            "preparation": "zested"
         },
         {
             "ingredient": "white wine",
@@ -37,56 +57,70 @@
             "preparation": ""
         },
         {
-            "ingredient": "kosher salt",
-            "amount": "1 tablespoon",
-            "preparation": ""
-        },
-        {
-            "ingredient": "freshly grated Parmigiano-Reggiano cheese",
+            "ingredient": "cherry tomato halves",
             "amount": "1 cup",
             "preparation": ""
         },
         {
-            "ingredient": "spaghetti",
-            "amount": "1 pound",
+            "ingredient": "fresh spinach",
+            "amount": "1 (10 ounce) package",
+            "preparation": "torn"
+        },
+        {
+            "ingredient": "heavy cream",
+            "amount": "1/2 cup",
             "preparation": ""
         },
         {
-            "ingredient": "fresh flat-leaf parsley",
-            "amount": "1 tablespoon",
+            "ingredient": "olive oil for drizzling",
+            "amount": "1 ",
+            "preparation": "or as needed"
+        },
+        {
+            "ingredient": "lemon slices",
+            "amount": "",
+            "preparation": ""
+        },
+        {
+            "ingredient": "pine nuts (optional)",
+            "amount": "",
             "preparation": ""
         }
     ],
     "steps": [
         {
             "step": 1,
-            "direction": "Gather all ingredients."
+            "direction": "Pat salmon filets dry with paper towels and season both sides with salt and pepper."
         },
         {
             "step": 2,
-            "direction": "Preheat oven to 475 degrees F (245 degrees C). Scatter bacon evenly over the bottom of a 13-x-9-inch baking dish. Bake in the preheated oven, stirring twice during cooking, until bacon is crispy and fat has rendered, 20 to 25 minutes. Remove from the oven and transfer bacon to a small paper-towel-lined plate and set aside. Reduce oven temperature to 425 degrees F (220 degrees C)."
+            "direction": "Melt butter in a large skillet over medium heat; add olive oil. When butter stops sizzling, swirl the skillet to combine. Add 2 or 3 rosemary sprigs to the skillet, to flavor the oil."
         },
         {
             "step": 3,
-            "direction": "Remove all but 2 tablespoons of the bacon fat from the baking dish. Add onion, tomato paste, and crushed red pepper to reserved hot bacon fat in the baking dish and stir until onion is well coated in tomato paste."
+            "direction": "Add salmon and cook until salmon is lightly browned and flakes when a fork is gently inserted, about 3 minutes per side. (If salmon filets are thinner than 1 1/2 inches, this may take less time.) An instant read thermometer, inserted near the center, should read 145 degrees F (63 degrees C). Remove from the skillet, and keep warm."
         },
         {
             "step": 4,
-            "direction": "Add chicken broth, cream, wine, salt, 3/4 cup of the Parmigiano-Reggiano, and stir to combine. Spread spaghetti into broth mixture and bake at 425 degrees F (220 degrees C), uncovered, stirring every 8 to 10 minutes, until spaghetti is tender, has absorbed most of the sauce, and the sauce has thickened, 40 to 45 minutes."
+            "direction": "To the same skillet with rosemary, add chopped prosciutto, green onion, garlic, red pepper flakes, and lemon zest, and cook for 1 minute or until fragrant."
         },
         {
             "step": 5,
-            "direction": "Remove and top with 1/4 cup of the reserved bacon, remaining 1/4 cup Parmigiano-Reggiano and parsley."
+            "direction": "Add white wine and cook until the liquid evaporates. Add tomatoes and cook, stirring, 2 to 3 minutes. Add spinach and toss in the skillet until bright green and barely wilted, 2 to 3 minutes."
         },
         {
             "step": 6,
-            "direction": "Serve immediately, garnishing each serving with more reserved bacon, as desired."
+            "direction": "Stir in cream, and season with salt and pepper. Cook until sauce bubbles, about 2 minutes, and remove cooked rosemary sprigs."
+        },
+        {
+            "step": 7,
+            "direction": "Serve salmon on a bed of vegetables and sauce, and drizzle with a little olive oil. Garnish with lemon slices, fresh rosemary sprigs, and toasted pine nuts, if desired."
         }
     ],
     "details": {
         "Prep Time:": "10 mins",
-        "Cook Time:": "1 hr",
-        "Total Time:": "1 hr 10 mins",
-        "Servings:": "6 (serving size: about 1 1/2 cups)"
+        "Cook Time:": "15 mins",
+        "Total Time:": "25 mins",
+        "Servings:": "4"
     }
 }

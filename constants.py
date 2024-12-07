@@ -232,3 +232,121 @@ SUGAR_FREE_INGREDIENTS = [
     "whipping cream",
 
 ]
+
+
+
+
+SOUTH_ASIAN_PROTEIN_SUBSTITUTIONS = {
+    # Red meats to leaner or regionally common meats
+    "beef": "lamb",
+    "pork": "chicken",
+    "veal": "goat",
+    "bacon": "turkey bacon",
+    "prosciutto": "chicken",
+    "ham": "turkey ham",
+    "pancetta": "chicken",
+
+    "salmon": "pomfret or rohu",
+    "cod": "tilapia",
+    "shrimp": "prawns",
+    "lobster": "crab",
+
+    "pepperoni": "spicy chicken sausage",
+    "chorizo": "spicy chicken sausage",
+    "bratwurst": "mutton sausage",
+    "hot dogs": "chicken franks",
+
+    "duck": "chicken",
+    "turkey": "chicken",
+    "cornish hen": "quail",
+
+    "rabbit": "chicken",
+    "venison": "goat"
+}
+
+SOUTH_ASIAN_CHEESE_SUBSTITUTIONS = {
+    "parmesan cheese": "paneer",
+    "Parmigiano-Reggiano": "paneer",
+    "mozzarella": "paneer",
+    "ricotta": "hung curd (strained yogurt)",
+    "mascarpone": "malai (clotted cream)",
+    "cream cheese": "paneer blended with yogurt",
+    "feta": "paneer with a dash of lemon juice",
+    "goat cheese": "crumbled paneer with mild vinegar",
+    "blue cheese": "mild paneer",
+    "cheddar": "mild paneer",
+    "cream": "malai or coconut cream",
+    "whipped cream": "whipped malai",
+    "sour cream": "hung yogurt",
+    "buttermilk": "thin lassi (salted)",
+    "butter": "ghee"
+}
+
+# Eggs & Dairy
+SOUTH_ASIAN_EGG_SUBSTITUTIONS = {
+    "eggs": "beaten yogurt thickened with besan",
+    "egg whites": "yogurt + water mixture",
+    "whole milk": "coconut milk",
+    "skim milk": "diluted buffalo milk",
+}
+
+
+SOUTH_ASIAN_BINDER_SUBSTITUTIONS = {
+    "bread crumbs": "chickpea flour",
+    "panko breadcrumbs": "chickpea flour",
+    "italian bread crumbs": "roasted besan",
+    "cornstarch": "arrowroot powder",
+    "wheat flour": "atta",
+    "all-purpose flour": "atta",
+    "pastry flour": "maida",
+    "cake flour": "maida + corn flour blend",
+    "pasta": "basmati rice",
+    "focaccia": "naan",
+    "ciabatta": "tandoori roti",
+    "baguette": "tawa roti ",
+    "gnocchi": "idli",
+    "couscous": "dalia (broken wheat)",
+    "polenta": "upma (semolina)",
+    "risotto rice": "gobindobhog rice",
+    "tortillas": "rotis",
+    "spaghetti": "sevai (rice vermicelli)",
+    "rice noodles": "sevai (rice vermicelli)",
+    "udon noodles": "wheat noodles"
+}
+
+
+HERB_SPICE_MAP = {
+    "basil": "coriander",
+    "oregano": "cumin",
+    "thyme": "turmeric",
+    "rosemary": "ginger",
+    "parsley": "fresh cilantro",
+    "sage": "cardamom",
+    "marjoram": "garam masala"
+}
+SOUTH_ASIAN_OIL_SUBSTITUTIONS = {
+    "olive oil": "ghee",
+    "sunflower oil": "mustard oil",
+    "peanut oil": "groundnut oil",
+    "sesame oil": "gingelly oil",
+    "butter": "ghee",
+    "lard": "ghee",
+    "shortening": "solidified ghee"
+}
+
+SOUTH_ASIAN_CONDIMENT_SUBSTITUTIONS = {
+    "ketchup": "tomato chutney",
+    "mayonnaise": "hung curd dip",
+    "mustard": "kashundi (Bengali mustard sauce)",
+    "soy sauce": "tamari",
+    "worcestershire sauce": "imli (tamarind)",
+    "balsamic vinegar": "tamarind pulp",
+    "red wine vinegar": "cane vinegar",
+    "white wine vinegar": "lemon juice",
+    "white wine": "coconut vinegar",
+    "red wine": "cane vinegar",
+    "tabasco": "Naga chili sauce",
+    "pesto": "mint-coriander chutney",
+    "harissa": "red chili-garlic chutney",
+    "salsa": "kachumber (tomato-onion) salad"
+}
