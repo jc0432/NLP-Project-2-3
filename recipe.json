@@ -1,80 +1,73 @@
 {
-    "title": "Garlic Chicken Fried Chicken",
+    "title": "Baked Ham and Cheese Sliders",
     "ingredients": [
         {
-            "ingredient": "garlic powder",
-            "amount": "2 teaspoons",
-            "preparation": "or to taste"
-        },
-        {
-            "ingredient": "ground black pepper",
-            "amount": "1 teaspoon",
+            "ingredient": "melted butter",
+            "amount": "\u00be cup",
             "preparation": ""
         },
         {
-            "ingredient": "salt",
-            "amount": "1 teaspoon",
+            "ingredient": "Dijon mustard",
+            "amount": "1 \u00bd tablespoons",
             "preparation": ""
         },
         {
-            "ingredient": "paprika",
-            "amount": "1 teaspoon",
+            "ingredient": "Worcestershire sauce",
+            "amount": "1 \u00bd teaspoons",
             "preparation": ""
         },
         {
-            "ingredient": "seasoned bread crumbs",
-            "amount": "\u00bd cup",
+            "ingredient": "poppy seeds",
+            "amount": "1 \u00bd tablespoons",
             "preparation": ""
         },
         {
-            "ingredient": "all-purpose flour",
-            "amount": "1 cup",
+            "ingredient": "dried minced onion",
+            "amount": "1 tablespoon",
             "preparation": ""
         },
         {
-            "ingredient": "milk",
-            "amount": "\u00bd cup",
+            "ingredient": "gluten-free rolls",
+            "amount": "24",
             "preparation": ""
         },
         {
-            "ingredient": "egg",
-            "amount": "1 ",
+            "ingredient": "thinly sliced cooked deli ham",
+            "amount": "1 pound",
             "preparation": ""
         },
         {
-            "ingredient": "skinless",
-            "amount": "4 ",
-            "preparation": "boneless chicken breast halves - pounded thin"
-        },
-        {
-            "ingredient": "oil for frying",
-            "amount": "1 cup",
-            "preparation": "or as needed"
+            "ingredient": "thinly sliced Swiss cheese",
+            "amount": "1 pound",
+            "preparation": ""
         }
     ],
     "steps": [
         {
             "step": 1,
-            "direction": "In a shallow dish, mix together the garlic powder, pepper, salt, paprika, bread crumbs and flour. In a separate dish, whisk together the milk and egg."
+            "direction": "Gather all ingredients. Preheat the oven to 350 degrees F (175 degrees C). Grease a 9x13-inch baking dish."
         },
         {
             "step": 2,
-            "direction": "Heat the oil in an electric skillet set to 350 degrees F (175 degrees C). Dip the chicken into the egg and milk, then dredge in the dry ingredients until evenly coated."
+            "direction": "Mix butter, Dijon mustard, Worcestershire sauce, poppy seeds, and dried onion in a bowl."
         },
         {
             "step": 3,
-            "direction": "Fry chicken in the hot oil for about 5 minutes per side, or until the chicken is cooked through and juices run clear. Remove from the oil with a slotted spatula, and serve."
+            "direction": "Separate the tops from the bottoms of the rolls; arrange the bottom pieces in a layer in the prepared baking dish. Layer about 1/2 of the ham onto the rolls; add a layer of Swiss cheese and top with remaining ham slices."
         },
         {
             "step": 4,
-            "direction": "We have determined the nutritional value of oil for frying based on a retention value of 10% after cooking. The exact amount may vary depending on cook time and temperature, ingredient density, and the specific type of oil used."
+            "direction": "Place the tops of the rolls onto the sandwiches. Pour mustard mixture evenly over the rolls"
+        },
+        {
+            "step": 5,
+            "direction": "Bake in the preheated oven until the rolls are lightly browned and the cheese has melted, about 20 minutes. Slice into individual rolls through the ham and cheese layers to serve."
         }
     ],
     "details": {
-        "Prep Time:": "20 mins",
-        "Cook Time:": "15 mins",
+        "Prep Time:": "15 mins",
+        "Cook Time:": "20 mins",
         "Total Time:": "35 mins",
-        "Servings:": "4",
-        "Yield:": "4 servings"
+        "Servings:": "24"
     }
 }

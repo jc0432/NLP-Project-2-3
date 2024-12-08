@@ -1,114 +1,154 @@
 [
     {
         "step_number": 1,
-        "direction": "In a shallow dish, mix together the garlic powder, pepper, salt, paprika, bread crumbs and flour. In a separate dish, whisk together the milk and egg.",
+        "direction": "Gather all ingredients. Preheat the oven to 350 degrees F (175 degrees C). Grease a 9x13-inch baking dish.",
+        "ingredients": {},
+        "tools": [
+            {
+                "size": null,
+                "name": "oven"
+            },
+            {
+                "size": "9x13-inch",
+                "name": "baking dish"
+            }
+        ],
+        "methods": {
+            "gather": {
+                "subject": [
+                    "ingredients"
+                ],
+                "duration": null,
+                "until": null
+            },
+            "preheat": {
+                "subject": [
+                    "oven"
+                ],
+                "duration": "350 degrees F",
+                "until": null
+            }
+        },
+        "substeps": [
+            "Gather all ingredients",
+            "Preheat the oven to 350 degrees F (175 degrees C)",
+            "Grease a 9x13-inch baking dish"
+        ]
+    },
+    {
+        "step_number": 2,
+        "direction": "Mix butter, Dijon mustard, Worcestershire sauce, poppy seeds, and dried onion in a bowl.",
         "ingredients": {
-            "garlic powder": null,
-            "salt": null,
-            "paprika": null,
-            "milk": null,
-            "egg": null
+            "Dijon mustard": null,
+            "Worcestershire sauce": null,
+            "poppy seeds": null
         },
         "tools": [
             {
                 "size": null,
-                "name": "whisk"
-            },
-            {
-                "size": null,
-                "name": "dish"
+                "name": "bowl"
             }
         ],
         "methods": {
             "mix": {
                 "subject": [
-                    "powder"
-                ],
-                "duration": null,
-                "until": null
-            },
-            "whisk": {
-                "subject": [
-                    "milk"
+                    "butter"
                 ],
                 "duration": null,
                 "until": null
             }
         },
         "substeps": [
-            "In a shallow dish, mix together the garlic powder, pepper, salt, paprika, bread crumbs and flour",
-            "In a separate dish, whisk together the milk and egg"
-        ]
-    },
-    {
-        "step_number": 2,
-        "direction": "Heat the oil in an electric skillet set to 350 degrees F (175 degrees C). Dip the chicken into the egg and milk, then dredge in the dry ingredients until evenly coated.",
-        "ingredients": {
-            "milk": null,
-            "egg": null
-        },
-        "tools": [
-            {
-                "size": null,
-                "name": "skillet"
-            }
-        ],
-        "methods": {
-            "heat": {
-                "subject": [
-                    "oil"
-                ],
-                "duration": "350 degrees F",
-                "until": "evenly coated"
-            }
-        },
-        "substeps": [
-            "Heat the oil in an electric skillet set to 350 degrees F (175 degrees C)",
-            "Dip the chicken into the egg and milk, then dredge in the dry ingredients until evenly coated"
+            "Mix butter, Dijon mustard, Worcestershire sauce, poppy seeds, and dried onion in a bowl"
         ]
     },
     {
         "step_number": 3,
-        "direction": "Fry chicken in the hot oil for about 5 minutes per side, or until the chicken is cooked through and juices run clear. Remove from the oil with a slotted spatula, and serve.",
+        "direction": "Separate the tops from the bottoms of the rolls; arrange the bottom pieces in a layer in the prepared baking dish. Layer about 1/2 of the ham onto the rolls; add a layer of Swiss cheese and top with remaining ham slices.",
         "ingredients": {},
         "tools": [
             {
                 "size": null,
-                "name": "spatula"
+                "name": "baking dish"
             }
         ],
         "methods": {
-            "fry": {
-                "subject": [
-                    "chicken"
-                ],
-                "duration": "about 5 minutes",
-                "until": "the chicken is cooked through and juices run clear"
+            "layer": {
+                "subject": [],
+                "duration": null,
+                "until": null
             },
-            "serve": {
+            "add": {
                 "subject": [
-                    "chicken"
+                    "layer"
                 ],
                 "duration": null,
                 "until": null
             }
         },
         "substeps": [
-            "Fry chicken in the hot oil for about 5 minutes per side, or until the chicken is cooked through and juices run clear",
-            "Remove from the oil with a slotted spatula, and serve"
+            "Separate the tops from the bottoms of the rolls",
+            "arrange the bottom pieces in a layer in the prepared baking dish",
+            "Layer about 1/2 of the ham onto the rolls",
+            "add a layer of Swiss cheese and top with remaining ham slices"
         ]
     },
     {
         "step_number": 4,
-        "direction": "We have determined the nutritional value of oil for frying based on a retention value of 10% after cooking. The exact amount may vary depending on cook time and temperature, ingredient density, and the specific type of oil used.",
-        "ingredients": {
-            "oil for frying": null
-        },
+        "direction": "Place the tops of the rolls onto the sandwiches. Pour mustard mixture evenly over the rolls",
+        "ingredients": {},
         "tools": [],
-        "methods": {},
+        "methods": {
+            "place": {
+                "subject": [
+                    "tops"
+                ],
+                "duration": null,
+                "until": null
+            },
+            "pour": {
+                "subject": [
+                    "mixture"
+                ],
+                "duration": null,
+                "until": null
+            }
+        },
         "substeps": [
-            "We have determined the nutritional value of oil for frying based on a retention value of 10% after cooking",
-            "The exact amount may vary depending on cook time and temperature, ingredient density, and the specific type of oil used"
+            "Place the tops of the rolls onto the sandwiches",
+            "Pour mustard mixture evenly over the rolls"
+        ]
+    },
+    {
+        "step_number": 5,
+        "direction": "Bake in the preheated oven until the rolls are lightly browned and the cheese has melted, about 20 minutes. Slice into individual rolls through the ham and cheese layers to serve.",
+        "ingredients": {},
+        "tools": [
+            {
+                "size": null,
+                "name": "oven"
+            }
+        ],
+        "methods": {
+            "bake": {
+                "subject": [],
+                "duration": "about 20 minutes",
+                "until": "the rolls are lightly browned and the cheese has melted"
+            },
+            "slice": {
+                "subject": [],
+                "duration": null,
+                "until": null
+            },
+            "serve": {
+                "subject": [],
+                "duration": null,
+                "until": null
+            }
+        },
+        "substeps": [
+            "Bake in the preheated oven until the rolls are lightly browned and the cheese has melted, about 20 minutes",
+            "Slice into individual rolls through the ham and cheese layers to serve"
         ]
     }
 ]

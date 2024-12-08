@@ -21,10 +21,15 @@ def main():
     
     ingredients = recipe.get('ingredients', [])
     ingredients = [ingredient['ingredient'] for ingredient in ingredients]
-    print(ingredients)
     
     gluten_free_ingredients = gluten_free(ingredients)
-    print(gluten_free_ingredients)
+    # overwrite the ingredients in the recipe
+    for i in range(len(ingredients)):
+        recipe['ingredients'][i]['ingredient'] = gluten_free_ingredients[i]
+    
+    # save the recipe
+    with open('recipe.json', 'w') as f:
+        json.dump(recipe, f, indent=4)
     
 if __name__ == '__main__':
     main()
