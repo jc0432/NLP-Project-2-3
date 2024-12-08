@@ -60,7 +60,7 @@ def transform_methods(methods_dict):
             details['subject'] = transformed_subjects
     return methods_dict
 
-    
+
 def transform_parsed_steps(parsed_steps):
     transformed = []
     for step in parsed_steps:
@@ -88,8 +88,14 @@ def save_transformed_steps(transformed_steps, filename="south_asian_transform_pa
     with open(filename, 'w') as f:
         json.dump(transformed_steps, f, indent=4)
 
+def transform_cuisine_sa():
+    parsed_steps = load_parsed_steps("parsed_steps.json")
+    transformed_steps = transform_parsed_steps(parsed_steps)
+    save_transformed_steps(transformed_steps, "south_asian_parsed_steps.json")
+    print("Transformed recipe steps have been saved to 'south_asian_parsed_steps.json'.")
+
 if __name__ == "__main__":
     parsed_steps = load_parsed_steps("parsed_steps.json")
     transformed_steps = transform_parsed_steps(parsed_steps)
     save_transformed_steps(transformed_steps, "south_asian_parsed_steps.json")
-    print("Transformed (Italian-ish to South Asian-ish) recipe steps have been saved to 'south_asian_parsed_steps.json'.")
+    print("Transformed recipe steps have been saved to 'south_asian_parsed_steps.json'.")
