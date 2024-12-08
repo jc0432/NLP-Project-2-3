@@ -1,0 +1,196 @@
+[
+    {
+        "step_number": 1,
+        "direction": "Pat pomfret or rohu filets dry with paper towels and season both sides with salt and pepper.",
+        "ingredients": {
+            "pomfret or rohu": null
+        },
+        "tools": [],
+        "methods": {},
+        "substeps": [
+            "Pat pomfret or rohu filets dry with paper towels and season both sides with salt and pepper"
+        ]
+    },
+    {
+        "step_number": 2,
+        "direction": "Melt ghee in a large skillet over medium heat. add ghee. When ghee stops sizzling, swirl the skillet to combine. Add 2 or 3 ginger sprigs to the skillet, to flavor the oil.",
+        "ingredients": {
+            "ghee": null,
+            "ginger": null
+        },
+        "tools": [
+            {
+                "size": "large",
+                "name": "skillet"
+            }
+        ],
+        "methods": {
+            "melt": {
+                "subject": [
+                    "ghee"
+                ],
+                "duration": null,
+                "until": null
+            },
+            "add": {
+                "subject": [
+                    "sprigs"
+                ],
+                "duration": null,
+                "until": null
+            },
+            "combine": {
+                "subject": [
+                    "oil"
+                ],
+                "duration": null,
+                "until": null
+            }
+        },
+        "substeps": [
+            "Melt ghee in a large skillet over medium heat",
+            "add ghee",
+            "When ghee stops sizzling, swirl the skillet to combine",
+            "Add 2 or 3 ginger sprigs to the skillet, to flavor the oil"
+        ]
+    },
+    {
+        "step_number": 3,
+        "direction": "Add pomfret or rohu and cook until pomfret or rohu is lightly browned and flakes when a fork is gently inserted, about 3 minutes per side. (If pomfret or rohu filets are thinner than 1 1/2 inches, this may take less time. ) An instant read thermometer, inserted near the center, should read 145 degrees F (63 degrees C). Remove from the skillet, and keep warm.",
+        "ingredients": {
+            "pomfret or rohu": null
+        },
+        "tools": [
+            {
+                "size": null,
+                "name": "fork"
+            },
+            {
+                "size": null,
+                "name": "thermometer"
+            },
+            {
+                "size": null,
+                "name": "skillet"
+            }
+        ],
+        "methods": {
+            "add": {
+                "subject": [
+                    "pomfret or rohu"
+                ],
+                "duration": null,
+                "until": "salmon is lightly browned and flakes when a fork is gently inserted"
+            }
+        },
+        "substeps": [
+            "Add pomfret or rohu and cook until pomfret or rohu is lightly browned and flakes when a fork is gently inserted, about 3 minutes per side",
+            "(If pomfret or rohu filets are thinner than 1 1/2 inches, this may take less time",
+            ") An instant read thermometer, inserted near the center, should read 145 degrees F (63 degrees C)",
+            "Remove from the skillet, and keep warm"
+        ]
+    },
+    {
+        "step_number": 4,
+        "direction": "To the same skillet with ginger, add chopped chicken, green onion, garlic, red pepper flakes, and lemon zest, and cook for 1 minute or until fragrant.",
+        "ingredients": {
+            "chicken": null,
+            "green onion": null,
+            "red pepper flakes": null,
+            "lemon": null
+        },
+        "tools": [
+            {
+                "size": null,
+                "name": "skillet"
+            }
+        ],
+        "methods": {
+            "add": {
+                "subject": [
+                    "chicken"
+                ],
+                "duration": null,
+                "until": "fragrant"
+            }
+        },
+        "substeps": [
+            "To the same skillet with ginger, add chopped chicken, green onion, garlic, red pepper flakes, and lemon zest, and cook for 1 minute or until fragrant"
+        ]
+    },
+    {
+        "step_number": 5,
+        "direction": "Add coconut vinegar and cook until the liquid evaporates. Add tomatoes and cook, stirring, 2 to 3 minutes. Add spinach and toss in the skillet until bright green and barely wilted, 2 to 3 minutes.",
+        "ingredients": {
+            "coconut vinegar": null
+        },
+        "tools": [
+            {
+                "size": null,
+                "name": "skillet"
+            }
+        ],
+        "methods": {
+            "add": {
+                "subject": [
+                    "spinach"
+                ],
+                "duration": null,
+                "until": null
+            }
+        },
+        "substeps": [
+            "Add coconut vinegar and cook until the liquid evaporates",
+            "Add tomatoes and cook, stirring, 2 to 3 minutes",
+            "Add spinach and toss in the skillet until bright green and barely wilted, 2 to 3 minutes"
+        ]
+    },
+    {
+        "step_number": 6,
+        "direction": "Stir in malai or coconut cream, and season with salt and pepper. Cook until sauce bubbles, about 2 minutes, and remove cooked ginger sprigs.",
+        "ingredients": {
+            "ginger": null
+        },
+        "tools": [],
+        "methods": {
+            "stir": {
+                "subject": [],
+                "duration": null,
+                "until": "sauce bubbles"
+            },
+            "cook": {
+                "subject": [],
+                "duration": "about 2 minutes",
+                "until": null
+            }
+        },
+        "substeps": [
+            "Stir in malai or coconut cream, and season with salt and pepper",
+            "Cook until sauce bubbles, about 2 minutes, and remove cooked ginger sprigs"
+        ]
+    },
+    {
+        "step_number": 7,
+        "direction": "Serve pomfret or rohu on a bed of vegetables and sauce, and drizzle with a little ghee. Garnish with lemon slices, fresh ginger sprigs, and toasted pine nuts, if desired.",
+        "ingredients": {
+            "ghee": null,
+            "ginger": null,
+            "lemon": null,
+            "lemon slices": null
+        },
+        "tools": [],
+        "methods": {
+            "serve": {
+                "subject": [
+                    "pomfret or rohu"
+                ],
+                "duration": null,
+                "until": null
+            }
+        },
+        "substeps": [
+            "Serve pomfret or rohu on a bed of vegetables and sauce, and drizzle with a little ghee",
+            "Garnish with lemon slices, fresh ginger sprigs, and toasted pine nuts, if desired"
+        ]
+    }
+]

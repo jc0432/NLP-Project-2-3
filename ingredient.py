@@ -1,203 +1,266 @@
 from Test import ingredient_parser, get_recipe_page
 import re
+from quantity_converter import QuantityConverter
 
-# create Ingredient class
-class Ingredient:
-    def __init__(self, ingredient="", amount="", preparation=""):
-        self.ingredient = ingredient
-        self.amount = amount
-        self.preparation = preparation
+def get_ingredients(url, scale_factor=1.0, target_unit=None):
+    try:
+        recipe_page_content = get_recipe_page(url)
+        if not recipe_page_content:
+            raise ValueError("Unable to fetch recipe page content")
+            
+        raw_ingredients = ingredient_parser(recipe_page_content)
+        formatted_ingredients = []
+        converter = QuantityConverter()
+        parser = IngredientParser()
+        
+        for ing in raw_ingredients:
+            try:
+                # separate the amount and ingredient
+                amount_str = ing.amount.strip() if hasattr(ing, 'amount') else ""
+                ingredient = ing.ingredient.strip() if hasattr(ing, 'ingredient') else ""
+                
+                # handle special fraction characters in the amount
+                amount = amount_str
+                unit = ""
+                
+                # separate the unit from the amount
+                if ' ' in amount_str:
+                    parts = amount_str.split(' ', 1)
+                    amount = parts[0]
+                    unit = parts[1] if len(parts) > 1 else ""
+                
+                # check if the ingredient name contains special fraction characters
+                for fraction_char, fraction_value in converter.fraction_map.items():
+                    if fraction_char in amount:
+                        amount = fraction_value
+                    if fraction_char in ingredient:
+                        if not amount:
+                            amount = fraction_value
+                        ingredient = ingredient.replace(fraction_char, '').strip()
+                
+                # standardize the unit format
+                if unit.lower() in ['cup', 'cups']:
+                    unit = 'cup'
+                elif unit.lower() in ['tablespoon', 'tablespoons', 'tbsp']:
+                    unit = 'tablespoon'
+                elif unit.lower() in ['teaspoon', 'teaspoons', 'tsp']:
+                    unit = 'teaspoon'
+                
+                formatted_ing = {
+                    'amount': amount,
+                    'unit': unit,
+                    'name': ingredient,
+                    'prep': ing.preparation if hasattr(ing, 'preparation') else ''
+                }
+                
+                formatted_ingredients.append(formatted_ing)
+                
+            except Exception as e:
+                print(f"Debug - Error processing ingredient: {e}")
+                continue
+        
+        # use QuantityConverter to convert
+        if scale_factor != 1.0:
+            try:
+                converted = converter.convert_recipe_quantity(
+                    formatted_ingredients, 
+                    scale_factor=scale_factor,
+                    target_unit=target_unit
+                )
+                return converted
+            except Exception as e:
+                print(f"Debug - Error converting quantities: {e}")
+                return formatted_ingredients
+            
+        return formatted_ingredients
+        
+    except Exception as e:
+        print(f"Error fetching recipe: {str(e)}")
+        return []
 
-# fix Test module
-import Test
-Test.Ingredient = Ingredient
+
+def transform_recipe_quantity(recipe_ingredients, scale_factor=1.0):
+    # Transform recipe quantities for health transformations
+    converter = QuantityConverter()
+    parser = IngredientParser()
+    
+    transformed_ingredients = []
+    for ing in recipe_ingredients:
+        try:
+            # ensure the input format is correct
+            if isinstance(ing, str):
+                parsed = parser.parse_single_ingredient(ing)
+            else:
+                parsed = ing
+            
+            # use quantity_converter to convert
+            converted = converter.convert_recipe_quantity(
+                [parsed], 
+                scale_factor=scale_factor
+            )
+            transformed_ingredients.extend(converted)
+            
+        except Exception as e:
+            print(f"Debug - Error transforming ingredient: {e}")
+            transformed_ingredients.append(ing)
+    
+    return transformed_ingredients
+
+def clean_ingredient_name(text, unit_match, descriptors):
+    name = text
+    if unit_match:
+        name = re.sub(unit_match.group(), '', name)
+    
+    for desc in descriptors:
+        name = name.replace(desc, '')
+    
+    name = re.sub(r'\([^)]*\)', '', name)
+    if ',' in name:
+        name = name.split(',')[0]
+    
+    # handle special cases
+    if "reduced-fat" in name:
+        name = "cream of chicken soup"
+        descriptors.append("reduced-fat")
+    
+    return re.sub(r'\s+', ' ', name).strip()
+
+def extract_preparation(text, descriptors):
+    # extract the preparation method
+    prep_parts = []
+    
+    # extract the preparation method from the descriptors
+    prep_descriptors = [d for d in descriptors if d in [
+        "chopped", "minced", "sliced", "diced", "grated", 
+        "shredded", "crushed", "ground", "beaten", "peeled", "cubed"
+    ]]
+    if prep_descriptors:
+        prep_parts.extend(prep_descriptors)
+    
+    # extract other preparation methods
+    if ',' in text:
+        prep_text = text.split(',', 1)[1].strip()
+        if prep_text and prep_text not in prep_parts:
+            prep_parts.append(prep_text)
+    
+    return ", ".join(prep_parts)
 
 class IngredientParser:
     def __init__(self):
-        # expand unit pattern to include more possible units
-        self.unit_pattern = r'\b(cup|cups|tablespoon|tablespoons|tbsp|teaspoon|teaspoons|to taste|tsp|pound|pounds|ounce|ounces|oz|gram|grams|g|pinch|pinches|dash|dashes|piece|pieces|slice|slices|whole|package|pkg|can|cans)\b'
-        # expand descriptor pattern to include more possible preparation methods
-        self.descriptor_pattern = r'\b(fresh|dried|chopped|minced|sliced|diced|grated|shredded|crushed|ground|whole|frozen|large|medium|small|ripe|raw|cooked|cold|hot|warm|softened|melted|beaten|peeled|cubed)\b'
-        self.number_pattern = r'(\d+(?:/\d+)?|\d*\.\d+|\d+)'
+        self.converter = QuantityConverter()
+        # expand the unit set
+        self.units = set(self.converter.volume_conversions.keys() | 
+                        self.converter.weight_conversions.keys() |
+                        {'piece', 'pieces', 'slice', 'slices', 'package', 'pkg'})
+        
+        # add more descriptors
+        self.adjectives = {
+            'large', 'medium', 'small', 'fresh', 'dried', 'ground',
+            'chopped', 'diced', 'minced', 'sliced', 'grated', 'crushed',
+            'frozen', 'ripe', 'raw', 'cooked', 'cold', 'hot', 'warm',
+            'softened', 'melted', 'beaten', 'peeled', 'cubed'
+        }
+        
+        # add common words
+        self.common_words = {'of', 'a', 'an', 'the'}
+        
+        # keep special phrase handling
+        self.special_phrases = {
+            'dash of': {'amount': '1', 'unit': 'dash'},
+            'pinch of': {'amount': '1', 'unit': 'pinch'},
+            'to taste': {'amount': '', 'unit': ''},
+            'fluid ounce': {'unit': 'oz'},
+            'fluid ounces': {'unit': 'oz'}
+        }
+        
+        # fraction mapping
+        self.fraction_map = {
+            '½': '1/2',
+            '¼': '1/4', 
+            '¾': '3/4',
+            '⅓': '1/3',
+            '⅔': '2/3',
+            '⅛': '1/8',
+            '⅜': '3/8',
+            '⅝': '5/8',
+            '⅞': '7/8',
+        }
 
-    def clean_text(self, text):
-        # clean text, keep meaningful punctuation
-        # keep comma for preparation method separation
+    def parse_single_ingredient(self, text):
         text = text.lower().strip()
-        text = re.sub(r'\s+', ' ', text)
-        return text
+        
+        # separate the preparation method
+        parts = [p.strip() for p in text.split(',')]
+        main_part = parts[0]
+        preparations = parts[1:] if len(parts) > 1 else []
+        
+        # check special phrases
+        for phrase, values in self.special_phrases.items():
+            if phrase in main_part:
+                name = main_part.replace(phrase, '').replace('a ', '').strip()
+                return {
+                    'amount': values['amount'],
+                    'unit': values['unit'],
+                    'name': name,
+                    'adjectives': [],
+                    'prep': preparations
+                }
+        
+        # preprocess
+        for word in self.common_words:
+            main_part = main_part.replace(f' {word} ', ' ')
+        
+        # handle the quantity
+        amount_match = re.search(r'^((?:\d+\s+)?\d+/\d+|\d+(?:\.\d+)?(?:\s*-\s*\d+)?)', main_part)
+        amount = amount_match.group(1) if amount_match else ""
+        main_part = main_part[len(amount):].strip() if amount else main_part
+        
+        # handle the unit and name
+        words = main_part.split()
+        unit = ''
+        name_parts = []
+        adjectives = []
+        
+        for word in words:
+            if word in self.units and not unit:
+                unit = word
+            elif word in self.adjectives:
+                adjectives.append(word)
+            else:
+                name_parts.append(word)
+        
+        # handle fluid ounces
+        for phrase, values in self.special_phrases.items():
+            if phrase in main_part and 'unit' in values:
+                unit = values['unit']
+                break
+        
+        return {
+            'amount': amount,
+            'unit': unit,
+            'name': ' '.join(name_parts),
+            'adjectives': adjectives,
+            'prep': preparations
+        }
 
-    def parse_amount(self, amount_str, unit_text):
-        # optimized amount parsing
-        amount = amount_str.strip() if amount_str else ""
-        
-        # handle special fraction characters
-        amount = amount.replace('\u00bd', '1/2')\
-                      .replace('\u00bc', '1/4')\
-                      .replace('\u00be', '3/4')
-        
-        # handle "fluid ounces" -> "oz"
-        if 'fluid' in unit_text.lower() and 'ounce' in unit_text.lower():
-            return f"{amount} oz"
-        
-        # handle "1 (1 inch) piece" -> "1 piece"
-        piece_match = re.search(r'(\d+)\s*\(.*?\)\s*piece', amount + " " + unit_text)
-        if piece_match:
-            return f"{piece_match.group(1)} piece"
-        
-        # handle normal ounces
-        if 'ounce' in unit_text.lower() or 'oz' in unit_text.lower():
-            return f"{amount} oz"
-        
-        # simplify can unit
-        can_match = re.search(r'(\d+)\s*\([\d.]+\s*ounce\)\s*cans?', amount + " " + unit_text)
-        if can_match:
-            num = int(can_match.group(1))
-            return f"{num} {'cans' if num > 1 else 'can'}"
-        
-        # handle other units
-        unit_match = re.search(self.unit_pattern, unit_text)
-        if unit_match:
-            unit = unit_match.group(1)
-            if amount == "1":
-                unit = unit.rstrip('s')
-            return f"{amount} {unit}"
-        
-        # handle package unit
-        package_match = re.search(r'(\d+)\s*\((\d+)\s*ounce\)\s*package', amount + " " + unit_text)
-        if package_match:
-            return f"{package_match.group(2)} oz"
-        
-        return amount.strip()
-
-    def extract_preparation(self, text, descriptors):
-        # optimized preparation method extraction
-        prep_parts = []
-        
-        # extract preparation methods from descriptors
-        prep_descriptors = [d for d in descriptors if d in [
-            "fresh", "dried", "chopped", "minced", "sliced", "diced", "grated", "shredded",
-            "crushed", "ground", "whole", "frozen", "large", "medium", "small", "ripe",
-            "raw", "cooked", "cold", "hot", "warm", "softened", "melted", "beaten", 
-            "peeled", "cubed"
-            ]]
-        if prep_descriptors:
-            prep_parts.extend(prep_descriptors)
-        
-        # extract other preparation methods
-        if ',' in text:
-            prep_text = text.split(',', 1)[1].strip()
-            if prep_text and prep_text not in prep_parts:
-                prep_parts.append(prep_text)
-        
-        return ", ".join(prep_parts)
-
-    def clean_ingredient_name(self, text, unit_match, descriptors):
-        # clean and format ingredient name
-        name = text
-        
-        # remove unit
-        if unit_match:
-            name = re.sub(self.unit_pattern, '', name)
-        
-        # remove descriptors
-        for desc in descriptors:
-            name = name.replace(desc, '')
-        
-        # remove content in parentheses and after comma
-        name = re.sub(r'\([^)]*\)', '', name)
-        if ',' in name:
-            name = name.split(',')[0]
-        
-        # handle special cases
-        if "reduced-fat" in name:
-            name = "cream of chicken soup"
-            descriptors.append("reduced-fat")
-        
-        # clean and return
-        name = re.sub(r'\s+', ' ', name).strip()
-        return name
-
-    def parse_single_ingredient(self, ing):
-        # parse single ingredient, ensure output format is correct
-
-        try:
-            ingredient_dict = {
-                "ingredient": "",
-                "amount": "",
-                "preparation": ""
-            }
-            
-            # get basic information
-            amount = ing.amount if hasattr(ing, 'amount') else ""
-            ingredient_text = ing.ingredient.lower() if hasattr(ing, 'ingredient') else ""
-            
-            # extract descriptors
-            descriptors = re.findall(self.descriptor_pattern, ingredient_text)
-            
-            # handle amount
-            ingredient_dict["amount"] = self.parse_amount(amount, ingredient_text)
-            
-            # handle preparation method
-            prep_method = ing.preparation if hasattr(ing, 'preparation') else ""
-            ingredient_dict["preparation"] = self.extract_preparation(
-                ingredient_text + (f", {prep_method}" if prep_method else ""),
-                descriptors
-            )
-            
-            
-            # handle ingredient name
-            unit_match = re.search(self.unit_pattern, ingredient_text)
-            ingredient_dict["ingredient"] = self.clean_ingredient_name(
-                ingredient_text,
-                unit_match,
-                descriptors
-            )     
-            return ingredient_dict
-            
-        except Exception as e:
-            print(f"Error parsing single ingredient: {e}")
-            return None
-
-    def parse_ingredients(self, url: str) -> str:
-        # parse all ingredients in recipe URL
-        try:
-            soup = get_recipe_page(url)
-            raw_ingredients = ingredient_parser(soup)
-            
-            parsed_ingredients = []
-            for ing in raw_ingredients:
-                parsed = self.parse_single_ingredient(ing)
-                if parsed and parsed["ingredient"]:  # only add valid ingredients
-                    parsed_ingredients.append(parsed)
-            
-            return parsed_ingredients
-            
-        except Exception as e:
-            print(f"Debug - Exception details: {str(e)}")
-            return f"Error parsing ingredients: {e}"
-
-def get_ingredients(url: str) -> str:
-    # main function, keep compatible with original interface
-    parser = IngredientParser()
-    return parser.parse_ingredients(url)
-
-# test code
-if __name__ == "__main__":
-    test_urls = ['https://www.allrecipes.com/recipe/18045/yellow-squash-casserole/']
+# if __name__ == "__main__":
+#     test_url = "https://www.allrecipes.com/recipe/260065/instant-pot-lasagna/"
     
-    # [
-    #    'https://www.allrecipes.com/recipe/230966/country-sunday-breakfast-casserole/',  # casserole 1
-    #     'https://www.allrecipes.com/recipe/18045/yellow-squash-casserole/',   # casserole 2
-    #     'https://www.allrecipes.com/recipe/231154/creamy-chicken-cordon-bleu-casserole/' # casserole 3
-    # ]
+#     def print_ingredients(ingredients, title):
+#         print(f"\n{title}:")
+#         for ing in ingredients:
+#             print(ing)
     
-    parser = IngredientParser()
-    for url in test_urls:
-        try:
-            print(f"\nRecipe: {url.split('/')[-2].replace('-', ' ').title()}")
-            result = parser.parse_ingredients(url)
-            print(result)
-            print("\n" + "-"*50)
-        except Exception as e:
-            print(f"Error parsing recipe: {e}")
+#     try:
+#         ingredients = get_ingredients(test_url)
+#         if not ingredients:
+#             print("Unable to get recipe")
+#             exit()
+            
+#         print_ingredients(ingredients, "original recipe")
+        
+#         double_ingredients = get_ingredients(test_url, scale_factor=2.0)
+#         print_ingredients(double_ingredients, "double portion")
+        
+#     except Exception as e:
+#         print(f"Error: {e}")

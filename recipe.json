@@ -1,70 +1,74 @@
 {
-    "title": "Cocktail Meatballs",
+    "title": "Coquito",
     "ingredients": [
         {
-            "ingredient": "lean ground beef",
-            "amount": "1 pound",
+            "ingredient": "evaporated coconut milk",
+            "amount": "1 (12 fluid ounce) can",
             "preparation": ""
         },
         {
-            "ingredient": "bread crumbs",
+            "ingredient": "egg yolks",
+            "amount": "2 large",
+            "preparation": "beaten"
+        },
+        {
+            "ingredient": "coconut cream",
+            "amount": "1 (14 ounce) can",
+            "preparation": ""
+        },
+        {
+            "ingredient": "sweetened condensed coconut milk",
+            "amount": "1 (14 ounce) can",
+            "preparation": ""
+        },
+        {
+            "ingredient": "white rum",
             "amount": "\u00bd cup",
             "preparation": ""
         },
         {
-            "ingredient": "minced onion",
-            "amount": "3 tablespoons",
-            "preparation": ""
-        },
-        {
             "ingredient": "water",
-            "amount": "2 tablespoons",
+            "amount": "\u00bd cup",
             "preparation": ""
         },
         {
-            "ingredient": "egg",
-            "amount": "1 large",
+            "ingredient": "vanilla extract",
+            "amount": "1 teaspoon",
             "preparation": ""
         },
         {
-            "ingredient": "jellied cranberry sauce",
-            "amount": "1 (8 ounce) can",
+            "ingredient": "ground cinnamon",
+            "amount": "\u00bd teaspoon",
             "preparation": ""
         },
         {
-            "ingredient": "chili sauce",
-            "amount": "\u00be cup",
-            "preparation": ""
-        },
-        {
-            "ingredient": "brown sugar",
-            "amount": "1 tablespoon",
-            "preparation": ""
-        },
-        {
-            "ingredient": "lemon juice",
-            "amount": "1 \u00bd teaspoons",
+            "ingredient": "ground cloves",
+            "amount": "\u00bc teaspoon",
             "preparation": ""
         }
     ],
     "steps": [
         {
             "step": 1,
-            "direction": "Gather the ingredients. Preheat the oven to 350 degrees F (175 degrees C)."
+            "direction": "Gather all ingredients."
         },
         {
             "step": 2,
-            "direction": "Mix ground beef, bread crumbs, onion, water, and egg together in a large bowl. Form into small meatballs and arrange on a nonstick baking sheet. Bake in the preheated oven for 20 to 25 minutes, turning once."
+            "direction": "Combine evaporated milk and egg yolks in the top of a double boiler over simmering water. Cook over the simmering water, stirring constantly, until mixture is thick enough to coat the back of a spoon, and reaches a temperature of 160 degrees F (71 degrees C)."
         },
         {
             "step": 3,
-            "direction": "Stir cranberry sauce, chili sauce, brown sugar, and lemon juice together in a large saucepan over low heat until smooth. Add meatballs; simmer for 1 hour before serving."
+            "direction": "Transfer mixture to a blender. Add cream of coconut, sweetened condensed milk, rum, water, vanilla, cinnamon, and cloves; blend until combined, about 30 seconds."
+        },
+        {
+            "step": 4,
+            "direction": "Pour into sterilized glass bottles and store in the refrigerator; serve cold or over ice, if desired."
         }
     ],
     "details": {
-        "Prep Time:": "20 mins",
-        "Cook Time:": "1 hr 20 mins",
-        "Total Time:": "1 hr 40 mins",
+        "Prep Time:": "5 mins",
+        "Cook Time:": "10 mins",
+        "Total Time:": "15 mins",
         "Servings:": "10"
     }
 }

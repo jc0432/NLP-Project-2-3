@@ -1,14 +1,9 @@
 [
     {
         "step_number": 1,
-        "direction": "Gather the ingredients. Preheat the oven to 350 degrees F (175 degrees C).",
+        "direction": "Gather all ingredients.",
         "ingredients": {},
-        "tools": [
-            {
-                "size": null,
-                "name": "oven"
-            }
-        ],
+        "tools": [],
         "methods": {
             "gather": {
                 "subject": [
@@ -16,98 +11,110 @@
                 ],
                 "duration": null,
                 "until": null
-            },
-            "preheat": {
-                "subject": [
-                    "oven"
-                ],
-                "duration": "350 degrees F",
-                "until": null
             }
         },
         "substeps": [
-            "Gather the ingredients",
-            "Preheat the oven to 350 degrees F (175 degrees C)"
+            "Gather all ingredients"
         ]
     },
     {
         "step_number": 2,
-        "direction": "Mix ground beef, bread crumbs, onion, water, and egg together in a large bowl. Form into small meatballs and arrange on a nonstick baking sheet. Bake in the preheated oven for 20 to 25 minutes, turning once.",
+        "direction": "Combine evaporated milk and egg yolks in the top of a double boiler over simmering water. Cook over the simmering water, stirring constantly, until mixture is thick enough to coat the back of a spoon, and reaches a temperature of 160 degrees F (71 degrees C).",
         "ingredients": {
-            "bread crumbs": null,
-            "water": null,
-            "egg": null
+            "evaporated milk": null,
+            "egg yolks": null,
+            "water": null
         },
         "tools": [
             {
                 "size": null,
-                "name": "oven"
-            },
-            {
-                "size": "large",
-                "name": "bowl"
-            },
-            {
-                "size": null,
-                "name": "baking sheet"
+                "name": "spoon"
             }
         ],
         "methods": {
-            "mix": {
+            "combine": {
                 "subject": [
-                    "beef"
+                    "milk"
                 ],
                 "duration": null,
+                "until": "mixture is thick enough to coat the back of a spoon"
+            },
+            "cook": {
+                "subject": [
+                    "milk"
+                ],
+                "duration": "160 degrees F",
                 "until": null
             },
-            "bake": {
+            "coat": {
                 "subject": [
-                    "beef"
+                    "back"
                 ],
-                "duration": "20 to 25 minutes",
+                "duration": null,
                 "until": null
             }
         },
         "substeps": [
-            "Mix ground beef, bread crumbs, onion, water, and egg together in a large bowl",
-            "Form into small meatballs and arrange on a nonstick baking sheet",
-            "Bake in the preheated oven for 20 to 25 minutes, turning once"
+            "Combine evaporated milk and egg yolks in the top of a double boiler over simmering water",
+            "Cook over the simmering water, stirring constantly, until mixture is thick enough to coat the back of a spoon, and reaches a temperature of 160 degrees F (71 degrees C)"
         ]
     },
     {
         "step_number": 3,
-        "direction": "Stir cranberry sauce, chili sauce, brown sugar, and lemon juice together in a large saucepan over low heat until smooth. Add meatballs; simmer for 1 hour before serving.",
+        "direction": "Transfer mixture to a blender. Add cream of coconut, sweetened condensed milk, rum, water, vanilla, cinnamon, and cloves; blend until combined, about 30 seconds.",
         "ingredients": {
-            "chili sauce": null,
-            "brown sugar": null,
-            "lemon juice": null
+            "cream of coconut": null,
+            "sweetened condensed milk": null,
+            "water": null
         },
         "tools": [
             {
-                "size": "large",
-                "name": "saucepan"
+                "size": null,
+                "name": "blender"
             }
         ],
         "methods": {
-            "stir": {
+            "transfer": {
                 "subject": [
-                    "sauce"
+                    "mixture"
                 ],
                 "duration": null,
-                "until": "smooth"
+                "until": "combined"
             },
             "add": {
                 "subject": [
-                    "meatballs"
+                    "cream"
                 ],
                 "duration": null,
                 "until": null
             }
         },
         "substeps": [
-            "Stir cranberry sauce, chili sauce, brown sugar, and lemon juice together in a large saucepan over low heat until smooth",
-            "Add meatballs",
-            "simmer for 1 hour before serving"
+            "Transfer mixture to a blender",
+            "Add cream of coconut, sweetened condensed milk, rum, water, vanilla, cinnamon, and cloves",
+            "blend until combined, about 30 seconds"
+        ]
+    },
+    {
+        "step_number": 4,
+        "direction": "Pour into sterilized glass bottles and store in the refrigerator; serve cold or over ice, if desired.",
+        "ingredients": {},
+        "tools": [],
+        "methods": {
+            "pour": {
+                "subject": [],
+                "duration": null,
+                "until": null
+            },
+            "serve": {
+                "subject": [],
+                "duration": null,
+                "until": null
+            }
+        },
+        "substeps": [
+            "Pour into sterilized glass bottles and store in the refrigerator",
+            "serve cold or over ice, if desired"
         ]
     }
 ]

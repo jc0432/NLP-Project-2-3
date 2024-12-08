@@ -33,8 +33,6 @@ def parse_step(step, ingredient_list):
             doc_ptr += 1
             continue
         if token.tag_ == "VB" and (token.lemma_.lower() in DURATION_METHODS or token.lemma_.lower() in NO_DURATION_METHODS):
-            # print("@@@@@@ ", token)
-            print("found token", token)
             method = token.lemma_.lower()
             subjects = []
             duration = None
@@ -50,7 +48,6 @@ def parse_step(step, ingredient_list):
                 next_doc = doc[next_ptr]
                 if next_doc.dep_ in ("dobj", "pobj", "nsubj", "appos"):
                     subjects.append(doc[next_ptr].text)
-                    print("added subject", doc[next_ptr].text, doc[next_ptr].dep_)
                     # for conj in doc[next_ptr].conjuncts:
                     #     subjects.append(conj.text)
                 next_ptr += 1
@@ -58,7 +55,6 @@ def parse_step(step, ingredient_list):
             if subjects: 
                 prev_subjects = subjects
             subjects = prev_subjects
-            print("subjects", subjects)
 
             # Find duration
             if method in DURATION_METHODS:
@@ -85,13 +81,10 @@ def parse_step(step, ingredient_list):
         match = re.search(pattern, direction.lower())
         if match:
             ingredients[ing["ingredient"]] = match.group(1) 
-    print("got here")
-    print(step)
     # get the substeps of this step
     substeps = []
     substeps = re.split(r'[.;]', step['direction'])
     substeps = [substep.strip() for substep in substeps if substep.strip()]
-    print("substeps", substeps)
     return {
         "step_number": step_number,
         "direction": direction,
@@ -103,7 +96,6 @@ def parse_step(step, ingredient_list):
 
 
 def parse_and_save():
-    print("called")
     try:
         with open('recipe.json', 'r') as f:
             recipe_data = json.load(f)
@@ -115,14 +107,9 @@ def parse_and_save():
 
     # Parse each step
     parsed_steps = []
-    # print("\n### Parsed Steps ###")
     for step in recipe_data.get('steps', []):
         parsed = parse_step(step, ingredients)
         parsed_steps.append(parsed)
-        # print(f"\nStep {parsed['step_number']}: {parsed['direction']}")
-        # print(f"  Ingredients: {parsed['ingredients']}")
-        # print(f"  Tools: {parsed['tools']}")
-        # print(f"  Methods: {parsed['methods']}")
 
     with open('parsed_steps.json', 'w') as f:
         json.dump(parsed_steps, f, indent=4)
