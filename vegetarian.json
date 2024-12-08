@@ -1,0 +1,88 @@
+{
+    "title": "Coquito",
+    "ingredients": [
+        {
+            "ingredient": "evaporated coconut milk",
+            "amount": "1 (12 fluid ounce) can",
+            "preparation": ""
+        },
+        {
+            "ingredient": "egg yolks",
+            "amount": "2 large",
+            "preparation": "beaten"
+        },
+        {
+            "ingredient": "coconut cream",
+            "amount": "1 (14 ounce) can",
+            "preparation": ""
+        },
+        {
+            "ingredient": "sweetened condensed coconut milk",
+            "amount": "1 (14 ounce) can",
+            "preparation": ""
+        },
+        {
+            "ingredient": "white rum",
+            "amount": "\u00bd cup",
+            "preparation": ""
+        },
+        {
+            "ingredient": "water",
+            "amount": "\u00bd cup",
+            "preparation": ""
+        },
+        {
+            "ingredient": "vanilla extract",
+            "amount": "1 teaspoon",
+            "preparation": ""
+        },
+        {
+            "ingredient": "ground cinnamon",
+            "amount": "\u00bd teaspoon",
+            "preparation": ""
+        },
+        {
+            "ingredient": "ground cloves",
+            "amount": "\u00bc teaspoon",
+            "preparation": ""
+        }
+    ],
+    "steps": [
+        {
+            "step": 1,
+            "direction": "Gather all ingredients.",
+            "substeps": [
+                "Gather all ingredients."
+            ]
+        },
+        {
+            "step": 2,
+            "direction": "Combine evaporated milk and egg yolks in the top of a double boiler over simmering water. Cook over the simmering water, stirring constantly, until mixture is thick enough to coat the back of a spoon, and reaches a temperature of 160 degrees F (71 degrees C).",
+            "substeps": [
+                "Combine evaporated milk and egg yolks in the top of a double boiler over simmering water.",
+                "Cook over the simmering water, stirring constantly, until mixture is thick enough to coat the back of a spoon, and reaches a temperature of 160 degrees F (71 degrees C)."
+            ]
+        },
+        {
+            "step": 3,
+            "direction": "Transfer mixture to a blender. Add cream of coconut, sweetened condensed milk, rum, water, vanilla, cinnamon, and cloves; blend until combined, about 30 seconds.",
+            "substeps": [
+                "Transfer mixture to a blender.",
+                "Add cream of coconut, sweetened condensed milk, rum, water, vanilla, cinnamon, and cloves; blend until combined, about 30 seconds."
+            ]
+        },
+        {
+            "step": 4,
+            "direction": "Pour into sterilized glass bottles and store in the refrigerator; serve cold or over ice, if desired.",
+            "substeps": [
+                "Pour into sterilized glass bottles and store in the refrigerator; serve cold or over ice, if desired."
+            ]
+        }
+    ],
+    "details": {
+        "Prep Time:": "5 mins",
+        "Cook Time:": "10 mins",
+        "Total Time:": "15 mins",
+        "Servings:": "10"
+    }
+}

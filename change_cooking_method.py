@@ -64,6 +64,7 @@ def change_order(preheated_occurence):
 
 
 def check_methods(): 
+    preheated_occurence =  ''
     ingredient_list = recipe['steps']
     for step in ingredient_list:
         full_instruction = step['direction']
@@ -82,7 +83,7 @@ def check_methods():
 
 
 
-def save_recipe_to_file(final_recipe, filename="updated_recipe.json"):
+def save_recipe_to_file(final_recipe, filename="change cooking method.json"):
 
     with open(filename, "w") as json_file:
         json.dump(final_recipe, json_file, indent=4)

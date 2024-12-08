@@ -1,0 +1,60 @@
+{
+    "title": "Grilled Peanut Chicken",
+    "ingredients": [
+        {
+            "ingredient": "reduced fat peanut butter",
+            "amount": "2 tablespoons",
+            "preparation": ""
+        },
+        {
+            "ingredient": "fresh lime juice",
+            "amount": "1 tablespoon",
+            "preparation": ""
+        },
+        {
+            "ingredient": "soy sauce",
+            "amount": "2 teaspoons",
+            "preparation": ""
+        },
+        {
+            "ingredient": "garlic",
+            "amount": "1 clove",
+            "preparation": "chopped"
+        },
+        {
+            "ingredient": "curry powder",
+            "amount": "\u2153 teaspoon",
+            "preparation": ""
+        },
+        {
+            "ingredient": "ground cayenne pepper",
+            "amount": "1 pinch",
+            "preparation": ""
+        },
+        {
+            "ingredient": "skinless",
+            "amount": "4 ",
+            "preparation": "boneless chicken breast halves"
+        }
+    ],
+    "steps": [
+        {
+            "step": 1,
+            "direction": "Mix peanut butter, lime juice, soy sauce, garlic, curry powder, and cayenne pepper together in a bowl."
+        },
+        {
+            "step": 2,
+            "direction": "Preheat pan with high heat and lightly spray with oil."
+        },
+        {
+            "step": 3,
+            "direction": "Place chicken onto the preheated pan. Brush 1/2 of the sauce over chicken and cook for 6 to 8 minutes. Turn chicken and brush with remaining sauce. Continue cooking until no longer pink in the center and the juices run clear, 6 to 8 more minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C)."
+        }
+    ],
+    "details": {
+        "Prep Time:": "15 mins",
+        "Cook Time:": "15 mins",
+        "Total Time:": "30 mins",
+        "Servings:": "4"
+    }
+}

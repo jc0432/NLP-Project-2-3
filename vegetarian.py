@@ -109,7 +109,7 @@ def find_replacement(recipe, flagged_food):
                 
                 adjust_information(recipe, food, determined_substitution)             
 
-def save_recipe_to_file(final_recipe, filename="updated_recipe.json"):
+def save_recipe_to_file(final_recipe, filename="vegetarian.json"):
 
     with open(filename, "w") as json_file:
         json.dump(final_recipe, json_file, indent=4)
