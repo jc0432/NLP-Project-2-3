@@ -1,112 +1,11 @@
 """
 Quantity Converter Usage:
-
-1. Parse ingredients:
-ingredients = parser.parse_ingredients(recipe_text)
-
-2. Convert quantities:
-- Scale adjustment: parser.convert_recipe(ingredients, scale=2)  # 2 times
-- Unit conversion: parser.convert_recipe(ingredients, unit='ml')  # unit conversion
-- Combined usage: parser.convert_recipe(ingredients, scale=2, unit='ml')
-
-3. Quick single ingredient parsing:
-result = get_ingredient("2 cups flour, sifted")                    # basic parsing
-result = get_ingredient("2 cups flour, sifted", scale_factor=2)    # scale up
-result = get_ingredient("2 cups flour, sifted", target_unit='ml')  # convert unit
+- Scale adjustment: converter.convert_recipe_quantity(ingredients, scale=2)  # 2 times
+- Unit conversion: converter.convert_recipe_quantity(ingredients, unit='ml')  # unit conversion
+- Combined usage: converter.convert_recipe_quantity(ingredients, scale=2, unit='ml')
 """
 
-import re  # add import statement
-
-# directly define IngredientParser class
-class IngredientParser:
-    def __init__(self):
-        self.converter = QuantityConverter()
-        # expand the unit set
-        self.units = set(self.converter.volume_conversions.keys() | 
-                        self.converter.weight_conversions.keys() |
-                        {'piece', 'pieces', 'slice', 'slices', 'package', 'pkg'})
-        
-        # add more descriptors
-        self.adjectives = {
-            'large', 'medium', 'small', 'fresh', 'dried', 'ground',
-            'chopped', 'diced', 'minced', 'sliced', 'grated', 'crushed',
-            'frozen', 'ripe', 'raw', 'cooked', 'cold', 'hot', 'warm',
-            'softened', 'melted', 'beaten', 'peeled', 'cubed'
-        }
-        
-        # add common words
-        self.common_words = {'of', 'a', 'an', 'the'}
-        
-        # keep special phrase handling
-        self.special_phrases = {
-            'dash of': {'amount': '1', 'unit': 'dash'},
-            'pinch of': {'amount': '1', 'unit': 'pinch'},
-            'to taste': {'amount': '', 'unit': ''},
-            'fluid ounce': {'unit': 'oz'},  # add
-            'fluid ounces': {'unit': 'oz'}  # add
-        }
-
-    # Enhanced ingredient parsing
-    def parse_single_ingredient(self, ingredient_str):
-        parts = ingredient_str.split(',', 1)
-        main_info = parts[0].strip().lower()
-        prep_info = parts[1].strip() if len(parts) > 1 else ''
-        
-        # add special case handling
-        if '(' in main_info:
-            main_info = re.sub(r'\([^)]*\)', '', main_info)
-        
-        # check special phrases
-        for phrase, values in self.special_phrases.items():
-            if phrase in main_info:
-                name = main_info.replace(phrase, '').replace('a ', '').strip()
-                return {
-                    'amount': values['amount'],
-                    'unit': values['unit'],
-                    'name': name,
-                    'adjectives': [],
-                    'prep': prep_info
-                }
-        
-        # preprocess
-        for word in self.common_words:
-            main_info = main_info.replace(f' {word} ', ' ')
-        
-        # parse the quantity
-        amount_match = re.search(r'^((?:\d+\s+)?\d+/\d+|\d+(?:\.\d+)?(?:\s*-\s*\d+)?)', main_info)
-        amount = amount_match.group(1) if amount_match else ""
-        main_info = main_info[len(amount):].strip() if amount else main_info
-        
-        # parse the unit and adjectives
-        words = main_info.split()
-        unit = ''
-        adjectives = []
-        name_parts = []
-        
-        for word in words:
-            if word in self.converter.adjectives:
-                adjectives.append(word)
-            elif word in self.units and not unit:
-                unit = word
-            else:
-                name_parts.append(word)
-        
-        # handle fluid ounces
-        for phrase, values in self.special_phrases.items():
-            if phrase in main_info and 'unit' in values:
-                unit = values['unit']
-                break
-        
-        return {
-            'amount': amount,
-            'unit': unit,
-            'name': ' '.join(name_parts),
-            'adjectives': adjectives,
-            'prep': prep_info
-        }
-    
-    def convert_recipe_quantities(self, ingredients, scale_factor=1, target_unit=None):
-        return self.converter.convert_recipe_quantity(ingredients, scale_factor, target_unit)
+import re
 
 class QuantityConverter:
     def __init__(self):
@@ -153,26 +52,11 @@ class QuantityConverter:
         
         # non-convertible units
         self.non_convertible_units = {
-            'whole',
-            'piece',
-            'pieces',
-            'slice',
-            'slices',
-            'head',
-            'heads',
-            'clove',
-            'cloves'
+            'whole', 'piece', 'pieces', 'slice', 'slices',
+            'head', 'heads', 'clove', 'cloves'
         }
         
-        # adjectives list
-        self.adjectives = {
-            'large', 'medium', 'small',
-            'fresh', 'dried', 'ground',
-            'chopped', 'diced', 'minced',
-            'sliced', 'grated', 'crushed'
-        }
-        
-        # add fraction character mapping
+        # fraction character mapping
         self.fraction_map = {
             '½': '1/2',
             '¼': '1/4', 
@@ -183,12 +67,13 @@ class QuantityConverter:
             '⅜': '3/8',
             '⅝': '5/8',
             '⅞': '7/8',
+            '\u00bd': '1/2',  # ½
+            '\u00bc': '1/4',  # ¼
+            '\u00be': '3/4',  # ¾
         }
 
     def convert_fraction(self, fraction_str):
-        # Handle fraction conversion, including special fraction characters
         try:
-            # first check if it's a special fraction character
             if fraction_str in self.fraction_map:
                 fraction_str = self.fraction_map[fraction_str]
             
@@ -206,7 +91,6 @@ class QuantityConverter:
             return None
 
     def parse_amount(self, amount_str):
-        # parse the quantity, including fractions and ranges
         if not amount_str:
             return None
             
@@ -238,12 +122,6 @@ class QuantityConverter:
                         converted.append(new_ing)
                         continue
                 
-                # handle the "a dash of" pattern
-                if ing['name'].startswith('a dash'):
-                    new_ing['amount'] = '1'
-                    new_ing['unit'] = 'dash'
-                    new_ing['name'] = ing['name'].replace('a dash of', '').strip()
-                
                 # handle the quantity conversion
                 parsed_amount = self.parse_amount(amount)
                 if parsed_amount:
@@ -271,29 +149,5 @@ class QuantityConverter:
         return converted
 
 def adjust_quantity(ingredient_dict, adjustment_factor):
-    # Interface for quantity adjustment called by health conversion functions
     converter = QuantityConverter()
     return converter.convert_recipe_quantity([ingredient_dict], scale_factor=adjustment_factor)[0]
-
-# # Test code
-# if __name__ == "__main__":
-#     test_cases = [
-#         "2 large eggs, beaten",
-#         "3 cloves garlic, minced",
-#         "1 head lettuce, chopped",
-#         "2 1/4 cups all-purpose flour, sifted",
-#         "1 stick butter, softened",
-#         "2-3 medium carrots, diced",
-#         "a dash of hot sauce",
-#         "fresh basil to taste",
-#         "1 can (14 oz) diced tomatoes",
-#         "500 g ground beef"
-#     ]
-
-#     parser = IngredientParser()
-#     for case in test_cases:
-#         parsed = parser.parse_single_ingredient(case)
-#         print(f"\nOriginal: {case}")
-#         print(f"Parsed: {parsed}")
-#         print(f"Double: {parser.convert_recipe_quantities([parsed], scale_factor=2)}")
-#         print(f"Metric: {parser.convert_recipe_quantities([parsed], target_unit='ml')}")
