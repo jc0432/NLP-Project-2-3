@@ -13,8 +13,7 @@ with open('recipe.json', 'r') as file:
 def split_into_substeps(direction):
     substeps = []
     for step in direction['direction'].split('. '):
-        if step.strip():  # Ensure the step is not empty
-            # Add a period only if the step doesn't already end with one
+        if step.strip(): 
             formatted_step = step.strip()
             if not formatted_step.endswith('.'):
                 formatted_step += '.'
@@ -26,7 +25,6 @@ for step in data['steps']:
     step['substeps'] = split_into_substeps(step)
 
 
-# Regex patterns for non-vegetarian foods 
 fish_regex = r"(?:\w+\s+)*\b(salmon|tuna|cod|trout|mackerel|sardines|haddock|halibut|snapper|sole|bass|herring|tilapia|swordfish|grouper)(?:\s+\w+)*\b"
 
 meat_regex = r"(?:\w+\s+)*\b(steak|beef|roast beef|ground beef|ham|pork|bacon|ribs|bacon|ham|sausage|pork chops|loin|lamb chops|leg of lamb|ground lamb|veal cutlets|veal roast|venison|bison|elk|boar)(?:\s+\w+)*\b"
@@ -43,26 +41,6 @@ vegetarian_piece_items_regex = r"\b(mushrooms|lentils|black beans|chickpeas|quin
 cooking_verbs_regex = r"\b(roast|baste|smoke|carve|spit-roast|butterfly|truss|barbecue|broil|sear|spatchcock|score|dry-brine|cure|rest)\b"
 
 
-def verb_type(sentence, food): 
-    doc = nlp(sentence) 
-    for token in doc:
-        if token.pos_ == 'VERB' and token.dep_== 'ROOT':
-            if re.search(cooking_verbs_regex, token.text, re.IGNORECASE):
-                if re.search('meat', sentence):
-                    substition = 'beyond meat'
-                if re.search('burger', sentence, re.IGNORECASE):
-                    substition = 'veggie burger'
-                if re.search('steak', sentence, re.IGNORECASE):
-                    substition = 'cauliflower steak'
-                else:
-                    substition = 'eggplant'
-        if re.search('broth', food, re.IGNORECASE):
-            substition = 'vegetarian broth'
-        else:
-            substition = 'tofu'
-    new_sentence = re.sub(food, substition, sentence)
-    return (new_sentence, sentence, substition)
-    
 
 def identify_non_veg_items(recipe):
     vegetarian_flags = {'Fish': [], "Poultry": [], "Meat": [], 'Other': []}
@@ -91,32 +69,60 @@ def adjust_steps(new_sentence, original_sentence, substeps):
     return updated_substeps
 
 def adjust_information(recipe, food, substitution): 
-    # pattern = fr"\b(?:{re.escape(food.split()[0])}\s+)?{re.escape(substitution)}\b"
     for item in recipe['ingredients']:
         if re.search(food, item['ingredient'], re.IGNORECASE):
             item['ingredient'] = substitution
     if re.search(food, recipe['title'], re.IGNORECASE):
         recipe['title'] = re.sub(food, substitution, recipe['title'], flags=re.IGNORECASE)
-        # print(recipe['title'])
-    # print(recipe)
+      
 
 def find_replacement(recipe, flagged_food):
-    for key in flagged_food:
-        if flagged_food[key] != None: 
-            for food in flagged_food[key]:
-                for step in recipe['steps']: 
-                    for i, substep in enumerate(step['substeps']):  
-                        new_sentence, original_sentence, substitution =  verb_type(substep, food)
-                        if new_sentence != original_sentence:
-                            step['substeps'][i] = new_sentence
-                    step['direction'] = " ".join(step['substeps'])
-                    adjust_information(recipe, food, substitution)               
+    for key, foods in flagged_food.items():
+        if foods:
+            for food in foods:
+                determined_substitution = None
+                for step in recipe['steps']:
+                    for substep in step['substeps']:
+                        if re.search(r'\b{}\b'.format(re.escape(food)), substep, re.IGNORECASE) and re.search(cooking_verbs_regex, substep, re.IGNORECASE):
+                            if re.search(r'\bmeat\b', food, re.IGNORECASE):
+                                determined_substitution = 'beyond meat'
+                            elif re.search(r'\bburger\b', food, re.IGNORECASE):
+                                determined_substitution = 'veggie burger'
+                            elif re.search(r'\bsteak\b', food, re.IGNORECASE):
+                                determined_substitution = 'cauliflower steak'
+                            else:
+                                determined_substitution = 'eggplant'
+                            break
+                    if determined_substitution is not None:
+                        break
+                # If no cooking verb found, pick broth or tofu
+                if determined_substitution is None:
+                    if re.search(r'\bbroth\b', food, re.IGNORECASE):
+                        determined_substitution = 'vegetarian broth'
+                    else:
+                        determined_substitution = 'tofu'
+                
+                for step in recipe['steps']:
+                    new_substeps = [re.sub(re.escape(food), determined_substitution, s, flags=re.IGNORECASE) for s in step['substeps']] ## ChatGPT assisnt in this line and logic 
+                    step['substeps'] = new_substeps
+                    step['direction'] = " ".join(new_substeps)
+                
+                adjust_information(recipe, food, determined_substitution)             
+
+def save_recipe_to_file(final_recipe, filename="updated_recipe.json"):
+
+    with open(filename, "w") as json_file:
+        json.dump(final_recipe, json_file, indent=4)
+    print(f"Updated recipe saved to {filename}")
+
+
 
 def main(): 
     recipe = data 
     dict_of_flags = identify_non_veg_items(recipe)
     find_replacement(recipe, dict_of_flags)
-    return recipe
+    save_recipe_to_file(recipe)
 
-returned = main()
-print(returned)
+
+
+main()
