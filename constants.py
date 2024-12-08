@@ -367,3 +367,22 @@ GLUTEN_SUBSTITUTIONS = {
     "soy sauce": "tamari",
     "teriyaki sauce": "gluten-free teriyaki sauce",
 }
+
+LACTOSE_SUBSTITUTIONS = {
+    "milk": "almond milk",
+    "whole milk": "oat milk",
+    "buttermilk": "almond milk with lemon juice",
+    "cream": "coconut cream",
+    "heavy cream": "coconut cream",
+    "whipped cream": "coconut whipped cream",
+    "half-and-half": "almond milk with coconut cream",
+    "cheese": "plant-based cheese",
+    "cream cheese": "cashew cream cheese",
+    "sour cream": "coconut yogurt",
+    "yogurt": "coconut yogurt",
+    "butter": "plant-based butter",
+    "ice cream": "coconut milk ice cream",
+    "condensed milk": "sweetened condensed coconut milk",
+    "evaporated milk": "evaporated coconut milk",
+    "whey": "pea protein powder",
+}

@@ -1,73 +1,74 @@
 {
-    "title": "Baked Ham and Cheese Sliders",
+    "title": "Coquito",
     "ingredients": [
         {
-            "ingredient": "melted butter",
-            "amount": "\u00be cup",
+            "ingredient": "evaporated coconut milk",
+            "amount": "1 (12 fluid ounce) can",
             "preparation": ""
         },
         {
-            "ingredient": "Dijon mustard",
-            "amount": "1 \u00bd tablespoons",
+            "ingredient": "egg yolks",
+            "amount": "2 large",
+            "preparation": "beaten"
+        },
+        {
+            "ingredient": "coconut cream",
+            "amount": "1 (14 ounce) can",
             "preparation": ""
         },
         {
-            "ingredient": "Worcestershire sauce",
-            "amount": "1 \u00bd teaspoons",
+            "ingredient": "sweetened condensed coconut milk",
+            "amount": "1 (14 ounce) can",
             "preparation": ""
         },
         {
-            "ingredient": "poppy seeds",
-            "amount": "1 \u00bd tablespoons",
+            "ingredient": "white rum",
+            "amount": "\u00bd cup",
             "preparation": ""
         },
         {
-            "ingredient": "dried minced onion",
-            "amount": "1 tablespoon",
+            "ingredient": "water",
+            "amount": "\u00bd cup",
             "preparation": ""
         },
         {
-            "ingredient": "gluten-free rolls",
-            "amount": "24",
+            "ingredient": "vanilla extract",
+            "amount": "1 teaspoon",
             "preparation": ""
         },
         {
-            "ingredient": "thinly sliced cooked deli ham",
-            "amount": "1 pound",
+            "ingredient": "ground cinnamon",
+            "amount": "\u00bd teaspoon",
             "preparation": ""
         },
         {
-            "ingredient": "thinly sliced Swiss cheese",
-            "amount": "1 pound",
+            "ingredient": "ground cloves",
+            "amount": "\u00bc teaspoon",
             "preparation": ""
         }
     ],
     "steps": [
         {
             "step": 1,
-            "direction": "Gather all ingredients. Preheat the oven to 350 degrees F (175 degrees C). Grease a 9x13-inch baking dish."
+            "direction": "Gather all ingredients."
         },
         {
             "step": 2,
-            "direction": "Mix butter, Dijon mustard, Worcestershire sauce, poppy seeds, and dried onion in a bowl."
+            "direction": "Combine evaporated milk and egg yolks in the top of a double boiler over simmering water. Cook over the simmering water, stirring constantly, until mixture is thick enough to coat the back of a spoon, and reaches a temperature of 160 degrees F (71 degrees C)."
         },
         {
             "step": 3,
-            "direction": "Separate the tops from the bottoms of the rolls; arrange the bottom pieces in a layer in the prepared baking dish. Layer about 1/2 of the ham onto the rolls; add a layer of Swiss cheese and top with remaining ham slices."
+            "direction": "Transfer mixture to a blender. Add cream of coconut, sweetened condensed milk, rum, water, vanilla, cinnamon, and cloves; blend until combined, about 30 seconds."
         },
         {
             "step": 4,
-            "direction": "Place the tops of the rolls onto the sandwiches. Pour mustard mixture evenly over the rolls"
-        },
-        {
-            "step": 5,
-            "direction": "Bake in the preheated oven until the rolls are lightly browned and the cheese has melted, about 20 minutes. Slice into individual rolls through the ham and cheese layers to serve."
+            "direction": "Pour into sterilized glass bottles and store in the refrigerator; serve cold or over ice, if desired."
         }
     ],
     "details": {
-        "Prep Time:": "15 mins",
-        "Cook Time:": "20 mins",
-        "Total Time:": "35 mins",
-        "Servings:": "24"
+        "Prep Time:": "5 mins",
+        "Cook Time:": "10 mins",
+        "Total Time:": "15 mins",
+        "Servings:": "10"
     }
 }

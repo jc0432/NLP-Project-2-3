@@ -1,18 +1,9 @@
 [
     {
         "step_number": 1,
-        "direction": "Gather all ingredients. Preheat the oven to 350 degrees F (175 degrees C). Grease a 9x13-inch baking dish.",
+        "direction": "Gather all ingredients.",
         "ingredients": {},
-        "tools": [
-            {
-                "size": null,
-                "name": "oven"
-            },
-            {
-                "size": "9x13-inch",
-                "name": "baking dish"
-            }
-        ],
+        "tools": [],
         "methods": {
             "gather": {
                 "subject": [
@@ -20,122 +11,97 @@
                 ],
                 "duration": null,
                 "until": null
-            },
-            "preheat": {
-                "subject": [
-                    "oven"
-                ],
-                "duration": "350 degrees F",
-                "until": null
             }
         },
         "substeps": [
-            "Gather all ingredients",
-            "Preheat the oven to 350 degrees F (175 degrees C)",
-            "Grease a 9x13-inch baking dish"
+            "Gather all ingredients"
         ]
     },
     {
         "step_number": 2,
-        "direction": "Mix butter, Dijon mustard, Worcestershire sauce, poppy seeds, and dried onion in a bowl.",
+        "direction": "Combine evaporated milk and egg yolks in the top of a double boiler over simmering water. Cook over the simmering water, stirring constantly, until mixture is thick enough to coat the back of a spoon, and reaches a temperature of 160 degrees F (71 degrees C).",
         "ingredients": {
-            "Dijon mustard": null,
-            "Worcestershire sauce": null,
-            "poppy seeds": null
+            "evaporated milk": null,
+            "egg yolks": null,
+            "water": null
         },
         "tools": [
             {
                 "size": null,
-                "name": "bowl"
+                "name": "spoon"
             }
         ],
         "methods": {
-            "mix": {
+            "combine": {
                 "subject": [
-                    "butter"
+                    "milk"
+                ],
+                "duration": null,
+                "until": "mixture is thick enough to coat the back of a spoon"
+            },
+            "cook": {
+                "subject": [
+                    "milk"
+                ],
+                "duration": "160 degrees F",
+                "until": null
+            },
+            "coat": {
+                "subject": [
+                    "back"
                 ],
                 "duration": null,
                 "until": null
             }
         },
         "substeps": [
-            "Mix butter, Dijon mustard, Worcestershire sauce, poppy seeds, and dried onion in a bowl"
+            "Combine evaporated milk and egg yolks in the top of a double boiler over simmering water",
+            "Cook over the simmering water, stirring constantly, until mixture is thick enough to coat the back of a spoon, and reaches a temperature of 160 degrees F (71 degrees C)"
         ]
     },
     {
         "step_number": 3,
-        "direction": "Separate the tops from the bottoms of the rolls; arrange the bottom pieces in a layer in the prepared baking dish. Layer about 1/2 of the ham onto the rolls; add a layer of Swiss cheese and top with remaining ham slices.",
-        "ingredients": {},
+        "direction": "Transfer mixture to a blender. Add cream of coconut, sweetened condensed milk, rum, water, vanilla, cinnamon, and cloves; blend until combined, about 30 seconds.",
+        "ingredients": {
+            "cream of coconut": null,
+            "sweetened condensed milk": null,
+            "water": null
+        },
         "tools": [
             {
                 "size": null,
-                "name": "baking dish"
+                "name": "blender"
             }
         ],
         "methods": {
-            "layer": {
-                "subject": [],
-                "duration": null,
-                "until": null
-            },
-            "add": {
-                "subject": [
-                    "layer"
-                ],
-                "duration": null,
-                "until": null
-            }
-        },
-        "substeps": [
-            "Separate the tops from the bottoms of the rolls",
-            "arrange the bottom pieces in a layer in the prepared baking dish",
-            "Layer about 1/2 of the ham onto the rolls",
-            "add a layer of Swiss cheese and top with remaining ham slices"
-        ]
-    },
-    {
-        "step_number": 4,
-        "direction": "Place the tops of the rolls onto the sandwiches. Pour mustard mixture evenly over the rolls",
-        "ingredients": {},
-        "tools": [],
-        "methods": {
-            "place": {
-                "subject": [
-                    "tops"
-                ],
-                "duration": null,
-                "until": null
-            },
-            "pour": {
+            "transfer": {
                 "subject": [
                     "mixture"
                 ],
                 "duration": null,
+                "until": "combined"
+            },
+            "add": {
+                "subject": [
+                    "cream"
+                ],
+                "duration": null,
                 "until": null
             }
         },
         "substeps": [
-            "Place the tops of the rolls onto the sandwiches",
-            "Pour mustard mixture evenly over the rolls"
+            "Transfer mixture to a blender",
+            "Add cream of coconut, sweetened condensed milk, rum, water, vanilla, cinnamon, and cloves",
+            "blend until combined, about 30 seconds"
         ]
     },
     {
-        "step_number": 5,
-        "direction": "Bake in the preheated oven until the rolls are lightly browned and the cheese has melted, about 20 minutes. Slice into individual rolls through the ham and cheese layers to serve.",
+        "step_number": 4,
+        "direction": "Pour into sterilized glass bottles and store in the refrigerator; serve cold or over ice, if desired.",
         "ingredients": {},
-        "tools": [
-            {
-                "size": null,
-                "name": "oven"
-            }
-        ],
+        "tools": [],
         "methods": {
-            "bake": {
-                "subject": [],
-                "duration": "about 20 minutes",
-                "until": "the rolls are lightly browned and the cheese has melted"
-            },
-            "slice": {
+            "pour": {
                 "subject": [],
                 "duration": null,
                 "until": null
@@ -147,8 +113,8 @@
             }
         },
         "substeps": [
-            "Bake in the preheated oven until the rolls are lightly browned and the cheese has melted, about 20 minutes",
-            "Slice into individual rolls through the ham and cheese layers to serve"
+            "Pour into sterilized glass bottles and store in the refrigerator",
+            "serve cold or over ice, if desired"
         ]
     }
 ]
