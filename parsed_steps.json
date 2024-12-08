@@ -1,196 +1,114 @@
 [
     {
         "step_number": 1,
-        "direction": "Pat salmon filets dry with paper towels and season both sides with salt and pepper.",
+        "direction": "In a shallow dish, mix together the garlic powder, pepper, salt, paprika, bread crumbs and flour. In a separate dish, whisk together the milk and egg.",
         "ingredients": {
-            "salmon filets": null
+            "garlic powder": null,
+            "salt": null,
+            "paprika": null,
+            "milk": null,
+            "egg": null
         },
-        "tools": [],
-        "methods": {},
+        "tools": [
+            {
+                "size": null,
+                "name": "whisk"
+            },
+            {
+                "size": null,
+                "name": "dish"
+            }
+        ],
+        "methods": {
+            "mix": {
+                "subject": [
+                    "powder"
+                ],
+                "duration": null,
+                "until": null
+            },
+            "whisk": {
+                "subject": [
+                    "milk"
+                ],
+                "duration": null,
+                "until": null
+            }
+        },
         "substeps": [
-            "Pat salmon filets dry with paper towels and season both sides with salt and pepper"
+            "In a shallow dish, mix together the garlic powder, pepper, salt, paprika, bread crumbs and flour",
+            "In a separate dish, whisk together the milk and egg"
         ]
     },
     {
         "step_number": 2,
-        "direction": "Melt butter in a large skillet over medium heat; add olive oil. When butter stops sizzling, swirl the skillet to combine. Add 2 or 3 rosemary sprigs to the skillet, to flavor the oil.",
+        "direction": "Heat the oil in an electric skillet set to 350 degrees F (175 degrees C). Dip the chicken into the egg and milk, then dredge in the dry ingredients until evenly coated.",
         "ingredients": {
-            "olive oil": null,
-            "rosemary sprigs": null
+            "milk": null,
+            "egg": null
         },
         "tools": [
             {
-                "size": "large",
+                "size": null,
                 "name": "skillet"
             }
         ],
         "methods": {
-            "melt": {
-                "subject": [
-                    "butter"
-                ],
-                "duration": null,
-                "until": null
-            },
-            "add": {
-                "subject": [
-                    "sprigs"
-                ],
-                "duration": null,
-                "until": null
-            },
-            "combine": {
+            "heat": {
                 "subject": [
                     "oil"
                 ],
-                "duration": null,
-                "until": null
+                "duration": "350 degrees F",
+                "until": "evenly coated"
             }
         },
         "substeps": [
-            "Melt butter in a large skillet over medium heat",
-            "add olive oil",
-            "When butter stops sizzling, swirl the skillet to combine",
-            "Add 2 or 3 rosemary sprigs to the skillet, to flavor the oil"
+            "Heat the oil in an electric skillet set to 350 degrees F (175 degrees C)",
+            "Dip the chicken into the egg and milk, then dredge in the dry ingredients until evenly coated"
         ]
     },
     {
         "step_number": 3,
-        "direction": "Add salmon and cook until salmon is lightly browned and flakes when a fork is gently inserted, about 3 minutes per side. (If salmon filets are thinner than 1 1/2 inches, this may take less time.) An instant read thermometer, inserted near the center, should read 145 degrees F (63 degrees C). Remove from the skillet, and keep warm.",
-        "ingredients": {
-            "salmon filets": null
-        },
+        "direction": "Fry chicken in the hot oil for about 5 minutes per side, or until the chicken is cooked through and juices run clear. Remove from the oil with a slotted spatula, and serve.",
+        "ingredients": {},
         "tools": [
             {
                 "size": null,
-                "name": "fork"
-            },
-            {
-                "size": null,
-                "name": "thermometer"
-            },
-            {
-                "size": null,
-                "name": "skillet"
+                "name": "spatula"
             }
         ],
         "methods": {
-            "add": {
+            "fry": {
                 "subject": [
-                    "salmon"
+                    "chicken"
+                ],
+                "duration": "about 5 minutes",
+                "until": "the chicken is cooked through and juices run clear"
+            },
+            "serve": {
+                "subject": [
+                    "chicken"
                 ],
                 "duration": null,
-                "until": "salmon is lightly browned and flakes when a fork is gently inserted"
+                "until": null
             }
         },
         "substeps": [
-            "Add salmon and cook until salmon is lightly browned and flakes when a fork is gently inserted, about 3 minutes per side",
-            "(If salmon filets are thinner than 1 1/2 inches, this may take less time",
-            ") An instant read thermometer, inserted near the center, should read 145 degrees F (63 degrees C)",
-            "Remove from the skillet, and keep warm"
+            "Fry chicken in the hot oil for about 5 minutes per side, or until the chicken is cooked through and juices run clear",
+            "Remove from the oil with a slotted spatula, and serve"
         ]
     },
     {
         "step_number": 4,
-        "direction": "To the same skillet with rosemary, add chopped prosciutto, green onion, garlic, red pepper flakes, and lemon zest, and cook for 1 minute or until fragrant.",
+        "direction": "We have determined the nutritional value of oil for frying based on a retention value of 10% after cooking. The exact amount may vary depending on cook time and temperature, ingredient density, and the specific type of oil used.",
         "ingredients": {
-            "prosciutto": null,
-            "green onion": null,
-            "red pepper flakes": null,
-            "lemon": null
-        },
-        "tools": [
-            {
-                "size": null,
-                "name": "skillet"
-            }
-        ],
-        "methods": {
-            "add": {
-                "subject": [
-                    "prosciutto"
-                ],
-                "duration": null,
-                "until": "fragrant"
-            }
-        },
-        "substeps": [
-            "To the same skillet with rosemary, add chopped prosciutto, green onion, garlic, red pepper flakes, and lemon zest, and cook for 1 minute or until fragrant"
-        ]
-    },
-    {
-        "step_number": 5,
-        "direction": "Add white wine and cook until the liquid evaporates. Add tomatoes and cook, stirring, 2 to 3 minutes. Add spinach and toss in the skillet until bright green and barely wilted, 2 to 3 minutes.",
-        "ingredients": {
-            "white wine": null
-        },
-        "tools": [
-            {
-                "size": null,
-                "name": "skillet"
-            }
-        ],
-        "methods": {
-            "add": {
-                "subject": [
-                    "spinach"
-                ],
-                "duration": null,
-                "until": null
-            }
-        },
-        "substeps": [
-            "Add white wine and cook until the liquid evaporates",
-            "Add tomatoes and cook, stirring, 2 to 3 minutes",
-            "Add spinach and toss in the skillet until bright green and barely wilted, 2 to 3 minutes"
-        ]
-    },
-    {
-        "step_number": 6,
-        "direction": "Stir in cream, and season with salt and pepper. Cook until sauce bubbles, about 2 minutes, and remove cooked rosemary sprigs.",
-        "ingredients": {
-            "rosemary sprigs": null
+            "oil for frying": null
         },
         "tools": [],
-        "methods": {
-            "stir": {
-                "subject": [],
-                "duration": null,
-                "until": "sauce bubbles"
-            },
-            "cook": {
-                "subject": [],
-                "duration": "about 2 minutes",
-                "until": null
-            }
-        },
+        "methods": {},
         "substeps": [
-            "Stir in cream, and season with salt and pepper",
-            "Cook until sauce bubbles, about 2 minutes, and remove cooked rosemary sprigs"
-        ]
-    },
-    {
-        "step_number": 7,
-        "direction": "Serve salmon on a bed of vegetables and sauce, and drizzle with a little olive oil. Garnish with lemon slices, fresh rosemary sprigs, and toasted pine nuts, if desired.",
-        "ingredients": {
-            "olive oil": null,
-            "rosemary sprigs": null,
-            "lemon": null,
-            "lemon slices": null
-        },
-        "tools": [],
-        "methods": {
-            "serve": {
-                "subject": [
-                    "salmon"
-                ],
-                "duration": null,
-                "until": null
-            }
-        },
-        "substeps": [
-            "Serve salmon on a bed of vegetables and sauce, and drizzle with a little olive oil",
-            "Garnish with lemon slices, fresh rosemary sprigs, and toasted pine nuts, if desired"
+            "We have determined the nutritional value of oil for frying based on a retention value of 10% after cooking",
+            "The exact amount may vary depending on cook time and temperature, ingredient density, and the specific type of oil used"
         ]
     }
 ]

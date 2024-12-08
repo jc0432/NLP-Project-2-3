@@ -350,3 +350,20 @@ SOUTH_ASIAN_CONDIMENT_SUBSTITUTIONS = {
     "harissa": "red chili-garlic chutney",
     "salsa": "kachumber (tomato-onion) salad"
 }
+
+GLUTEN_SUBSTITUTIONS = {
+    "bread crumbs": "gluten-free bread crumbs",
+    "breadcrumbs": "gluten-free bread crumbs",
+    "panko": "gluten-free panko",
+    "flour": "rice flour",
+    "roll": "gluten-free rolls",
+    "pasta": "gluten-free pasta",
+    "noodels": "gluten-free noodles",
+    "spaghetti": "gluten-free spaghetti",
+    "bread": "gluten-free bread",
+    "crouton": "gluten-free croutons",
+    "beer": "gluten-free beer",
+    "torilla": "corn tortilla",
+    "soy sauce": "tamari",
+    "teriyaki sauce": "gluten-free teriyaki sauce",
+}

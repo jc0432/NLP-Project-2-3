@@ -1,126 +1,80 @@
 {
-    "title": "Tuscan Salmon",
+    "title": "Garlic Chicken Fried Chicken",
     "ingredients": [
         {
-            "ingredient": "salmon filets",
-            "amount": "4 (5 ounce)",
-            "preparation": ""
-        },
-        {
-            "ingredient": "salt and freshly ground black pepper to taste",
-            "amount": "",
-            "preparation": ""
-        },
-        {
-            "ingredient": "olive oil",
-            "amount": "1 tablespoon",
-            "preparation": ""
-        },
-        {
-            "ingredient": "unsalted butter",
-            "amount": "1 tablespoon",
-            "preparation": ""
-        },
-        {
-            "ingredient": "rosemary sprigs",
-            "amount": "2 or 3 short",
-            "preparation": "plus more for garnish"
-        },
-        {
-            "ingredient": "prosciutto",
-            "amount": "1/3 cup",
-            "preparation": ""
-        },
-        {
-            "ingredient": "green onion",
-            "amount": "1",
-            "preparation": "finely chopped"
-        },
-        {
-            "ingredient": "garlic cloves",
-            "amount": "1 to 2",
-            "preparation": "minced"
-        },
-        {
-            "ingredient": "red pepper flakes",
-            "amount": "1 pinch",
+            "ingredient": "garlic powder",
+            "amount": "2 teaspoons",
             "preparation": "or to taste"
         },
         {
-            "ingredient": "lemon",
-            "amount": "1/2",
-            "preparation": "zested"
-        },
-        {
-            "ingredient": "white wine",
-            "amount": "1/2 cup",
+            "ingredient": "ground black pepper",
+            "amount": "1 teaspoon",
             "preparation": ""
         },
         {
-            "ingredient": "cherry tomato halves",
+            "ingredient": "salt",
+            "amount": "1 teaspoon",
+            "preparation": ""
+        },
+        {
+            "ingredient": "paprika",
+            "amount": "1 teaspoon",
+            "preparation": ""
+        },
+        {
+            "ingredient": "seasoned bread crumbs",
+            "amount": "\u00bd cup",
+            "preparation": ""
+        },
+        {
+            "ingredient": "all-purpose flour",
             "amount": "1 cup",
             "preparation": ""
         },
         {
-            "ingredient": "fresh spinach",
-            "amount": "1 (10 ounce) package",
-            "preparation": "torn"
-        },
-        {
-            "ingredient": "heavy cream",
-            "amount": "1/2 cup",
+            "ingredient": "milk",
+            "amount": "\u00bd cup",
             "preparation": ""
         },
         {
-            "ingredient": "olive oil for drizzling",
+            "ingredient": "egg",
             "amount": "1 ",
+            "preparation": ""
+        },
+        {
+            "ingredient": "skinless",
+            "amount": "4 ",
+            "preparation": "boneless chicken breast halves - pounded thin"
+        },
+        {
+            "ingredient": "oil for frying",
+            "amount": "1 cup",
             "preparation": "or as needed"
-        },
-        {
-            "ingredient": "lemon slices",
-            "amount": "",
-            "preparation": ""
-        },
-        {
-            "ingredient": "pine nuts (optional)",
-            "amount": "",
-            "preparation": ""
         }
     ],
     "steps": [
         {
             "step": 1,
-            "direction": "Pat salmon filets dry with paper towels and season both sides with salt and pepper."
+            "direction": "In a shallow dish, mix together the garlic powder, pepper, salt, paprika, bread crumbs and flour. In a separate dish, whisk together the milk and egg."
         },
         {
             "step": 2,
-            "direction": "Melt butter in a large skillet over medium heat; add olive oil. When butter stops sizzling, swirl the skillet to combine. Add 2 or 3 rosemary sprigs to the skillet, to flavor the oil."
+            "direction": "Heat the oil in an electric skillet set to 350 degrees F (175 degrees C). Dip the chicken into the egg and milk, then dredge in the dry ingredients until evenly coated."
         },
         {
             "step": 3,
-            "direction": "Add salmon and cook until salmon is lightly browned and flakes when a fork is gently inserted, about 3 minutes per side. (If salmon filets are thinner than 1 1/2 inches, this may take less time.) An instant read thermometer, inserted near the center, should read 145 degrees F (63 degrees C). Remove from the skillet, and keep warm."
+            "direction": "Fry chicken in the hot oil for about 5 minutes per side, or until the chicken is cooked through and juices run clear. Remove from the oil with a slotted spatula, and serve."
         },
         {
             "step": 4,
-            "direction": "To the same skillet with rosemary, add chopped prosciutto, green onion, garlic, red pepper flakes, and lemon zest, and cook for 1 minute or until fragrant."
-        },
-        {
-            "step": 5,
-            "direction": "Add white wine and cook until the liquid evaporates. Add tomatoes and cook, stirring, 2 to 3 minutes. Add spinach and toss in the skillet until bright green and barely wilted, 2 to 3 minutes."
-        },
-        {
-            "step": 6,
-            "direction": "Stir in cream, and season with salt and pepper. Cook until sauce bubbles, about 2 minutes, and remove cooked rosemary sprigs."
-        },
-        {
-            "step": 7,
-            "direction": "Serve salmon on a bed of vegetables and sauce, and drizzle with a little olive oil. Garnish with lemon slices, fresh rosemary sprigs, and toasted pine nuts, if desired."
+            "direction": "We have determined the nutritional value of oil for frying based on a retention value of 10% after cooking. The exact amount may vary depending on cook time and temperature, ingredient density, and the specific type of oil used."
         }
     ],
     "details": {
-        "Prep Time:": "10 mins",
+        "Prep Time:": "20 mins",
         "Cook Time:": "15 mins",
-        "Total Time:": "25 mins",
-        "Servings:": "4"
+        "Total Time:": "35 mins",
+        "Servings:": "4",
+        "Yield:": "4 servings"
     }
 }
