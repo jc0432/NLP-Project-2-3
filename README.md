@@ -49,7 +49,7 @@ Ask "how do I do that" to prompt an external search for the most recent cooking 
 Transforming Recipes
 
 ## Set up:
-To preload a recipe into recipe.json for transformations, run ```python3 main_console.py``` and enter the URL you want to test. When the recipe is parsed, you can exit the program.
+To preload a recipe into recipe.json for transformations, run ```python3 tester.py``` and enter the URL you want to test.
 
 ### Healthy
 Run ```python3 healthy.py``` to test a healthy transformation, and look in healthier_parsed_steps.json for the output.
