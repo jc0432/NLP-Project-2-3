@@ -6,8 +6,8 @@ def lactose_free(ingredient_list):
         for start in range(len(ingredient_list[i])):
             found = False
             for end in range(len(ingredient_list[i]), start, -1):
-                if ingredient_list[i][start:end].lower() in LACTOSE_SUBSTITUTIONS:
-                    print(ingredient_list[i][start:end].lower() + " contains lactose, substituting it with " + LACTOSE_SUBSTITUTIONS[ingredient_list[i][start:end].lower()] + "!")
+                if ingredient_list[i][start:end].lower() in LACTOSE_SUBSTITUTIONS and ingredient_list[i] != LACTOSE_SUBSTITUTIONS[ingredient_list[i][start:end].lower()]:
+                    print(ingredient_list[i] + " contains lactose, substituting it with " + LACTOSE_SUBSTITUTIONS[ingredient_list[i][start:end].lower()] + "!")
                     ingredient_list[i] = LACTOSE_SUBSTITUTIONS[ingredient_list[i][start:end].lower()]
                     found = True
                     break

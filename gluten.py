@@ -6,8 +6,8 @@ def gluten_free(ingredient_list):
         for start in range(len(ingredient_list[i])):
             found = False
             for end in range(len(ingredient_list[i]), start, -1):
-                if ingredient_list[i][start:end].lower() in GLUTEN_SUBSTITUTIONS:
-                    print(ingredient_list[i][start:end].lower() + " contains gluten, substituting it with " + GLUTEN_SUBSTITUTIONS[ingredient_list[i][start:end].lower()] + "!")
+                if ingredient_list[i][start:end].lower() in GLUTEN_SUBSTITUTIONS and ingredient_list[i] != GLUTEN_SUBSTITUTIONS[ingredient_list[i][start:end].lower()]:
+                    print(ingredient_list[i] + " contains gluten, substituting it with " + GLUTEN_SUBSTITUTIONS[ingredient_list[i][start:end].lower()] + "!")
                     ingredient_list[i] = GLUTEN_SUBSTITUTIONS[ingredient_list[i][start:end].lower()]
                     found = True
                     break
