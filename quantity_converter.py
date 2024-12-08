@@ -183,6 +183,9 @@ class QuantityConverter:
             '⅜': '3/8',
             '⅝': '5/8',
             '⅞': '7/8',
+            '\u00bd': '1/2',  
+            '\u00bc': '1/4',  
+            '\u00be': '3/4',  
         }
 
     def convert_fraction(self, fraction_str):
