@@ -11,7 +11,6 @@ def get_ingredients(url, scale_factor=1.0, target_unit=None):
         raw_ingredients = ingredient_parser(recipe_page_content)
         formatted_ingredients = []
         converter = QuantityConverter()
-        parser = IngredientParser()
         
         for ing in raw_ingredients:
             try:
@@ -243,24 +242,24 @@ class IngredientParser:
             'prep': preparations
         }
 
-# if __name__ == "__main__":
-#     test_url = "https://www.allrecipes.com/recipe/260065/instant-pot-lasagna/"
+if __name__ == "__main__":
+    test_url = "https://www.allrecipes.com/recipe/260065/instant-pot-lasagna/"
     
-#     def print_ingredients(ingredients, title):
-#         print(f"\n{title}:")
-#         for ing in ingredients:
-#             print(ing)
+    def print_ingredients(ingredients, title):
+        print(f"\n{title}:")
+        for ing in ingredients:
+            print(ing)
     
-#     try:
-#         ingredients = get_ingredients(test_url)
-#         if not ingredients:
-#             print("Unable to get recipe")
-#             exit()
+    try:
+        ingredients = get_ingredients(test_url)
+        if not ingredients:
+            print("Unable to get recipe")
+            exit()
             
-#         print_ingredients(ingredients, "original recipe")
+        print_ingredients(ingredients, "original recipe")
         
-#         double_ingredients = get_ingredients(test_url, scale_factor=2.0)
-#         print_ingredients(double_ingredients, "double portion")
+        double_ingredients = get_ingredients(test_url, scale_factor=2.0)
+        print_ingredients(double_ingredients, "double portion")
         
-#     except Exception as e:
-#         print(f"Error: {e}")
+    except Exception as e:
+        print(f"Error: {e}")

@@ -44,3 +44,33 @@ Ask a "what is ___" question to prompt an external google search
 Ask a "how do I ___" question to prompt an external search to a youtube video
 
 Ask "how do I do that" to prompt an external search for the most recent cooking action from the conversation context
+
+## Project 3: Transformations
+Transforming Recipes
+
+## Set up:
+To preload a recipe into recipe.json for transformations, run ```python3 tester.py``` and enter the URL you want to test.
+
+### Healthy
+Run ```python3 healthy.py``` to test a healthy transformation, and look in healthier_parsed_steps.json for the output.
+
+### South Asian
+Run ```python3 south_asian_transform.py``` to transform into south asian cuisine, and look in recipe.json for the output.
+
+### Quantity
+Look in the ingredient.py file, and specify the test_url (line 246) you want to test.
+If you want to change the scale factor, change the scale_factor parameter on line 261.
+
+Run ```python3 ingredient.py``` and check the console output for the transformation.
+
+### Vegetarian
+Run ```python3 vegetarian_transformation.py``` to turn the recipe vegetarian, and look in recipe.json for the output.
+
+### Change Cooking Method
+Run ```python3 change_cooking_method_transformation.py``` to test changing the cooking method, and look in recipe.json for the output.
+
+### Gluten Free
+Run ```python3 gluten.py``` to change a recipe to gluten free, and look in recipe.json for the output.
+
+### Lactose Free
+Run ```python3 lactose.py``` to change a recipe to lactose free, and look in recipe.json for the output.
