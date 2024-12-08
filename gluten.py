@@ -20,9 +20,9 @@ def main():
         recipe = json.load(f)
     
     ingredients = recipe.get('ingredients', [])
-    ingredients = [ingredient['ingredient'] for ingredient in ingredients]
-    
+    ingredients = [ingredient['ingredient'] for ingredient in ingredients]    
     gluten_free_ingredients = gluten_free(ingredients)
+
     # overwrite the ingredients in the recipe
     for i in range(len(ingredients)):
         recipe['ingredients'][i]['ingredient'] = gluten_free_ingredients[i]
